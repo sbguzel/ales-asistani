@@ -8,8 +8,8 @@ export class QuizRenderer {
   static renderLatex(text) {
     if (!text) return '';
 
-    // 1. Blok formüller: $$...$$
-    let parsed = text.replace(/\$\$(.+?)\$\$/g, (match, formula) => {
+    // 1. Blok formüller: $$...$$ (çok satırlı destek)
+    let parsed = text.replace(/\$\$(.+?)\$\$/gs, (match, formula) => {
       try {
         return katex.renderToString(formula.trim(), {
           displayMode: true,
@@ -20,8 +20,8 @@ export class QuizRenderer {
       }
     });
 
-    // 2. Satır içi formüller: $...$
-    parsed = parsed.replace(/\$(.+?)\$/g, (match, formula) => {
+    // 2. Satır içi formüller: $...$ (çok satırlı destek)
+    parsed = parsed.replace(/\$(.+?)\$/gs, (match, formula) => {
       try {
         return katex.renderToString(formula.trim(), {
           displayMode: false,

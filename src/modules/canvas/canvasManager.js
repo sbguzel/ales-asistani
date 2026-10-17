@@ -24,14 +24,21 @@ export class CanvasManager {
   }
 
   resize() {
+    if (!this.container) return;
     const rect = this.container.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
+    const width = Math.floor(rect.width) || Math.floor(window.innerWidth * 0.5);
+    const height = Math.floor(rect.height) || Math.floor(window.innerHeight - 60);
+
+    if (width <= 0 || height <= 0) return;
 
     // Önceki çizimi yedekle
     let prevImage = null;
     if (this.canvas.width > 0 && this.canvas.height > 0) {
-      prevImage = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
+      try {
+        prevImage = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
+      } catch (e) {
+        prevImage = null;
+      }
     }
 
     this.dpr = window.devicePixelRatio || 1;
@@ -46,7 +53,9 @@ export class CanvasManager {
     this.ctx.lineJoin = 'round';
 
     if (prevImage) {
-      this.ctx.putImageData(prevImage, 0, 0);
+      try {
+        this.ctx.putImageData(prevImage, 0, 0);
+      } catch (e) {}
     }
   }
 
@@ -114,25 +123,34 @@ export class CanvasManager {
   }
 
   undo() {
-    const currentState = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
-    const prevState = this.history.undo(currentState);
-    if (prevState) {
-      this.ctx.putImageData(prevState, 0, 0);
-    }
+    if (this.canvas.width <= 0 || this.canvas.height <= 0) return;
+    try {
+      const currentState = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
+      const prevState = this.history.undo(currentState);
+      if (prevState) {
+        this.ctx.putImageData(prevState, 0, 0);
+      }
+    } catch (e) {}
   }
 
   redo() {
-    const currentState = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
-    const nextState = this.history.redo(currentState);
-    if (nextState) {
-      this.ctx.putImageData(nextState, 0, 0);
-    }
+    if (this.canvas.width <= 0 || this.canvas.height <= 0) return;
+    try {
+      const currentState = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
+      const nextState = this.history.redo(currentState);
+      if (nextState) {
+        this.ctx.putImageData(nextState, 0, 0);
+      }
+    } catch (e) {}
   }
 
   clear() {
-    const currentState = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
-    this.history.saveState(currentState);
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    if (this.canvas.width <= 0 || this.canvas.height <= 0) return;
+    try {
+      const currentState = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
+      this.history.saveState(currentState);
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    } catch (e) {}
   }
 
   toggleGrid() {
