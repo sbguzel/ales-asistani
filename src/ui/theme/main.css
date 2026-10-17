@@ -88,25 +88,6 @@ html, body {
   border: 1px solid var(--border-subtle);
 }
 
-/* Sınav Dönemi Seçici */
-.exam-selector {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-full);
-  color: var(--text-primary);
-  font-size: 12px;
-  font-weight: 500;
-  padding: 5px 12px;
-  outline: none;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.exam-selector:hover, .exam-selector:focus {
-  border-color: var(--accent-primary);
-  background: var(--bg-elevated);
-}
-
 /* Kategori & Mod Seçici */
 .mode-selector {
   display: flex;

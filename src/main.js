@@ -148,16 +148,7 @@ class App {
 
   // 5. Mod ve Kategori Seçici
   initModeSelector() {
-    this.selectedExam = 'all';
     this.selectedMode = 'all';
-
-    const examSelect = document.getElementById('exam-selector');
-    if (examSelect) {
-      examSelect.addEventListener('change', (e) => {
-        this.selectedExam = e.target.value;
-        this.applyFilter();
-      });
-    }
 
     const modeBtns = document.querySelectorAll('.mode-btn');
     modeBtns.forEach(btn => {
@@ -204,11 +195,6 @@ class App {
 
   applyFilter() {
     let result = [...this.allQuestions];
-
-    // Sınav filtresi
-    if (this.selectedExam && this.selectedExam !== 'all') {
-      result = result.filter(q => q.examId === this.selectedExam);
-    }
 
     // Ders/Mod filtresi
     if (this.selectedMode === 'mistakes') {
