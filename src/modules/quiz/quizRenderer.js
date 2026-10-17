@@ -9,9 +9,11 @@ export class QuizRenderer {
     if (!text) return '';
 
     // 1. Blok formüller: $$...$$ (çok satırlı destek)
-    let parsed = text.replace(/\$\$(.+?)\$\$/gs, (match, formula) => {
+    let parsed = text.replace(/\$\$([\s\S]+?)\$\$/g, (match, formula) => {
       try {
-        return katex.renderToString(formula.trim(), {
+        // KaTeX'in desteklemediği @{...} sütun hizalama belirteçlerini temizle
+        const sanitized = formula.trim().replace(/@\{[^}]*\}/g, '');
+        return katex.renderToString(sanitized, {
           displayMode: true,
           throwOnError: false
         });
@@ -20,10 +22,11 @@ export class QuizRenderer {
       }
     });
 
-    // 2. Satır içi formüller: $...$ (çok satırlı destek)
-    parsed = parsed.replace(/\$(.+?)\$/gs, (match, formula) => {
+    // 2. Satır içi formüller: $...$ (tek satırda çalışan, diğer $ karakterlerini ve paragrafları yutmayan)
+    parsed = parsed.replace(/\$([^\$\n]+?)\$/g, (match, formula) => {
       try {
-        return katex.renderToString(formula.trim(), {
+        const sanitized = formula.trim().replace(/@\{[^}]*\}/g, '');
+        return katex.renderToString(sanitized, {
           displayMode: false,
           throwOnError: false
         });

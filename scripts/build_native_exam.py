@@ -110,7 +110,7 @@ def build_native_questions():
             "category": "basamak_kavrami",
             "topicTitle": "Alt Alta Çıkarma ve Basamak Değeri",
             "difficulty": 3,
-            "questionText": "$A, B$ ve $C$ birer rakam olmak üzere,\n\n$$\\begin{array}{r@{\\quad}l} & A5B \\\\ - & CA3 \\\\ \\hline & B79 \\end{array}$$\n\nolduğuna göre, $A + B + C$ toplamı kaçtır?",
+            "questionText": "$A, B$ ve $C$ birer rakam olmak üzere,\n\n$$\\begin{array}{rr} & A5B \\\\ - & CA3 \\\\ \\hline & B79 \\end{array}$$\n\nolduğuna göre, $A + B + C$ toplamı kaçtır?",
             "hasImage": False,
             "imageUrl": None,
             "options": [
@@ -213,7 +213,7 @@ def build_native_questions():
             ],
             "correctAnswer": "C",
             "suggestedSolution": "1. $ABC$ eşkenar üçgen olduğundan $m(\\widehat{A}) = m(\\widehat{B}) = m(\\widehat{C}) = 60^\\circ$'dir.\n2. $ADK$ üçgeninde iç açılar toplamı $180^\\circ$:\n   $m(\\widehat{AKD}) = 180^\\circ - (60^\\circ + 48^\\circ) = 72^\\circ$.\n3. $[AB]$ doğrusunda $D$ noktasındaki ters açılardan $m(\\widehat{BDL}) = m(\\widehat{ADK}) = 48^\\circ$'dir.\n4. $KLM$ ikizkenar dik üçgeninde $[KL] \\perp [KM]$ olduğundan taban açıları $m(\\widehat{L}) = m(\\widehat{M}) = 45^\\circ$'dir.\n5. $[LM]$ doğrusunun $[AB]$ kenarını kestiği noktaya $H$ dersek, $DHL$ üçgeninde $H$ köşesindeki dış açı:\n   $m(\\widehat{BHM}) = m(\\widehat{BDL}) + m(\\widehat{L}) = 48^\\circ + 45^\\circ = 93^\\circ$.\n6. $BHE$ üçgeninde $E$ noktasındaki dış açı $m(\\widehat{CEL})$:\n   $x = m(\\widehat{B}) + (180^\\circ - 93^\\circ) = 60^\\circ + 87^\\circ = 147^\\circ$ bulunur.",
-            "quickTip": "💡 ALES Taktiği: Dış açı kuralını ($dış\\ açı = komşu\\ olmayan\\ iki\\ iç\\ açı\\ toplamı$) iki kez uygulayın: $48^\\circ + 45^\\circ = 93^\\circ$, ardından $60^\\circ + 87^\\circ = 147^\\circ$.",
+            "quickTip": "💡 ALES Taktiği: Dış açı kuralını (dış açı = komşu olmayan iki iç açının toplamı) iki kez uygulayın: $48^\\circ + 45^\\circ = 93^\\circ$, ardından $60^\\circ + 87^\\circ = 147^\\circ$.",
             "targetTimeSec": 80,
             "derivedFrom": "2021-ALES/1-S44"
         },
