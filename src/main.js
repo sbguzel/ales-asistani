@@ -26,6 +26,7 @@ class App {
     this.initCanvas();
     this.initTimer();
     this.initModeSelector();
+    this.initNavigation();
     this.initMobileToggle();
     await this.loadQuestions();
   }
@@ -161,6 +162,33 @@ class App {
     });
   }
 
+  // 6. Soru Gezinme ve Klavye Kısayolları
+  initNavigation() {
+    const prevBtn = document.getElementById('prev-question-btn');
+    const nextBtn = document.getElementById('next-nav-btn');
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => this.prevQuestion());
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => this.nextQuestion());
+    }
+
+    // Klavye yön tuşları ile hızlı geçiş (Sol/Sağ ok)
+    window.addEventListener('keydown', (e) => {
+      // Eğer kullanıcı input/textarea içinde yazıyorsa yön tuşlarını engelleme
+      const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
+      if (activeTag === 'input' || activeTag === 'textarea') return;
+
+      if (e.key === 'ArrowLeft') {
+        this.prevQuestion();
+      } else if (e.key === 'ArrowRight') {
+        this.nextQuestion();
+      }
+    });
+  }
+
   // 6. Mobil Karalama Butonu
   initMobileToggle() {
     const toggleBtn = document.getElementById('mobile-view-toggle');
@@ -220,9 +248,19 @@ class App {
     const question = this.filteredQuestions[this.currentIndex];
     const container = document.getElementById('question-container');
 
-    // Soru sayacını güncelle
+    // Soru sayacını ve ok butonlarını güncelle
     const counterEl = document.getElementById('question-counter');
-    counterEl.textContent = `Soru ${this.currentIndex + 1} / ${this.filteredQuestions.length}`;
+    if (counterEl) {
+      counterEl.textContent = `Soru ${this.currentIndex + 1} / ${this.filteredQuestions.length}`;
+    }
+    const prevBtn = document.getElementById('prev-question-btn');
+    if (prevBtn) {
+      prevBtn.disabled = this.currentIndex === 0;
+    }
+    const nextNavBtn = document.getElementById('next-nav-btn');
+    if (nextNavBtn) {
+      nextNavBtn.disabled = this.currentIndex === this.filteredQuestions.length - 1;
+    }
 
     // KaTeX ile soruyu ve şıkları render et
     QuizRenderer.renderQuestion(question, container, (selectedKey, buttonEl) => {
@@ -284,6 +322,15 @@ class App {
     });
   }
 
+  prevQuestion() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.renderCurrentQuestion();
+      const panel = document.getElementById('question-panel');
+      if (panel) panel.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
   nextQuestion() {
     if (this.currentIndex + 1 < this.filteredQuestions.length) {
       this.currentIndex++;
@@ -291,7 +338,8 @@ class App {
       this.currentIndex = 0; // Başa dön
     }
     this.renderCurrentQuestion();
-    document.getElementById('question-panel').scrollTo({ top: 0, behavior: 'smooth' });
+    const panel = document.getElementById('question-panel');
+    if (panel) panel.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
 

@@ -1,24 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 240" width="100%" height="220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 250" width="100%" height="230">
   <defs>
+    
     <style>
-      .geo-line { stroke: #38bdf8; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
-      .geo-text { font-family: -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #f1f5f9; }
-      .geo-shaded { fill: rgba(16, 185, 129, 0.25); stroke: #10b981; stroke-width: 2; }
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2.2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+        .geo-right-angle { stroke: var(--text-muted, #64748b); }
+        .geo-angle-arc { stroke: var(--zen-warning, #d97706); }
+      }
     </style>
+
   </defs>
 
+  <!-- Boyalı Bölge: EFCG Dörtgeni -->
+  <polygon points="170,200 290,116 290,60 146,60" class="geo-shaded" />
+
   <!-- ABCD Dikdörtgeni -->
-  <rect x="50" y="40" width="220" height="140" class="geo-line" />
+  <rect x="50" y="60" width="240" height="140" class="geo-line" />
 
-  <!-- EFCG Dörtgeni (Taralı) -->
-  <polygon points="120,40 270,40 270,130 180,180" class="geo-shaded" />
+  <!-- Ayırıcı Doğrular [GE] ve [EF] -->
+  <line x1="146" y1="60" x2="170" y2="200" class="geo-sec" />
+  <line x1="170" y1="200" x2="290" y2="116" class="geo-sec" />
 
-  <!-- Harfler -->
-  <text x="35" y="40" class="geo-text">D</text>
-  <text x="278" y="40" class="geo-text">C</text>
-  <text x="35" y="188" class="geo-text">A</text>
-  <text x="278" y="188" class="geo-text">B</text>
-  <text x="115" y="30" class="geo-text">E</text>
-  <text x="280" y="135" class="geo-text">F</text>
-  <text x="175" y="198" class="geo-text">G</text>
+  <!-- Eşitlik Çentikleri (|AE| = |EB|) -->
+  <line x1="108" y1="195" x2="112" y2="205" class="geo-line" stroke-width="1.8" />
+  <line x1="228" y1="195" x2="232" y2="205" class="geo-line" stroke-width="1.8" />
+
+  <!-- Köşe Harfleri -->
+  <text x="36" y="60" class="geo-text">D</text>
+  <text x="304" y="60" class="geo-text">C</text>
+  <text x="36" y="206" class="geo-text">A</text>
+  <text x="304" y="206" class="geo-text">B</text>
+
+  <text x="170" y="218" class="geo-text">E</text>
+  <text x="146" y="44" class="geo-text">G</text>
+  <text x="306" y="116" class="geo-text">F</text>
 </svg>

@@ -21,6 +21,9 @@
   --accent-glow: rgba(56, 189, 248, 0.2);
   --accent-secondary: #818cf8;
 
+  --geo-shaded-fill: rgba(56, 189, 248, 0.28);
+  --geo-shaded-stroke: #38bdf8;
+
   --zen-success: #10b981;
   --zen-success-bg: rgba(16, 185, 129, 0.12);
   --zen-success-border: rgba(16, 185, 129, 0.3);
@@ -78,6 +81,9 @@
   --accent-hover: #0369a1;
   --accent-glow: rgba(2, 132, 199, 0.2);
   --accent-secondary: #6366f1;
+
+  --geo-shaded-fill: rgba(2, 132, 199, 0.22);
+  --geo-shaded-stroke: #0284c7;
 
   --zen-success: #059669;
   --zen-success-bg: rgba(5, 150, 105, 0.1);

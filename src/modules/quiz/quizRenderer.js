@@ -46,11 +46,16 @@ export class QuizRenderer {
       `<span class="diff-dot ${level <= question.difficulty ? 'active' : ''}"></span>`
     ).join('');
 
-    const imageHtml = question.hasImage && question.imageUrl
-      ? `<div class="question-image-container">
-           <img src="${question.imageUrl}" alt="Soru ${question.number}" class="question-image" />
-         </div>`
-      : '';
+    let imageHtml = '';
+    if (question.hasImage) {
+      if (question.svgContent) {
+        imageHtml = `<div class="question-image-container">${question.svgContent}</div>`;
+      } else if (question.imageUrl) {
+        imageHtml = `<div class="question-image-container">
+          <img src="${question.imageUrl}" alt="Soru ${question.number || ''}" class="question-image" />
+        </div>`;
+      }
+    }
 
     const textHtml = question.questionText && question.questionText.trim()
       ? `<div class="question-text">${this.renderLatex(question.questionText)}</div>`

@@ -303,6 +303,7 @@
     "difficulty": 3,
     "questionText": "$ABC$ eşkenar üçgen, $KLM$ ikizkenar dik üçgendir.\n* $[KL] \\perp [KM]$\n* $[BC] \\cap [LM] = \\{E\\}$\n* $[AB] \\cap [KL] = \\{D\\}$\n* $m(\\widehat{ADK}) = 48^\\circ$\n* $m(\\widehat{CEL}) = x$\n\n$K$ köşesi $[AC]$ kenarı üzerinde olduğuna göre, $x$ kaç derecedir?",
     "hasImage": true,
+    "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 310\" width=\"100%\" height=\"280\">\n  <defs>\n    \n    <style>\n      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2.2; stroke-linejoin: round; }\n      .geo-text { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }\n      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 13px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }\n      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }\n      .geo-point { fill: var(--text-primary, #f1f5f9); }\n      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }\n      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }\n\n      @media (prefers-color-scheme: light) {\n        .geo-line { stroke: var(--text-primary, #0f172a); }\n        .geo-sec { stroke: var(--accent-primary, #0284c7); }\n        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }\n        .geo-text { fill: var(--text-primary, #0f172a); }\n        .geo-text-muted { fill: var(--text-secondary, #475569); }\n        .geo-text-accent { fill: var(--zen-warning, #d97706); }\n        .geo-point { fill: var(--text-primary, #0f172a); }\n        .geo-right-angle { stroke: var(--text-muted, #64748b); }\n        .geo-angle-arc { stroke: var(--zen-warning, #d97706); }\n      }\n    </style>\n\n  </defs>\n\n  <!-- ABC Eşkenar Üçgeni -->\n  <polygon points=\"160,48 50,238 270,238\" class=\"geo-line\" />\n\n  <!-- KLM İkizkenar Dik Üçgeni ([KL] ve [KM]) -->\n  <line x1=\"105\" y1=\"143\" x2=\"226\" y2=\"280\" class=\"geo-sec\" />\n  <line x1=\"105\" y1=\"143\" x2=\"235\" y2=\"42\" class=\"geo-sec\" />\n  <line x1=\"235\" y1=\"42\" x2=\"226\" y2=\"280\" class=\"geo-sec\" />\n\n  <!-- K Köşesinde Dik Açı Sembolü -->\n  <path d=\"M 112,135 L 120,142 L 113,150\" class=\"geo-right-angle\" />\n  <circle cx=\"115\" cy=\"142\" r=\"1.5\" class=\"geo-point\" />\n\n  <!-- 48° Açı Yayı (D noktasında) -->\n  <path d=\"M 172,238 A 18,18 0 0,1 176,224\" class=\"geo-angle-arc\" />\n  <text x=\"148\" y=\"222\" class=\"geo-text-muted\">48°</text>\n\n  <!-- x Açısı Yayı (E noktasında) -->\n  <path d=\"M 218,150 A 20,20 0 0,0 228,188\" class=\"geo-angle-arc\" stroke-width=\"2\" />\n  <text x=\"202\" y=\"171\" class=\"geo-text-accent\">x</text>\n\n  <!-- Nokta İsimleri & Köşeler -->\n  <text x=\"160\" y=\"32\" class=\"geo-text\">C</text>\n  <text x=\"36\" y=\"244\" class=\"geo-text\">A</text>\n  <text x=\"284\" y=\"244\" class=\"geo-text\">B</text>\n  \n  <text x=\"88\" y=\"143\" class=\"geo-text\">K</text>\n  <text x=\"248\" y=\"38\" class=\"geo-text\">M</text>\n  <text x=\"238\" y=\"292\" class=\"geo-text\">L</text>\n  <text x=\"188\" y=\"255\" class=\"geo-text\">D</text>\n  <text x=\"246\" y=\"168\" class=\"geo-text\">E</text>\n</svg>",
     "imageUrl": "/assets/questions/svg/geo_ucgen_aci_q44.svg",
     "options": [
       {
@@ -327,8 +328,8 @@
       }
     ],
     "correctAnswer": "C",
-    "suggestedSolution": "$ABC$ eşkenar üçgen olduğundan tüm iç açıları $60^\\circ$'dir. $m(\\widehat{A}) = 60^\\circ$.\n$ADK$ üçgeninde iç açılar toplamı $180^\\circ$:\n$m(\\widehat{AKD}) = 180^\\circ - (60^\\circ + 48^\\circ) = 72^\\circ$.\n$[KL] \\perp [KM]$ olduğundan dik üçgenin dar açıları $45^\\circ$'dir ($m(\\widehat{M}) = m(\\widehat{L}) = 45^\\circ$).\nİlgili dörtgen ve üçgen dış açı bağıntıları yazıldığında $x = 147^\\circ$ bulunur.",
-    "quickTip": "💡 ALES Taktiği: Eşkenar üçgenin $60^\\circ$ ve ikizkenar dik üçgenin $45^\\circ$ açılarını doğrudan şekil üzerine yerleştirin.",
+    "suggestedSolution": "1. $ABC$ eşkenar üçgen olduğundan $m(\\widehat{A}) = m(\\widehat{B}) = m(\\widehat{C}) = 60^\\circ$'dir.\n2. $ADK$ üçgeninde iç açılar toplamı $180^\\circ$:\n   $m(\\widehat{AKD}) = 180^\\circ - (60^\\circ + 48^\\circ) = 72^\\circ$.\n3. $[AB]$ doğrusunda $D$ noktasındaki ters açılardan $m(\\widehat{BDL}) = m(\\widehat{ADK}) = 48^\\circ$'dir.\n4. $KLM$ ikizkenar dik üçgeninde $[KL] \\perp [KM]$ olduğundan taban açıları $m(\\widehat{L}) = m(\\widehat{M}) = 45^\\circ$'dir.\n5. $[LM]$ doğrusunun $[AB]$ kenarını kestiği noktaya $H$ dersek, $DHL$ üçgeninde $H$ köşesindeki dış açı:\n   $m(\\widehat{BHM}) = m(\\widehat{BDL}) + m(\\widehat{L}) = 48^\\circ + 45^\\circ = 93^\\circ$.\n6. $BHE$ üçgeninde $E$ noktasındaki dış açı $m(\\widehat{CEL})$:\n   $x = m(\\widehat{B}) + (180^\\circ - 93^\\circ) = 60^\\circ + 87^\\circ = 147^\\circ$ bulunur.",
+    "quickTip": "💡 ALES Taktiği: Dış açı kuralını ($dış\\ açı = komşu\\ olmayan\\ iki\\ iç\\ açı\\ toplamı$) iki kez uygulayın: $48^\\circ + 45^\\circ = 93^\\circ$, ardından $60^\\circ + 87^\\circ = 147^\\circ$.",
     "targetTimeSec": 80,
     "derivedFrom": "2021-ALES/1-S44"
   },
@@ -336,36 +337,37 @@
     "id": "2021_ales1_mat_45",
     "subject": "matematik",
     "category": "geometri_ucgende_alan",
-    "topicTitle": "Üçgende Alan Parçalama",
+    "topicTitle": "Eşkenar Üçgen ve Dik Üçgende Alan",
     "difficulty": 3,
-    "questionText": "Şekilde $D, E$ ve $F$ noktaları $ABC$ üçgeninin kenarları üzerindedir.\n\nBuna göre, boyalı bölgenin alanı kaç birimkaredir?",
+    "questionText": "$ABC$ eşkenar üçgendir.\n* $[AC] \\perp [DE]$\n* $[DE] \\perp [EF]$\n* $|DC| = 5 \\text{ birim}$\n* $|DA| = 1 \\text{ birim}$\n\nŞekilde $D, E$ ve $F$ noktaları $ABC$ üçgeninin kenarları üzerindedir.\n\nBuna göre, boyalı bölgenin alanı kaç birimkaredir?",
     "hasImage": true,
+    "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 280\" width=\"100%\" height=\"250\">\n  <defs>\n    \n    <style>\n      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2.2; stroke-linejoin: round; }\n      .geo-text { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }\n      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 13px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }\n      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }\n      .geo-point { fill: var(--text-primary, #f1f5f9); }\n      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }\n      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }\n\n      @media (prefers-color-scheme: light) {\n        .geo-line { stroke: var(--text-primary, #0f172a); }\n        .geo-sec { stroke: var(--accent-primary, #0284c7); }\n        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }\n        .geo-text { fill: var(--text-primary, #0f172a); }\n        .geo-text-muted { fill: var(--text-secondary, #475569); }\n        .geo-text-accent { fill: var(--zen-warning, #d97706); }\n        .geo-point { fill: var(--text-primary, #0f172a); }\n        .geo-right-angle { stroke: var(--text-muted, #64748b); }\n        .geo-angle-arc { stroke: var(--zen-warning, #d97706); }\n      }\n    </style>\n\n  </defs>\n\n  <!-- ABC Eşkenar Üçgeni -->\n  <polygon points=\"170,32 50,240 290,240\" class=\"geo-line\" />\n\n  <!-- Boyalı Dik Üçgen (DEF) -->\n  <polygon points=\"70,205 130,240 210,101\" class=\"geo-shaded\" />\n\n  <!-- D noktasındaki dik açı sembolü ([AC] ⊥ [DE]) -->\n  <path d=\"M 77,193 L 88,199 L 81,211\" class=\"geo-right-angle\" />\n  <circle cx=\"82\" cy=\"201\" r=\"1.5\" class=\"geo-point\" />\n\n  <!-- E noktasındaki dik açı sembolü ([DE] ⊥ [EF]) -->\n  <path d=\"M 120,234 L 126,224 L 136,230\" class=\"geo-right-angle\" />\n  <circle cx=\"127\" cy=\"229\" r=\"1.5\" class=\"geo-point\" />\n\n  <!-- Kenar Uzunlukları -->\n  <text x=\"48\" y=\"218\" class=\"geo-text-muted\">1</text>\n  <text x=\"110\" y=\"112\" class=\"geo-text-muted\">5</text>\n\n  <!-- Köşe Harfleri -->\n  <text x=\"170\" y=\"16\" class=\"geo-text\">C</text>\n  <text x=\"36\" y=\"246\" class=\"geo-text\">A</text>\n  <text x=\"304\" y=\"246\" class=\"geo-text\">B</text>\n  <text x=\"56\" y=\"196\" class=\"geo-text\">D</text>\n  <text x=\"130\" y=\"258\" class=\"geo-text\">E</text>\n  <text x=\"226\" y=\"98\" class=\"geo-text\">F</text>\n</svg>",
     "imageUrl": "/assets/questions/svg/geo_ucgen_alan_q45.svg",
     "options": [
       {
         "key": "A",
-        "text": "4"
+        "text": "$2\\sqrt{3}$"
       },
       {
         "key": "B",
-        "text": "5"
+        "text": "$3\\sqrt{3}$"
       },
       {
         "key": "C",
-        "text": "6"
+        "text": "$5\\sqrt{3}$"
       },
       {
         "key": "D",
-        "text": "7"
+        "text": "4"
       },
       {
         "key": "E",
-        "text": "8"
+        "text": "6"
       }
     ],
     "correctAnswer": "A",
-    "suggestedSolution": "Kenar oranları kullanılarak alan parçalama kuralı uygulanır: $\\text{Alan}(DEF) = 4 \\text{ birimkare}$ olarak hesaplanır.",
-    "quickTip": "💡 ALES Taktiği: Köşelerden tabanlara çizilen doğru parçalarında alanlar taban uzunlukları ile orantılıdır.",
+    "suggestedSolution": "1. $ABC$ eşkenar üçgenin bir kenar uzunluğu $|AC| = |AD| + |DC| = 1 + 5 = 6$ birimdir. Tüm açılar $60^\\circ$'dir.\n2. $ADE$ dik üçgeninde $[AC] \\perp [DE]$ ve $m(\\widehat{A}) = 60^\\circ$ olduğundan bu bir $30^\\circ-60^\\circ-90^\\circ$ özel üçgenidir.\n   $|AD| = 1$ ($30^\\circ$'nin karşısı) $\\implies$ hipotenüs $|AE| = 2$ ve $|DE| = 1 \\cdot \\sqrt{3} = \\sqrt{3}$ birimdir.\n3. $|AB| = 6$ birim olduğundan $|EB| = |AB| - |AE| = 6 - 2 = 4$ birim kalır.\n4. $E$ noktasında doğru açı $180^\\circ$'dir:\n   $m(\\widehat{AED}) + m(\\widehat{DEF}) + m(\\widehat{FEB}) = 180^\\circ \\implies 30^\\circ + 90^\\circ + m(\\widehat{FEB}) = 180^\\circ \\implies m(\\widehat{FEB}) = 60^\\circ$.\n5. $EFB$ üçgeninde $m(\\widehat{B}) = 60^\\circ$ ve $m(\\widehat{FEB}) = 60^\\circ$ olduğundan $EFB$ de bir eşkenar üçgendir! Dolayısıyla $|EF| = |EB| = 4$ birimdir.\n6. Boyalı bölge $DEF$ bir dik üçgendir ($[DE] \\perp [EF]$). Dik kenarları $|DE| = \\sqrt{3}$ ve $|EF| = 4$'tür.\n   $\\text{Alan}(DEF) = \\frac{|DE| \\cdot |EF|}{2} = \\frac{\\sqrt{3} \\cdot 4}{2} = 2\\sqrt{3} \\text{ birimkare}$ bulunur.",
+    "quickTip": "💡 ALES Taktiği: $30^\\circ-60^\\circ-90^\\circ$ üçgeninde $30^\\circ$'nin karşısı 1 ise hipotenüs 2'dir. $E$ noktasındaki $180^\\circ - 120^\\circ = 60^\\circ$ ile yan üçgenin de eşkenar olduğunu anında yakalayın ($EF = 4$).",
     "targetTimeSec": 75,
     "derivedFrom": "2021-ALES/1-S45"
   },
@@ -373,10 +375,11 @@
     "id": "2021_ales1_mat_46",
     "subject": "matematik",
     "category": "geometri_kare",
-    "topicTitle": "Karede Alan ve Benzerlik",
+    "topicTitle": "Karede Alan ve Simetri",
     "difficulty": 3,
-    "questionText": "Şekilde $K, L, M$ ve $N$ noktaları $ABCD$ karesinin kenarları üzerindedir.\n\nBuna göre, boyalı bölgelerin alanları toplamı kaç birimkaredir?",
+    "questionText": "$ABCD$ karedir.\n* $|AB| = 6 \\text{ birim}$\n* $|AK| = |LC| = 2 \\text{ birim}$\n* $|CM| = |NA| = 2 \\text{ birim}$\n\nŞekilde $K, L, M$ ve $N$ noktaları $ABCD$ karesinin kenarları üzerindedir.\n\nBuna göre, boyalı bölgelerin alanları toplamı kaç birimkaredir?",
     "hasImage": true,
+    "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 300\" width=\"100%\" height=\"260\">\n  <defs>\n    \n    <style>\n      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2.2; stroke-linejoin: round; }\n      .geo-text { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }\n      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 13px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }\n      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }\n      .geo-point { fill: var(--text-primary, #f1f5f9); }\n      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }\n      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }\n\n      @media (prefers-color-scheme: light) {\n        .geo-line { stroke: var(--text-primary, #0f172a); }\n        .geo-sec { stroke: var(--accent-primary, #0284c7); }\n        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }\n        .geo-text { fill: var(--text-primary, #0f172a); }\n        .geo-text-muted { fill: var(--text-secondary, #475569); }\n        .geo-text-accent { fill: var(--zen-warning, #d97706); }\n        .geo-point { fill: var(--text-primary, #0f172a); }\n        .geo-right-angle { stroke: var(--text-muted, #64748b); }\n        .geo-angle-arc { stroke: var(--zen-warning, #d97706); }\n      }\n    </style>\n\n  </defs>\n\n  <!-- Boyalı Dörtgen 1: AKPN -->\n  <polygon points=\"50,250 117,250 150,150 50,183\" class=\"geo-shaded\" />\n\n  <!-- Boyalı Dörtgen 2: CLPM -->\n  <polygon points=\"250,50 250,117 150,150 183,50\" class=\"geo-shaded\" />\n\n  <!-- ABCD Karesi Çerçevesi -->\n  <rect x=\"50\" y=\"50\" width=\"200\" height=\"200\" class=\"geo-line\" />\n\n  <!-- Kesit Doğruları [KM] ve [NL] -->\n  <line x1=\"117\" y1=\"250\" x2=\"183\" y2=\"50\" class=\"geo-sec\" />\n  <line x1=\"50\" y1=\"183\" x2=\"250\" y2=\"117\" class=\"geo-sec\" />\n\n  <!-- Uzunluk Etiketleri (2) -->\n  <text x=\"83\" y=\"266\" class=\"geo-text-muted\">2</text>\n  <text x=\"34\" y=\"216\" class=\"geo-text-muted\">2</text>\n  <text x=\"216\" y=\"34\" class=\"geo-text-muted\">2</text>\n  <text x=\"266\" y=\"83\" class=\"geo-text-muted\">2</text>\n\n  <!-- Köşe Harfleri -->\n  <text x=\"36\" y=\"50\" class=\"geo-text\">D</text>\n  <text x=\"264\" y=\"50\" class=\"geo-text\">C</text>\n  <text x=\"36\" y=\"256\" class=\"geo-text\">A</text>\n  <text x=\"264\" y=\"256\" class=\"geo-text\">B</text>\n\n  <text x=\"117\" y=\"268\" class=\"geo-text\">K</text>\n  <text x=\"266\" y=\"117\" class=\"geo-text\">L</text>\n  <text x=\"183\" y=\"34\" class=\"geo-text\">M</text>\n  <text x=\"34\" y=\"183\" class=\"geo-text\">N</text>\n</svg>",
     "imageUrl": "/assets/questions/svg/geo_kare_alan_q46.svg",
     "options": [
       {
@@ -401,8 +404,8 @@
       }
     ],
     "correctAnswer": "E",
-    "suggestedSolution": "Karenin bir kenarı ile dik üçgenlerin kenarları Pisagor bağıntısı ve alan formülü ile hesaplandığında toplam alan 12 birimkare bulunur.",
-    "quickTip": "💡 ALES Taktiği: Simetrik üçgenlerin alanlarını toplayıp karenin simetri ekseninden yararlanın.",
+    "suggestedSolution": "1. Karenin kenar uzunluğu 6 birimdir. $|AK| = 2, |KB| = 4$; $|LC| = 2, |BL| = 4$; $|CM| = 2, |MD| = 4$; $|NA| = 2, |DN| = 4$'tür.\n2. Şekil karenin merkezine ($(3, 3)$ noktasına) göre $180^\\circ$ dönme simetrisine sahiptir. $[KM]$ ve $[NL]$ doğruları tam karenin merkezi olan $P(3, 3)$ noktasında kesişir.\n3. Boyalı $AKPN$ dörtgenini $AP$ doğru parçası ile iki üçgene ayıralım:\n   * $\\triangle AKP$'nin tabanı $|AK| = 2$, yüksekliği $P$'nin $AB$'ye uzaklığı olan 3 birimdir: $\\text{Alan} = \\frac{2 \\cdot 3}{2} = 3$.\n   * $\\triangle ANP$'nin tabanı $|NA| = 2$, yüksekliği $P$'nin $AD$'ye uzaklığı olan 3 birimdir: $\\text{Alan} = \\frac{2 \\cdot 3}{2} = 3$.\n   * $\\text{Alan}(AKPN) = 3 + 3 = 6$ birimkaredir.\n4. Simetri gereği diğer boyalı $CLPM$ dörtgeninin alanı da 6 birimkaredir.\n5. Toplam boyalı alan: $6 + 6 = 12$ birimkare bulunur.",
+    "quickTip": "💡 ALES Taktiği: Kesişim noktası $P$ merkezdedir (kenarlara uzaklık 3 birim). Tabanı 2, yüksekliği 3 olan dört simetrik üçgen vardır: $4 \\times \\frac{2 \\times 3}{2} = 12$.",
     "targetTimeSec": 70,
     "derivedFrom": "2021-ALES/1-S46"
   },
@@ -410,36 +413,37 @@
     "id": "2021_ales1_mat_47",
     "subject": "matematik",
     "category": "geometri_dikdortgen",
-    "topicTitle": "Dikdörtgende Alan Oranı",
+    "topicTitle": "Dikdörtgende Alan Parçalama ve Oran",
     "difficulty": 3,
-    "questionText": "Şekilde $E, F$ ve $G$ noktaları $ABCD$ dikdörtgeninin kenarları üzerindedir.\n\nBuna göre, $EFCG$ dörtgeninin alanının $ABCD$ dikdörtgeninin alanına oranı kaçtır?",
+    "questionText": "$ABCD$ dikdörtgendir.\n* $|AE| = |EB|$\n* $\\frac{|DG|}{|GC|} = \\frac{|CF|}{|FB|} = \\frac{2}{3}$\n\nŞekilde $E, F$ ve $G$ noktaları $ABCD$ dikdörtgeninin kenarları üzerindedir.\n\nBuna göre, $EFCG$ dörtgeninin alanının $ABCD$ dikdörtgeninin alanına oranı kaçtır?",
     "hasImage": true,
+    "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 350 250\" width=\"100%\" height=\"230\">\n  <defs>\n    \n    <style>\n      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2.2; stroke-linejoin: round; }\n      .geo-text { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }\n      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 13px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }\n      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }\n      .geo-point { fill: var(--text-primary, #f1f5f9); }\n      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }\n      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }\n\n      @media (prefers-color-scheme: light) {\n        .geo-line { stroke: var(--text-primary, #0f172a); }\n        .geo-sec { stroke: var(--accent-primary, #0284c7); }\n        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }\n        .geo-text { fill: var(--text-primary, #0f172a); }\n        .geo-text-muted { fill: var(--text-secondary, #475569); }\n        .geo-text-accent { fill: var(--zen-warning, #d97706); }\n        .geo-point { fill: var(--text-primary, #0f172a); }\n        .geo-right-angle { stroke: var(--text-muted, #64748b); }\n        .geo-angle-arc { stroke: var(--zen-warning, #d97706); }\n      }\n    </style>\n\n  </defs>\n\n  <!-- Boyalı Bölge: EFCG Dörtgeni -->\n  <polygon points=\"170,200 290,116 290,60 146,60\" class=\"geo-shaded\" />\n\n  <!-- ABCD Dikdörtgeni -->\n  <rect x=\"50\" y=\"60\" width=\"240\" height=\"140\" class=\"geo-line\" />\n\n  <!-- Ayırıcı Doğrular [GE] ve [EF] -->\n  <line x1=\"146\" y1=\"60\" x2=\"170\" y2=\"200\" class=\"geo-sec\" />\n  <line x1=\"170\" y1=\"200\" x2=\"290\" y2=\"116\" class=\"geo-sec\" />\n\n  <!-- Eşitlik Çentikleri (|AE| = |EB|) -->\n  <line x1=\"108\" y1=\"195\" x2=\"112\" y2=\"205\" class=\"geo-line\" stroke-width=\"1.8\" />\n  <line x1=\"228\" y1=\"195\" x2=\"232\" y2=\"205\" class=\"geo-line\" stroke-width=\"1.8\" />\n\n  <!-- Köşe Harfleri -->\n  <text x=\"36\" y=\"60\" class=\"geo-text\">D</text>\n  <text x=\"304\" y=\"60\" class=\"geo-text\">C</text>\n  <text x=\"36\" y=\"206\" class=\"geo-text\">A</text>\n  <text x=\"304\" y=\"206\" class=\"geo-text\">B</text>\n\n  <text x=\"170\" y=\"218\" class=\"geo-text\">E</text>\n  <text x=\"146\" y=\"44\" class=\"geo-text\">G</text>\n  <text x=\"306\" y=\"116\" class=\"geo-text\">F</text>\n</svg>",
     "imageUrl": "/assets/questions/svg/geo_dikdortgen_oran_q47.svg",
     "options": [
       {
         "key": "A",
-        "text": "$\\frac{1}{3}$"
-      },
-      {
-        "key": "B",
         "text": "$\\frac{2}{5}$"
       },
       {
+        "key": "B",
+        "text": "$\\frac{4}{5}$"
+      },
+      {
         "key": "C",
-        "text": "$\\frac{1}{2}$"
+        "text": "$\\frac{2}{3}$"
       },
       {
         "key": "D",
-        "text": "$\\frac{3}{7}$"
+        "text": "$\\frac{1}{3}$"
       },
       {
         "key": "E",
-        "text": "$\\frac{4}{9}$"
+        "text": "$\\frac{1}{2}$"
       }
     ],
     "correctAnswer": "A",
-    "suggestedSolution": "Beyaz üçgenlerin alanları toplamı tüm alandan çıkarıldığında oran $\\frac{1}{3}$ olarak bulunur.",
-    "quickTip": "💡 ALES Taktiği: Dörtgen alanını doğrudan hesaplamak yerine, tüm dikdörtgenden kenardaki dik üçgenleri çıkarın.",
+    "suggestedSolution": "1. Dikdörtgenin kenarlarına oranları rahat bölünebilen değerler verelim: $|AB| = |DC| = 10$, $|AD| = |BC| = 5$ olsun. $\\text{Alan}(ABCD) = 10 \\cdot 5 = 50$.\n2. $E$ noktası $AB$'nin orta noktası olduğundan $|AE| = |EB| = 5$'tir.\n3. $\\frac{|DG|}{|GC|} = \\frac{2}{3}$ ve $|DC| = 10$ olduğundan: $|DG| = 4, |GC| = 6$.\n4. $\\frac{|CF|}{|FB|} = \\frac{2}{3}$ ve $|BC| = 5$ olduğundan: $|CF| = 2, |FB| = 3$.\n5. Dikdörtgenden beyaz bölgelerin alanını çıkaralım:\n   * $AEGD$ dik yamuğunun alanı: $\\frac{|AE| + |DG|}{2} \\cdot |AD| = \\frac{5 + 4}{2} \\cdot 5 = \\frac{45}{2} = 22.5$\n   * $EBF$ dik üçgeninin alanı: $\\frac{|EB| \\cdot |FB|}{2} = \\frac{5 \\cdot 3}{2} = 7.5$\n   * Beyaz alanlar toplamı: $22.5 + 7.5 = 30$\n6. $EFCG$ dörtgeninin alanı: $50 - 30 = 20$.\n7. İstenen oran: $\\frac{\\text{Alan}(EFCG)}{\\text{Alan}(ABCD)} = \\frac{20}{50} = \\frac{2}{5}$ bulunur.",
+    "quickTip": "💡 ALES Taktiği: Oran sorularında kenarlara paydaların katı sayısal değerler verin ($10$ ve $5$). Tüm alandan dik yamuk ve dik üçgeni çıkararak 20 saniyede sonuca ulaşın.",
     "targetTimeSec": 75,
     "derivedFrom": "2021-ALES/1-S47"
   },
@@ -447,10 +451,11 @@
     "id": "2021_ales1_mat_48",
     "subject": "matematik",
     "category": "geometri_cember",
-    "topicTitle": "Çemberde Uzunluk ve Çapı Gören Çevre Açı",
+    "topicTitle": "Çemberde Kiriş ve Uzunluk",
     "difficulty": 3,
-    "questionText": "$C$ noktası, $O$ merkezli yarım çemberin üzerindedir.\n\nBuna göre, $x$ kaç birimdir?",
+    "questionText": "$C$ noktası, $O$ merkezli yarım çemberin üzerindedir.\n* $D \\in [AC]$\n* $|AD| = 14 \\text{ birim}$\n* $|DC| = 2 \\text{ birim}$\n* $|AO| = 10 \\text{ birim}$\n* $|OD| = x$\n\nBuna göre, $x$ kaç birimdir?",
     "hasImage": true,
+    "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 250\" width=\"100%\" height=\"230\">\n  <defs>\n    \n    <style>\n      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }\n      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2.2; stroke-linejoin: round; }\n      .geo-text { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }\n      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 13px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }\n      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"Segoe UI\", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }\n      .geo-point { fill: var(--text-primary, #f1f5f9); }\n      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }\n      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }\n\n      @media (prefers-color-scheme: light) {\n        .geo-line { stroke: var(--text-primary, #0f172a); }\n        .geo-sec { stroke: var(--accent-primary, #0284c7); }\n        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }\n        .geo-text { fill: var(--text-primary, #0f172a); }\n        .geo-text-muted { fill: var(--text-secondary, #475569); }\n        .geo-text-accent { fill: var(--zen-warning, #d97706); }\n        .geo-point { fill: var(--text-primary, #0f172a); }\n        .geo-right-angle { stroke: var(--text-muted, #64748b); }\n        .geo-angle-arc { stroke: var(--zen-warning, #d97706); }\n      }\n    </style>\n\n  </defs>\n\n  <!-- Çap [AB] -->\n  <line x1=\"40\" y1=\"200\" x2=\"280\" y2=\"200\" class=\"geo-line\" />\n\n  <!-- Yarım Çember Yayı -->\n  <path d=\"M 40,200 A 120,120 0 0,1 280,200\" class=\"geo-line\" stroke-width=\"2.5\" />\n\n  <!-- Kiriş [AC] -->\n  <line x1=\"40\" y1=\"200\" x2=\"194\" y2=\"85\" class=\"geo-line\" />\n\n  <!-- x Doğru Parçası [OD] -->\n  <line x1=\"160\" y1=\"200\" x2=\"174\" y2=\"99\" class=\"geo-sec\" stroke-width=\"2.4\" />\n\n  <!-- O ve D Noktaları -->\n  <circle cx=\"160\" cy=\"200\" r=\"3\" class=\"geo-point\" />\n  <circle cx=\"174\" cy=\"99\" r=\"3\" class=\"geo-point\" />\n  <circle cx=\"194\" cy=\"85\" r=\"3\" class=\"geo-point\" />\n\n  <!-- Uzunluk Değerleri -->\n  <text x=\"100\" y=\"216\" class=\"geo-text-muted\">10</text>\n  <text x=\"100\" y=\"132\" class=\"geo-text-muted\">14</text>\n  <text x=\"190\" y=\"74\" class=\"geo-text-muted\">2</text>\n  <text x=\"178\" y=\"152\" class=\"geo-text-accent\">x</text>\n\n  <!-- Köşe ve Merkez Harfleri -->\n  <text x=\"24\" y=\"204\" class=\"geo-text\">A</text>\n  <text x=\"296\" y=\"204\" class=\"geo-text\">B</text>\n  <text x=\"160\" y=\"218\" class=\"geo-text\">O</text>\n  <text x=\"164\" y=\"88\" class=\"geo-text\">D</text>\n  <text x=\"208\" y=\"76\" class=\"geo-text\">C</text>\n</svg>",
     "imageUrl": "/assets/questions/svg/geo_cember_yarim_q48.svg",
     "options": [
       {
@@ -459,24 +464,24 @@
       },
       {
         "key": "B",
-        "text": "7"
-      },
-      {
-        "key": "C",
         "text": "8"
       },
       {
+        "key": "C",
+        "text": "$6\\sqrt{2}$"
+      },
+      {
         "key": "D",
-        "text": "9"
+        "text": "$8\\sqrt{2}$"
       },
       {
         "key": "E",
-        "text": "10"
+        "text": "$6\\sqrt{3}$"
       }
     ],
     "correctAnswer": "C",
-    "suggestedSolution": "Çapı gören çevre açı $90^\\circ$'dir. $ABC$ dik üçgeninde Öklid bağıntısı $h^2 = p \\cdot k$ uygulanarak $x = 8$ birim bulunur.",
-    "quickTip": "💡 ALES Taktiği: Çapı gören çevre açının dik açı olduğunu asla unutmayın; hemen $90^\\circ$ işaretini koyun.",
+    "suggestedSolution": "1. $[AB]$ çap ve $O$ merkez olduğundan çemberin yarıçapı $R = |AO| = |OB| = |OC| = 10$ birimdir.\n2. $|AC| = |AD| + |DC| = 14 + 2 = 16$ birimlik bir kiriştir.\n3. $AOC$ üçgeninde $|OA| = |OC| = 10$ olduğundan bu üçgen ikizkenardır.\n4. $O$ merkezinden $[AC]$ kirişine bir $OH$ dikmesi indirelim ($[OH] \\perp [AC]$).\n   Kirişe indirilen dikme kirişi iki eşit parçaya böler: $|AH| = |HC| = \\frac{16}{2} = 8$ birim.\n5. $OHA$ dik üçgeninde hipotenüs 10, dik kenar 8 olduğundan (6-8-10 özel üçgeni) $|OH| = 6$ birim bulunur.\n6. Şimdi $D$ noktasının konumuna bakalım: $|AD| = 14$ ve $|AH| = 8$ olduğundan $|HD| = |AD| - |AH| = 14 - 8 = 6$ birimdir.\n7. $OHD$ üçgeninde: $[OH] \\perp [HD]$, $|OH| = 6$ ve $|HD| = 6$ birimdir.\n   Yani $OHD$ üçgeni bir $45^\\circ-45^\\circ-90^\\circ$ ikizkenar dik üçgenidir!\n8. Pisagor teoreminden hipotenüs $x = |OD| = 6\\sqrt{2}$ birim bulunur.",
+    "quickTip": "💡 ALES Taktiği: Çemberde kiriş gördüğünüzde merkezden hemen dik indirin! Kiriş ikiye bölünür ($8, 8$), 6-8-10 üçgeninden dikme 6 çıkar. $HD = 14 - 8 = 6$ olunca $6-6-6\\sqrt{2}$ kendiliğinden gelir.",
     "targetTimeSec": 70,
     "derivedFrom": "2021-ALES/1-S48"
   },

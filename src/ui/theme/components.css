@@ -242,17 +242,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 12px 0 24px;
-  padding: 16px;
-  background: #ffffff;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-medium);
-  box-shadow: var(--shadow-md);
+  margin: 16px 0 24px;
+  padding: 20px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
+  transition: background var(--transition-normal), border-color var(--transition-normal);
+}
+
+.question-image-container svg {
+  max-width: 100%;
+  width: auto;
+  max-height: 280px;
+  display: block;
 }
 
 .question-image {
   max-width: 100%;
+  max-height: 280px;
   height: auto;
   display: block;
   object-fit: contain;
