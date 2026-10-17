@@ -1,0 +1,141 @@
+{
+  "total_exams": 11,
+  "total_questions_extracted": 1198,
+  "total_sayisal": 579,
+  "total_sozel": 619,
+  "total_images_extracted": 1069,
+  "exams": [
+    {
+      "filename": "ALES1_sorular-2.pdf",
+      "exam_stem": "ALES1_sorular-2",
+      "metadata": {
+        "exam_title": "2020 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI - 1",
+        "exam_code": "2020 - ALES/1",
+        "exam_date": "16-08-2020"
+      },
+      "sayisal_questions": 55,
+      "sozel_questions": 60,
+      "images_extracted": 122
+    },
+    {
+      "filename": "ALES1_sorular-3.pdf",
+      "exam_stem": "ALES1_sorular-3",
+      "metadata": {
+        "exam_title": "2019 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI",
+        "exam_code": "2019 - ALES/1",
+        "exam_date": "05-05-2019"
+      },
+      "sayisal_questions": 56,
+      "sozel_questions": 58,
+      "images_extracted": 85
+    },
+    {
+      "filename": "ALES1_sorular.pdf",
+      "exam_stem": "ALES1_sorular",
+      "metadata": {
+        "exam_title": "2021 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI - 1",
+        "exam_code": "2021 - ALES/1",
+        "exam_date": "02-05-2021"
+      },
+      "sayisal_questions": 48,
+      "sozel_questions": 52,
+      "images_extracted": 81
+    },
+    {
+      "filename": "ALES2-12112019.pdf",
+      "exam_stem": "ALES2-12112019",
+      "metadata": {
+        "exam_title": "2018 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI/2",
+        "exam_code": "2018 - ALES/2",
+        "exam_date": "30-09-2018"
+      },
+      "sayisal_questions": 59,
+      "sozel_questions": 58,
+      "images_extracted": 94
+    },
+    {
+      "filename": "ALES2_sorular-2.pdf",
+      "exam_stem": "ALES2_sorular-2",
+      "metadata": {
+        "exam_title": "2020 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI - 2",
+        "exam_code": "2020 - ALES/2",
+        "exam_date": "21-02-2021"
+      },
+      "sayisal_questions": 47,
+      "sozel_questions": 53,
+      "images_extracted": 102
+    },
+    {
+      "filename": "ALES2_sorular-3.pdf",
+      "exam_stem": "ALES2_sorular-3",
+      "metadata": {
+        "exam_title": "2019 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI - 2",
+        "exam_code": "2019 - ALES/2",
+        "exam_date": "22-09-2019"
+      },
+      "sayisal_questions": 56,
+      "sozel_questions": 58,
+      "images_extracted": 102
+    },
+    {
+      "filename": "ALES2_sorular.pdf",
+      "exam_stem": "ALES2_sorular",
+      "metadata": {
+        "exam_title": "2021 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI - 2",
+        "exam_code": "2021 - ALES/2",
+        "exam_date": "19-09-2021"
+      },
+      "sayisal_questions": 50,
+      "sozel_questions": 51,
+      "images_extracted": 84
+    },
+    {
+      "filename": "ALES3-12112019.pdf",
+      "exam_stem": "ALES3-12112019",
+      "metadata": {
+        "exam_title": "2018 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI/3",
+        "exam_code": "2018 - ALES/3",
+        "exam_date": "18-11-2018"
+      },
+      "sayisal_questions": 49,
+      "sozel_questions": 58,
+      "images_extracted": 91
+    },
+    {
+      "filename": "ALES3_sorular-2.pdf",
+      "exam_stem": "ALES3_sorular-2",
+      "metadata": {
+        "exam_title": "2019 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI - 3",
+        "exam_code": "2019 - ALES/3",
+        "exam_date": "17-11-2019"
+      },
+      "sayisal_questions": 55,
+      "sozel_questions": 60,
+      "images_extracted": 114
+    },
+    {
+      "filename": "ALES3_sorular.pdf",
+      "exam_stem": "ALES3_sorular",
+      "metadata": {
+        "exam_title": "2021 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI - 3",
+        "exam_code": "2021 - ALES/3",
+        "exam_date": "21-11-2021"
+      },
+      "sayisal_questions": 48,
+      "sozel_questions": 53,
+      "images_extracted": 89
+    },
+    {
+      "filename": "ALESILKBAHAR24072018.pdf",
+      "exam_stem": "ALESILKBAHAR24072018",
+      "metadata": {
+        "exam_title": "2018 AKADEMİK PERSONEL VE LİSANSÜSTÜ EĞİTİMİ GİRİŞ SINAVI (İLKBAHAR DÖNEMİ)",
+        "exam_code": "",
+        "exam_date": "06-05-2018"
+      },
+      "sayisal_questions": 56,
+      "sozel_questions": 58,
+      "images_extracted": 105
+    }
+  ]
+}

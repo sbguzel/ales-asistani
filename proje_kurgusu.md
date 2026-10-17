@@ -1113,10 +1113,10 @@ ales-asistani/
 ### 🐍 Faz 3: Python PDF Analiz & Soru Üretim Hattı (Scripts Pipeline)
 
 #### Faz 3A: PDF Çıkarma Altyapısı
-- [ ] `scripts/requirements.txt` oluşturun (`PyMuPDF`, `matplotlib`, `shapely`, `pillow`, `numpy`).
-- [ ] `scripts/pipeline/pdf_extractor.py`: 11 PDF'i otomatik okuyup çift sütun ayrıştırma (x=297.6pt bölme), soru sınırlarını tespit, gömülü PNG'leri boyutlarına göre sınıflandırarak `scripts/output/extracted/` altına dışa aktaran betiği yazın.
-- [ ] `scripts/pipeline/answer_key_parser.py`: Son sayfa "SAYISAL TESTİ / SÖZEL TESTİ" formatını parse edip soru-cevap eşleştirmesi yapan modülü oluşturun.
-- [ ] Çıktı: Her PDF için `scripts/output/raw_json/{pdf_adı}.json` ham yapısal veri dosyası.
+- [x] `scripts/requirements.txt` oluşturun (`PyMuPDF`, `matplotlib`, `shapely`, `pillow`, `numpy`).
+- [x] `scripts/pipeline/pdf_extractor.py`: 11 PDF'i otomatik okuyup çift sütun ayrıştırma (x=297.6pt bölme), soru sınırlarını tespit, gömülü PNG'leri boyutlarına göre sınıflandırarak `scripts/output/extracted/` altına dışa aktaran betiği yazın.
+- [x] `scripts/pipeline/answer_key_parser.py`: Son sayfa "SAYISAL TESTİ / SÖZEL TESTİ" formatını parse edip soru-cevap eşleştirmesi yapan modülü oluşturun.
+- [x] Çıktı: Her PDF için `scripts/output/raw_json/{pdf_adı}.json` ham yapısal veri dosyası.
 
 #### Faz 3B: Blueprint (Şablon) Oluşturma (İnsan Destekli)
 - [ ] Çıkarılan ham verileri ve PNG görselleri inceleyerek her soru için konu kategorisini belirleyin.
