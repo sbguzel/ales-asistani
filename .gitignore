@@ -1,0 +1,32 @@
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+serviceAccountKey.json
+
+# Node dependencies & build
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env/
+*.egg-info/
+.pytest_cache/
+
+# Output & Extracted data
+scripts/output/extracted/
+scripts/output/raw_json/

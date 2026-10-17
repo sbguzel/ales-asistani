@@ -1,0 +1,100 @@
+:root {
+  /* Renk Paleti - Sessiz Koyu Tema (Varsayılan Zen Modu) */
+  --bg-primary: #0a0b10;
+  --bg-secondary: #12151f;
+  --bg-tertiary: #1a1e2d;
+  --bg-elevated: #212638;
+  --bg-glass: rgba(18, 21, 31, 0.75);
+  
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-inverted: #0a0b10;
+
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-focus: #38bdf8;
+
+  /* Vurgu ve Geri Bildirim Renkleri (Göz Yormayan Sakin Tonlar) */
+  --accent-primary: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --accent-glow: rgba(56, 189, 248, 0.2);
+  --accent-secondary: #818cf8;
+
+  --zen-success: #10b981;
+  --zen-success-bg: rgba(16, 185, 129, 0.12);
+  --zen-success-border: rgba(16, 185, 129, 0.3);
+
+  --zen-error: #f43f5e;
+  --zen-error-bg: rgba(244, 63, 94, 0.12);
+  --zen-error-border: rgba(244, 63, 94, 0.3);
+
+  --zen-warning: #f59e0b;
+  --zen-warning-bg: rgba(245, 158, 11, 0.12);
+
+  /* Çizim Tuvali Renkleri */
+  --canvas-bg: #0f121a;
+  --canvas-grid: rgba(255, 255, 255, 0.04);
+  --canvas-pen-default: #38bdf8;
+
+  /* Tipografi */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", monospace;
+
+  /* Yuvarlaklık & Gölgeler */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+
+  --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 150ms var(--ease-apple);
+  --transition-normal: 250ms var(--ease-apple);
+  --transition-slow: 400ms var(--ease-apple);
+}
+
+/* Açık Tema Desteği */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-elevated: #e2e8f0;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --text-inverted: #f8fafc;
+
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-medium: rgba(0, 0, 0, 0.12);
+  --border-focus: #0284c7;
+
+  --accent-primary: #0284c7;
+  --accent-hover: #0369a1;
+  --accent-glow: rgba(2, 132, 199, 0.2);
+  --accent-secondary: #6366f1;
+
+  --zen-success: #059669;
+  --zen-success-bg: rgba(5, 150, 105, 0.1);
+  --zen-success-border: rgba(5, 150, 105, 0.25);
+
+  --zen-error: #e11d48;
+  --zen-error-bg: rgba(225, 29, 72, 0.1);
+  --zen-error-border: rgba(225, 29, 72, 0.25);
+
+  --zen-warning: #d97706;
+  --zen-warning-bg: rgba(217, 119, 6, 0.1);
+
+  --canvas-bg: #f8fafc;
+  --canvas-grid: rgba(0, 0, 0, 0.05);
+  --canvas-pen-default: #0284c7;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+}

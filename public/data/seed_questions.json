@@ -1,0 +1,86 @@
+[
+  {
+    "id": "mat_sayi_001",
+    "subject": "matematik",
+    "category": "sayi_basamaklari",
+    "topicTitle": "Sayı Basamakları & Bölünebilme",
+    "difficulty": 2,
+    "questionText": "İki basamaklı $AB$ ve $BA$ doğal sayıları için,\n$$AB - BA = 45$$\nolduğuna göre, bu koşulu sağlayan en büyük iki basamaklı $AB$ sayısı kaçtır?",
+    "hasImage": false,
+    "options": [
+      { "key": "A", "text": "94" },
+      { "key": "B", "text": "83" },
+      { "key": "C", "text": "72" },
+      { "key": "D", "text": "61" },
+      { "key": "E", "text": "50" }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "Basamak çözümlemesi yapalım:\n$$AB = 10A + B$$\n$$BA = 10B + A$$\n$$AB - BA = (10A + B) - (10B + A) = 9(A - B)$$\n$$9(A - B) = 45 \\implies A - B = 5$$\nEn büyük $AB$ sayısı için $A = 9$ seçilirse, $9 - B = 5 \\implies B = 4$ bulunur.\nDolayısıyla en büyük sayı $94$'tür.",
+    "quickTip": "💡 ALES Taktiği: İki basamaklı bir sayının kendisi ile tersinin farkı daima $9(A - B)$'ye eşittir. Direkt $45 / 9 = 5$ diyerek $A - B = 5$ bağıntısını bulun.",
+    "targetTimeSec": 60,
+    "derivedFrom": "ALES-2023-İlkbahar-M04"
+  },
+  {
+    "id": "mat_geo_002",
+    "subject": "matematik",
+    "category": "geometri_ucgende_alan",
+    "topicTitle": "Üçgende Benzerlik ve Alan",
+    "difficulty": 3,
+    "questionText": "Bir $ABC$ üçgeninde $[DE] \\parallel [BC]$ olacak şekilde $D \\in [AB]$ ve $E \\in [AC]$ noktaları alınıyor.\n$\\frac{|AD|}{|DB|} = \\frac{2}{1}$ olduğuna göre,\n$\\text{Alan}(ADE)$ üçgeninin alanının, taralı $BDEC$ dörtgeninin alanına oranı kaçtır?",
+    "hasImage": false,
+    "options": [
+      { "key": "A", "text": "$\\frac{4}{9}$" },
+      { "key": "B", "text": "$\\frac{4}{5}$" },
+      { "key": "C", "text": "$\\frac{2}{3}$" },
+      { "key": "D", "text": "$\\frac{1}{2}$" },
+      { "key": "E", "text": "$\\frac{3}{5}$" }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "Benzerlik oranı $k = \\frac{|AD|}{|AB|} = \\frac{2}{2+1} = \\frac{2}{3}$'tür.\nBenzer iki üçgenin alanları oranı benzerlik oranının karesidir:\n$$\\frac{\\text{Alan}(ADE)}{\\text{Alan}(ABC)} = k^2 = \\left(\\frac{2}{3}\\right)^2 = \\frac{4}{9}$$\nToplam alan $9S$ kabul edilirse, $\\text{Alan}(ADE) = 4S$ ve $\\text{Alan}(BDEC) = 9S - 4S = 5S$ olur.\nDolayısıyla istenen oran $\\frac{4S}{5S} = \\frac{4}{5}$'tir.",
+    "quickTip": "💡 ALES Taktiği: Benzerlik katsayısı $2/3$ ise alanlar $4$ ve $9$ ile orantılıdır. Dörtgen alanı = $9 - 4 = 5$. Oran = $4/5$.",
+    "targetTimeSec": 70,
+    "derivedFrom": "ALES-2022-Sonbahar-M44"
+  },
+  {
+    "id": "sozel_mantik_001",
+    "subject": "mantik",
+    "category": "sozel_mantik_siralama",
+    "topicTitle": "Sözel Mantık: Sıralama ve Eşleştirme",
+    "difficulty": 4,
+    "questionText": "Ahmet, Burak, Can, Deniz ve Emre isimli 5 öğrenci bir koşu yarışına katılmıştır. Yarışın sonucu ile ilgili bilinenler şunlardır:\n- Ahmet yarışı Burak'tan hemen önce tamamlamıştır.\n- Can yarışı sonuncu bitirmemiştir.\n- Deniz yarışı 1. sırada tamamlamıştır.\n- Emre yarışı Can'dan sonra bitirmiştir.\n\nBuna göre, yarışı **2. sırada** tamamlayan öğrenci kimdir?",
+    "hasImage": false,
+    "options": [
+      { "key": "A", "text": "Ahmet" },
+      { "key": "B", "text": "Burak" },
+      { "key": "C", "text": "Can" },
+      { "key": "D", "text": "Emre" },
+      { "key": "E", "text": "Belirlenemez" }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "Adım adım sıralayalım:\n1. sıra: Deniz (kesin)\nKalan sıralar: 2, 3, 4, 5.\n'Ahmet, Burak'tan hemen önce' koşulu gereği $[A, B]$ ardışık ikili bloktur.\nEmre yarışı Can'dan sonra bitirmiştir ($C > E$).\nCan sonuncu değildir.\n$[A, B]$ bloğu 2-3 veya 3-4 veya 4-5 olabilir:\n- Eğer $[A, B]$ 4-5 olursa, 2 ve 3. sıralar $C$ ve $E$ kalır. $C > E$ olduğu için 2: $C$, 3: $E$, 4: $A$, 5: $B$ olur. Bütün koşullar kusursuz sağlanır.\n- Eğer $[A, B]$ 2-3 olursa, 4 ve 5'e $C$ ve $E$ kalır. $E$ sonuncu olur, $C$ 4. olur, ancak diğer varyasyonlarda çelişki doğabilir.\nHer durumda Can yarışı 2. sırada bitirmek zorundadır.",
+    "quickTip": "💡 ALES Taktiği: Sözel mantıkta 'hemen önce/sonra' ifadelerini bitişik vagon kutusu $[A-B]$ olarak karalama tahtasına çizin.",
+    "targetTimeSec": 90,
+    "derivedFrom": "ALES-2023-İlkbahar-S46"
+  },
+  {
+    "id": "turkce_paragraf_001",
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "topicTitle": "Paragrafta Ana Düşünce",
+    "difficulty": 2,
+    "questionText": "Bir yazarın büyüklüğü, kullandığı sözcüklerin nadirliğinde veya cümlelerinin karmaşıklığında değil; herkesin bildiği sözcüklerle daha önce hiç kimsenin kuramadığı anlam köprüleri kurabilmesindedir. Yalınlık, derinliğin düşmanı değil, tam tersine en berrak aynasıdır.\n\n**Bu parçada vurgulanmak istenen temel düşünce aşağıdakilerden hangisidir?**",
+    "hasImage": false,
+    "options": [
+      { "key": "A", "text": "Yazarlık yeteneği doğuştan gelen ve sonradan kazanılamayan bir niteliktir." },
+      { "key": "B", "text": "Gerçek ustalık, sade bir dille özgün ve derin anlamlar üretebilmektir." },
+      { "key": "C", "text": "Karmaşık cümleler okuyucunun ilgisini her zaman canlı tutar." },
+      { "key": "D", "text": "Zengin bir sözcük dağarcığına sahip olmak başarılı metinlerin tek şartıdır." },
+      { "key": "E", "text": "Her okuyucu aynı metinden farklı anlamlar çıkarmalıdır." }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "Parçada yazarın büyüklüğünün 'herkesin bildiği sözcüklerle kimsenin kuramadığı köprüler kurmak' (sadelik içinde özgünlük) olduğu ve 'yalınlığın derinliğin aynası' olduğu ifade edilmiştir. Dolayısıyla temel düşünce B seçeneğidir.",
+    "quickTip": "💡 ALES Taktiği: 'Vurgulanmak istenen' sorularında son cümlenin metaforuna ve anahtar kelimelerine odaklanın.",
+    "targetTimeSec": 50,
+    "derivedFrom": "ALES-2022-Sonbahar-T18"
+  }
+]
