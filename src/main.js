@@ -273,10 +273,18 @@ class App {
       nextBtn.addEventListener('click', () => this.nextQuestion());
     }
 
-    // Karalama alanını yeni soru için temizle
-    if (this.canvasManager) {
+    // Karalama alanını akıllı yönet:
+    // Eğer aynı soru grubundaysak adayın çizdiği mantık tablosunu/notlarını KORU!
+    const prevQuestion = this.currentActiveQuestion;
+    const isSameGroup = prevQuestion && 
+                        prevQuestion.isGroupQuestion && 
+                        question.isGroupQuestion && 
+                        prevQuestion.groupId === question.groupId;
+
+    if (!isSameGroup && this.canvasManager) {
       this.canvasManager.clear();
     }
+    this.currentActiveQuestion = question;
 
     // Kronometreyi başlat (hedef süreye göre)
     const targetSeconds = question.targetTimeSec || 75;

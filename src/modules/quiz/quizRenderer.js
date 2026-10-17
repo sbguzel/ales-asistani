@@ -58,6 +58,21 @@ export class QuizRenderer {
       `<span class="diff-dot ${level <= question.difficulty ? 'active' : ''}"></span>`
     ).join('');
 
+    const groupHtml = question.isGroupQuestion ? `
+      <div class="group-context-card">
+        <div class="group-header-banner">
+          <div class="group-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            <span>Bağlantılı Soru Metni (${question.groupIndex} / ${question.groupTotal})</span>
+          </div>
+          <span class="group-title">${question.groupHeader || 'Ortak Bilgilendirme'}</span>
+        </div>
+        <div class="group-context-body">
+          ${this.renderLatex(question.sharedContext || '')}
+        </div>
+      </div>
+    ` : '';
+
     let imageHtml = '';
     if (question.hasImage) {
       if (question.svgContent) {
@@ -81,6 +96,8 @@ export class QuizRenderer {
     `).join('');
 
     container.innerHTML = `
+      ${groupHtml}
+
       <div class="question-header-meta">
         <span class="question-tag">${question.topicTitle || question.subject}</span>
         <div class="question-difficulty" title="Zorluk Derecesi: ${question.difficulty}/5">
