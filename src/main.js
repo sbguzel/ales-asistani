@@ -148,13 +148,24 @@ class App {
 
   // 5. Mod ve Kategori Seçici
   initModeSelector() {
+    this.selectedExam = 'all';
+    this.selectedMode = 'all';
+
+    const examSelect = document.getElementById('exam-selector');
+    if (examSelect) {
+      examSelect.addEventListener('change', (e) => {
+        this.selectedExam = e.target.value;
+        this.applyFilter();
+      });
+    }
+
     const modeBtns = document.querySelectorAll('.mode-btn');
     modeBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         modeBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        const mode = btn.getAttribute('data-mode');
-        this.applyFilter(mode);
+        this.selectedMode = btn.getAttribute('data-mode');
+        this.applyFilter();
       });
     });
   }
@@ -183,7 +194,7 @@ class App {
     try {
       const response = await fetch('/data/seed_questions.json');
       this.allQuestions = await response.json();
-      this.applyFilter('all');
+      this.applyFilter();
     } catch (err) {
       console.error('Soru verisi yüklenirken hata oluştu:', err);
       const container = document.getElementById('question-container');
@@ -191,20 +202,27 @@ class App {
     }
   }
 
-  applyFilter(mode) {
-    if (mode === 'all') {
-      this.filteredQuestions = [...this.allQuestions];
-    } else if (mode === 'mistakes') {
-      const mistakeIds = FirestoreService.getMistakeQuestionIds();
-      this.filteredQuestions = this.allQuestions.filter(q => mistakeIds.includes(q.id));
-      if (this.filteredQuestions.length === 0) {
-        alert('Tebrikler! Hata defterinizde henüz yanlış çözülmüş soru bulunmuyor.');
-        this.filteredQuestions = [...this.allQuestions];
-      }
-    } else {
-      this.filteredQuestions = this.allQuestions.filter(q => q.subject === mode);
+  applyFilter() {
+    let result = [...this.allQuestions];
+
+    // Sınav filtresi
+    if (this.selectedExam && this.selectedExam !== 'all') {
+      result = result.filter(q => q.examId === this.selectedExam);
     }
 
+    // Ders/Mod filtresi
+    if (this.selectedMode === 'mistakes') {
+      const mistakeIds = FirestoreService.getMistakeQuestionIds();
+      result = result.filter(q => mistakeIds.includes(q.id));
+      if (result.length === 0) {
+        alert('Tebrikler! Seçili filtrede henüz yanlış çözülmüş soru bulunmuyor.');
+        result = [...this.allQuestions];
+      }
+    } else if (this.selectedMode && this.selectedMode !== 'all') {
+      result = result.filter(q => q.subject === this.selectedMode);
+    }
+
+    this.filteredQuestions = result;
     this.currentIndex = 0;
     this.renderCurrentQuestion();
   }

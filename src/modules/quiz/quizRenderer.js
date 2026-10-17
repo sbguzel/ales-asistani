@@ -48,8 +48,12 @@ export class QuizRenderer {
 
     const imageHtml = question.hasImage && question.imageUrl
       ? `<div class="question-image-container">
-           <img src="${question.imageUrl}" alt="Soru Görseli" class="question-image" />
+           <img src="${question.imageUrl}" alt="Soru ${question.number}" class="question-image" />
          </div>`
+      : '';
+
+    const textHtml = question.questionText && question.questionText.trim()
+      ? `<div class="question-text">${this.renderLatex(question.questionText)}</div>`
       : '';
 
     const optionsHtml = question.options.map(opt => `
@@ -67,11 +71,8 @@ export class QuizRenderer {
         </div>
       </div>
 
-      <div class="question-text">
-        ${this.renderLatex(question.questionText)}
-      </div>
-
       ${imageHtml}
+      ${textHtml}
 
       <div class="options-list">
         ${optionsHtml}
