@@ -35,7 +35,16 @@ export class QuizRenderer {
       }
     });
 
-    // Satır sonlarını HTML <br>'e çevir
+    // 3. Kalın metin (Markdown Bold): **metin**
+    parsed = parsed.replace(/\*\*([\s\S]+?)\*\*/g, '<strong>$1</strong>');
+
+    // 4. Liste maddeleri: Satır başındaki "* " veya "- " işaretlerini zarif "• " maddelerine çevir
+    parsed = parsed.replace(/^[ \t]*[*-][ \t]+/gm, '• ');
+
+    // 5. İtalik metin (Markdown Italic): *metin*
+    parsed = parsed.replace(/(^|[^*])\*([^* \n][^*]*?[^* \n])\*/g, '$1<em>$2</em>');
+
+    // 6. Satır sonlarını HTML <br>'e çevir
     return parsed.replace(/\n/g, '<br>');
   }
 

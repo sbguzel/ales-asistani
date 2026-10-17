@@ -238,6 +238,13 @@
   margin-bottom: 24px;
 }
 
+.question-text strong,
+.solution-body strong,
+.quick-tip-banner strong {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
 .question-image-container {
   display: flex;
   justify-content: center;
