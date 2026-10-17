@@ -29,4 +29,6 @@ env/
 
 # Output & Extracted data
 scripts/output/extracted/
+firebase-debug.log
+scratch/
 scripts/output/raw_json/

@@ -83,4 +83,53 @@ export class FirestoreService {
       return { total: 0, correct: 0, wrong: 0, accuracy: 0, avgTime: 0 };
     }
   }
+
+  /**
+   * Firestore'daki 'questions' koleksiyonundan soruları çeker.
+   * orderIndex sırasına göre dizer.
+   * Çevrimdışı veya hata durumunda yerel önbellek ve statik seed yedeğini kullanır.
+   */
+  static async getQuestions() {
+    try {
+      console.log('[FirestoreService] Sorular Firestore veritabanından alınıyor...');
+      const questionsCol = collection(db, 'questions');
+      const qQuery = query(questionsCol, orderBy('orderIndex', 'asc'));
+      const snapshot = await getDocs(qQuery);
+
+      if (!snapshot.empty) {
+        const questions = [];
+        snapshot.forEach(docSnap => {
+          questions.push(docSnap.data());
+        });
+        console.log(`[FirestoreService] Firestore'dan ${questions.length} soru başarıyla çekildi.`);
+
+        // Çevrimdışı dayanıklılık için localStorage önbelleğini güncelle
+        try {
+          localStorage.setItem('ales_cached_questions', JSON.stringify(questions));
+        } catch (e) {}
+
+        return { questions, source: 'firestore' };
+      }
+    } catch (err) {
+      console.warn('[FirestoreService] Firestore bağlantı uyarısı (Fallback devrede):', err);
+    }
+
+    // Fallback 1: LocalStorage önbelleği
+    try {
+      const cached = localStorage.getItem('ales_cached_questions');
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          console.log(`[FirestoreService] Yerel hafızadaki önbellekten ${parsed.length} soru yüklendi.`);
+          return { questions: parsed, source: 'cache' };
+        }
+      }
+    } catch (e) {}
+
+    // Fallback 2: /data/seed_questions.json statik dosya
+    console.log('[FirestoreService] /data/seed_questions.json yedeğinden yükleniyor...');
+    const response = await fetch('/data/seed_questions.json');
+    const questions = await response.json();
+    return { questions, source: 'seed_json' };
+  }
 }

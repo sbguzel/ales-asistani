@@ -208,16 +208,56 @@ class App {
     });
   }
 
-  // Soru Verilerini Yükleme
+  // Soru Verilerini Yükleme (Firestore Veritabanı + Akıllı Fallback)
   async loadQuestions() {
+    const container = document.getElementById('question-container');
+    if (container) {
+      container.innerHTML = `
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 320px; gap: 16px; color: var(--text-secondary);">
+          <div class="db-spinner"></div>
+          <p style="font-size: 14px; font-weight: 500;">Sorular veritabanından getiriliyor...</p>
+        </div>
+      `;
+    }
+
     try {
-      const response = await fetch('/data/seed_questions.json');
-      this.allQuestions = await response.json();
+      const { questions, source } = await FirestoreService.getQuestions();
+      this.allQuestions = questions;
+      this.dataSource = source;
+      this.updateDbStatusBadge(source);
       this.applyFilter();
     } catch (err) {
       console.error('Soru verisi yüklenirken hata oluştu:', err);
-      const container = document.getElementById('question-container');
-      container.innerHTML = `<p style="color: var(--zen-error); padding: 20px;">Sorular yüklenemedi. Lütfen sayfayı yenileyin.</p>`;
+      this.updateDbStatusBadge('error');
+      if (container) {
+        container.innerHTML = `<p style="color: var(--zen-error); padding: 20px;">Sorular yüklenemedi. Lütfen sayfayı yenileyin.</p>`;
+      }
+    }
+  }
+
+  updateDbStatusBadge(source) {
+    const badge = document.getElementById('db-status-badge');
+    if (!badge) return;
+
+    badge.className = 'db-status-badge';
+    const textEl = badge.querySelector('.db-status-text');
+
+    if (source === 'firestore') {
+      badge.classList.remove('loading', 'offline');
+      badge.title = 'Sorular canlı Firebase Firestore veritabanından başarıyla yüklendi.';
+      if (textEl) textEl.textContent = 'Firestore';
+    } else if (source === 'cache') {
+      badge.classList.add('offline');
+      badge.title = 'Sorular yerel önbellekten (çevrimdışı) yüklendi.';
+      if (textEl) textEl.textContent = 'Önbellek';
+    } else if (source === 'seed_json') {
+      badge.classList.add('offline');
+      badge.title = 'Sorular statik veri kaynağından yüklendi.';
+      if (textEl) textEl.textContent = 'Statik';
+    } else {
+      badge.classList.add('offline');
+      badge.title = 'Veritabanı bağlantısı kurulamadı.';
+      if (textEl) textEl.textContent = 'Çevrimdışı';
     }
   }
 
