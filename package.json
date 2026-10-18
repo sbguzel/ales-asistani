@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "seed:firestore": "node scripts/seeds/seed_to_firestore.js"
+    "seed:firestore": "node scripts/seeds/seed_to_firestore.js",
+    "upload:storage": "node scripts/seeds/upload_to_storage.js"
   },
   "dependencies": {
     "firebase": "^11.4.0",
