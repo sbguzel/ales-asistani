@@ -52,6 +52,13 @@ class App {
     document.addEventListener('gesturestart', (e) => e.preventDefault());
     document.addEventListener('gesturechange', (e) => e.preventDefault());
     document.addEventListener('gestureend', (e) => e.preventDefault());
+
+    // Mobil tarayıcılarda viewport kaymasını ve header'ın ekrandan çıkmasını engelle
+    window.addEventListener('scroll', () => {
+      if (window.scrollY !== 0 || window.scrollX !== 0) {
+        window.scrollTo(0, 0);
+      }
+    }, { passive: true });
   }
 
   // 1. Tema Yönetimi
@@ -371,6 +378,7 @@ class App {
     if (this.filteredQuestions.length === 0) return;
 
     this.isEvaluating = false;
+    this.resetScrollPositions();
     const question = this.filteredQuestions[this.currentIndex];
     const container = document.getElementById('question-container');
 
@@ -439,9 +447,14 @@ class App {
 
     // Çözüm ve ipucu kartını göster
     const solutionCard = document.getElementById('solution-card');
-    if (solutionCard) {
+    const questionPanel = document.getElementById('question-panel');
+    if (solutionCard && questionPanel) {
       solutionCard.classList.add('active');
-      solutionCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      // scrollIntoView pencereyi kaydırdığı için yerine yalnızca questionPanel içi kaydırma yapılır
+      setTimeout(() => {
+        const targetScroll = solutionCard.offsetTop - 20;
+        questionPanel.scrollTo({ top: targetScroll, behavior: 'smooth' });
+      }, 50);
     }
 
     // Sonucu yerel önbellek ve Firestore'a kaydet
@@ -456,12 +469,24 @@ class App {
     });
   }
 
+  resetScrollPositions() {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    const appEl = document.getElementById('app');
+    if (appEl) appEl.scrollTop = 0;
+    const panel = document.getElementById('question-panel');
+    if (panel) {
+      panel.scrollTop = 0;
+      panel.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }
+
   prevQuestion() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
       this.renderCurrentQuestion();
-      const panel = document.getElementById('question-panel');
-      if (panel) panel.scrollTo({ top: 0, behavior: 'smooth' });
+      this.resetScrollPositions();
     }
   }
 
@@ -472,8 +497,7 @@ class App {
       this.currentIndex = 0; // Başa dön
     }
     this.renderCurrentQuestion();
-    const panel = document.getElementById('question-panel');
-    if (panel) panel.scrollTo({ top: 0, behavior: 'smooth' });
+    this.resetScrollPositions();
   }
 }
 

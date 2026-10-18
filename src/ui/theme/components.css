@@ -472,6 +472,7 @@
 /* 3. ÇÖZÜM & PRATİK TAKTİK KARTI */
 .solution-card {
   margin-top: 20px;
+  margin-bottom: 28px;
   padding: 20px;
   border-radius: var(--radius-md);
   background: var(--bg-secondary);
