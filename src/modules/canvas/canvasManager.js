@@ -64,6 +64,15 @@ export class CanvasManager {
     this.canvas.addEventListener('pointermove', (e) => this.onPointerMove(e));
     this.canvas.addEventListener('pointerup', () => this.onPointerUp());
     this.canvas.addEventListener('pointercancel', () => this.onPointerUp());
+
+    // Çift dokunma/tıklama zoom ve uzun basma menülerini engelle
+    this.canvas.addEventListener('dblclick', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+    this.canvas.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
   }
 
   getPointerPos(e) {

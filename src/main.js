@@ -23,6 +23,7 @@ class App {
   }
 
   async init() {
+    this.initTouchGestures();
     this.initTheme();
     this.initAuth();
     this.initCanvas();
@@ -31,6 +32,26 @@ class App {
     this.initNavigation();
     this.initMobileToggle();
     await this.loadQuestions();
+  }
+
+  // Dokunmatik cihazlarda ve iOS Safari'de istenmeyen zoom'ları engelleme
+  initTouchGestures() {
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', (e) => {
+      const now = Date.now();
+      if (now - lastTouchEnd <= 300) {
+        const tag = e.target && e.target.tagName ? e.target.tagName.toLowerCase() : '';
+        if (tag !== 'input' && tag !== 'textarea') {
+          e.preventDefault();
+        }
+      }
+      lastTouchEnd = now;
+    }, { passive: false });
+
+    // iOS Safari gesturestart/change/end (pinch zoom) engelleme
+    document.addEventListener('gesturestart', (e) => e.preventDefault());
+    document.addEventListener('gesturechange', (e) => e.preventDefault());
+    document.addEventListener('gestureend', (e) => e.preventDefault());
   }
 
   // 1. Tema Yönetimi
@@ -202,23 +223,42 @@ class App {
     });
   }
 
-  // 6. Mobil Karalama Butonu
+  // 6. Mobil Karalama Butonu ve Ekran Yönetimi
   initMobileToggle() {
     const toggleBtn = document.getElementById('mobile-view-toggle');
+    const closeCanvasBtn = document.getElementById('close-canvas-mobile-btn');
     const canvasPanel = document.getElementById('canvas-panel');
     let isShowingCanvas = false;
 
-    toggleBtn.addEventListener('click', () => {
-      isShowingCanvas = !isShowingCanvas;
-      canvasPanel.classList.toggle('active-mobile', isShowingCanvas);
-      toggleBtn.innerHTML = isShowingCanvas 
-        ? '<span>📄 Soruyu Gör</span>' 
-        : '<span>✏️ Karalama Tahtası</span>';
-      
-      if (isShowingCanvas) {
-        this.canvasManager.resize();
+    const setCanvasState = (show) => {
+      isShowingCanvas = show;
+      if (canvasPanel) {
+        canvasPanel.classList.toggle('active-mobile', isShowingCanvas);
       }
-    });
+      if (toggleBtn) {
+        toggleBtn.classList.toggle('active-canvas', isShowingCanvas);
+        toggleBtn.innerHTML = isShowingCanvas 
+          ? '<span>📄 Soruyu Gör</span>' 
+          : '<span>✏️ Karalama Tahtası</span>';
+      }
+      if (isShowingCanvas && this.canvasManager) {
+        setTimeout(() => this.canvasManager.resize(), 60);
+      }
+    };
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        setCanvasState(!isShowingCanvas);
+      });
+    }
+
+    if (closeCanvasBtn) {
+      closeCanvasBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        setCanvasState(false);
+      });
+    }
   }
 
   // Soru Verilerini Yükleme (Firestore Veritabanı + Akıllı Fallback)
@@ -299,9 +339,9 @@ class App {
 
     // 2. Soru Çözüm Moduna Dönüş
     if (analyticsPanel) analyticsPanel.style.display = 'none';
-    if (questionPanel) questionPanel.style.display = 'flex';
+    if (questionPanel) questionPanel.style.display = '';
     if (canvasPanel) {
-      canvasPanel.style.display = 'flex';
+      canvasPanel.style.display = '';
       if (this.canvasManager) this.canvasManager.resize();
     }
     if (mobileToggle) mobileToggle.style.display = '';

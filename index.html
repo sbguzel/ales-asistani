@@ -2,7 +2,7 @@
 <html lang="tr" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>ALES Asistanı | Akıllı Soru Bankası & Zen Çalışma Platformu</title>
   <meta name="description" content="Sıfır ses, Apple sadeliğinde kullanıcı girişi, entegre dijital karalama alanı ve KaTeX destekli ALES çalışma platformu." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -95,6 +95,12 @@
       <!-- Sağ Panel: Karalama & Çizim Alanı (Canvas) -->
       <section class="canvas-panel" id="canvas-panel" aria-label="Karalama Tahtası">
         <div class="canvas-toolbar" id="canvas-toolbar">
+          <button class="tool-btn mobile-back-btn" id="close-canvas-mobile-btn" title="Soruya Dön">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <span>Soru</span>
+          </button>
+          <div class="toolbar-divider mobile-back-divider"></div>
+
           <button class="tool-btn active" id="tool-pen" title="Kalem (Çizim)">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
           </button>
