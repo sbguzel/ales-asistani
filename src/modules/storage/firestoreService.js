@@ -132,4 +132,70 @@ export class FirestoreService {
     const questions = await response.json();
     return { questions, source: 'seed_json' };
   }
+
+  /**
+   * Tüm yerel soru denemelerini getirir
+   */
+  static getAttempts() {
+    try {
+      return JSON.parse(localStorage.getItem('ales_attempts') || '[]');
+    } catch (e) {
+      return [];
+    }
+  }
+
+  /**
+   * Çözüm geçmişini temizler
+   */
+  static clearAttempts() {
+    try {
+      localStorage.removeItem('ales_attempts');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  /**
+   * Kullanıcının analiz sayfasını zengin biçimde deneyimleyebilmesi için
+   * gerçekçi simülasyon verileri üretir.
+   */
+  static seedSampleAttempts(questions = []) {
+    if (!questions || questions.length === 0) return [];
+
+    const sampleAttempts = [];
+    // 14 farklı soru için gerçekçi ALES deneme verisi
+    const targetQuestions = questions.slice(0, 16);
+
+    targetQuestions.forEach((q, idx) => {
+      // 12 doğru, 4 yanlış dağılımı
+      const isWrong = idx === 4 || idx === 8 || idx === 12 || idx === 15;
+      const targetSec = q.targetTimeSec || 75;
+      
+      // Hız varyasyonları
+      let timeSpent;
+      if (idx % 3 === 0) {
+        timeSpent = Math.round(targetSec * 0.65); // Çok hızlı
+      } else if (idx % 3 === 1) {
+        timeSpent = Math.round(targetSec * 0.9);  // Normal
+      } else {
+        timeSpent = Math.round(targetSec * 1.25); // Süre aşımı
+      }
+
+      sampleAttempts.push({
+        userId: 'anonymous',
+        questionId: q.id,
+        category: q.category || 'genel',
+        selectedOption: isWrong ? 'C' : q.correctAnswer,
+        isCorrect: !isWrong,
+        timeSpentSeconds: timeSpent,
+        targetTimeSec: targetSec,
+        usedCanvas: idx % 2 === 0,
+        timestamp: new Date(Date.now() - (16 - idx) * 3600000).toISOString()
+      });
+    });
+
+    localStorage.setItem('ales_attempts', JSON.stringify(sampleAttempts));
+    return sampleAttempts;
+  }
 }

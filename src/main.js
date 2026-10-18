@@ -6,6 +6,7 @@ import { QuizRenderer } from './modules/quiz/quizRenderer.js';
 import { ZenTimer } from './modules/quiz/timer.js';
 import { FirestoreService } from './modules/storage/firestoreService.js';
 import { AuthModal } from './ui/components/authModal.js';
+import { AnalyticsManager } from './modules/analytics/analyticsManager.js';
 
 class App {
   constructor() {
@@ -15,6 +16,7 @@ class App {
     this.canvasManager = null;
     this.timer = null;
     this.authModal = null;
+    this.analyticsManager = new AnalyticsManager(this);
     this.isEvaluating = false;
 
     this.init();
@@ -154,12 +156,23 @@ class App {
     const modeBtns = document.querySelectorAll('.mode-btn');
     modeBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        modeBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        this.selectedMode = btn.getAttribute('data-mode');
-        this.applyFilter();
+        const mode = btn.getAttribute('data-mode');
+        this.switchMode(mode);
       });
     });
+  }
+
+  switchMode(mode) {
+    this.selectedMode = mode;
+    const modeBtns = document.querySelectorAll('.mode-btn');
+    modeBtns.forEach(b => {
+      if (b.getAttribute('data-mode') === mode) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+    this.applyFilter();
   }
 
   // 6. Soru Gezinme ve Klavye Kısayolları
@@ -262,6 +275,39 @@ class App {
   }
 
   applyFilter() {
+    const questionPanel = document.getElementById('question-panel');
+    const canvasPanel = document.getElementById('canvas-panel');
+    const analyticsPanel = document.getElementById('analytics-panel');
+    const timerEl = document.getElementById('zen-timer');
+    const navGroupEl = document.querySelector('.question-nav-group');
+    const mobileToggle = document.getElementById('mobile-view-toggle');
+
+    if (this.selectedMode === 'analytics') {
+      // 1. Analiz Dashboard Görünümü
+      if (questionPanel) questionPanel.style.display = 'none';
+      if (canvasPanel) canvasPanel.style.display = 'none';
+      if (mobileToggle) mobileToggle.style.display = 'none';
+      if (timerEl) timerEl.style.opacity = '0.25';
+      if (navGroupEl) navGroupEl.style.opacity = '0.25';
+
+      if (analyticsPanel) {
+        analyticsPanel.style.display = 'block';
+        this.analyticsManager.render(analyticsPanel);
+      }
+      return;
+    }
+
+    // 2. Soru Çözüm Moduna Dönüş
+    if (analyticsPanel) analyticsPanel.style.display = 'none';
+    if (questionPanel) questionPanel.style.display = 'flex';
+    if (canvasPanel) {
+      canvasPanel.style.display = 'flex';
+      if (this.canvasManager) this.canvasManager.resize();
+    }
+    if (mobileToggle) mobileToggle.style.display = '';
+    if (timerEl) timerEl.style.opacity = '1';
+    if (navGroupEl) navGroupEl.style.opacity = '1';
+
     let result = [...this.allQuestions];
 
     // Ders/Mod filtresi
