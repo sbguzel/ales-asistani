@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 200" width="100%" height="180">
+  <defs>
+    <style>
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.35); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.35); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-blue { fill: rgba(56, 189, 248, 0.35); stroke: #38bdf8; stroke-width: 2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+      .geo-dashed { stroke-dasharray: 4 4; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+      }
+    </style>
+</defs>
+  
+  <!-- Yarım Çember Yayı -->
+  <path d="M 50,160 A 100,100 0 0,1 250,160" class="geo-line" />
+  <!-- AB Çapı -->
+  <line x1="50" y1="160" x2="250" y2="160" class="geo-line" />
+
+  <!-- Kirişler ve Yarıçaplar -->
+  <!-- D=(79, 89), B=(250, 160) => DB Kirişi -->
+  <line x1="79" y1="89" x2="250" y2="160" class="geo-sec" stroke-width="2" />
+  <!-- C=(185, 65) => OC Yarıçapı (E=(164.5, 124.5) üzerinden) -->
+  <line x1="150" y1="160" x2="185" y2="65" class="geo-sec" stroke-width="2" />
+  <!-- AD Kirişi -->
+  <line x1="50" y1="160" x2="79" y2="89" class="geo-line" />
+
+  <!-- Eşitlik İşareti (|DE| = |EB|) -->
+  <line x1="120" y1="102" x2="124" y2="110" class="geo-line" stroke-width="1.8" />
+  <line x1="205" y1="138" x2="209" y2="146" class="geo-line" stroke-width="1.8" />
+
+  <!-- Eşitlik İşareti (|OE| = |EC|) -->
+  <line x1="153" y1="140" x2="161" y2="143" class="geo-line" stroke-width="1.8" />
+  <line x1="154" y1="143" x2="162" y2="146" class="geo-line" stroke-width="1.8" />
+  <line x1="170" y1="92" x2="178" y2="95" class="geo-line" stroke-width="1.8" />
+  <line x1="171" y1="95" x2="179" y2="98" class="geo-line" stroke-width="1.8" />
+
+  <!-- x Açı Yayı (OAD) -->
+  <path d="M 72,160 A 22,22 0 0,0 66,140" class="geo-angle-arc" stroke-width="2" />
+  <text x="82" y="145" class="geo-text-accent">x</text>
+
+  <!-- Noktalar -->
+  <circle cx="150" cy="160" r="2.5" class="geo-point" />
+  <text x="150" y="175" class="geo-text">O</text>
+  <text x="35" y="165" class="geo-text">A</text>
+  <text x="262" y="165" class="geo-text">B</text>
+  <text x="195" y="55" class="geo-text">C</text>
+  <text x="70" y="78" class="geo-text">D</text>
+  <text x="175" y="132" class="geo-text">E</text>
+</svg>

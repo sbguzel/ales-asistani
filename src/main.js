@@ -5,7 +5,9 @@ import { CanvasManager } from './modules/canvas/canvasManager.js';
 import { QuizRenderer } from './modules/quiz/quizRenderer.js';
 import { ZenTimer } from './modules/quiz/timer.js';
 import { FirestoreService } from './modules/storage/firestoreService.js';
+import { questionBufferService } from './modules/storage/questionBufferService.js';
 import { AuthModal } from './ui/components/authModal.js';
+import { SettingsModal } from './ui/components/settingsModal.js';
 import { AnalyticsManager } from './modules/analytics/analyticsManager.js';
 
 class App {
@@ -16,6 +18,9 @@ class App {
     this.canvasManager = null;
     this.timer = null;
     this.authModal = null;
+    this.settingsModal = null;
+    this.settings = { randomOrder: true, hideSolved: true };
+    this.solvedQuestionIds = new Set();
     this.analyticsManager = new AnalyticsManager(this);
     this.isEvaluating = false;
 
@@ -26,12 +31,29 @@ class App {
     this.initTouchGestures();
     this.initTheme();
     this.initAuth();
+    this.initSettings();
     this.initCanvas();
     this.initTimer();
     this.initModeSelector();
     this.initNavigation();
     this.initMobileToggle();
+    this.initNetworkAndBufferListeners();
+    await this.loadUserSettingsAndProgress();
     await this.loadQuestions();
+  }
+
+  // Çevrimdışı ve akıllı tampon dinleyicileri
+  initNetworkAndBufferListeners() {
+    eventBus.on('network:status', async ({ isOnline }) => {
+      this.updateBufferStatusBadge();
+      if (isOnline) {
+        await FirestoreService.syncPendingAttempts();
+      }
+    });
+
+    eventBus.on('buffer:status', () => {
+      this.updateBufferStatusBadge();
+    });
   }
 
   // Dokunmatik cihazlarda ve iOS Safari'de istenmeyen zoom'ları engelleme
@@ -98,7 +120,7 @@ class App {
     });
 
     // Oturum durumundaki değişimleri dinle
-    eventBus.on('auth:stateChanged', (user) => {
+    eventBus.on('auth:stateChanged', async (user) => {
       if (user) {
         authContainer.innerHTML = `
           <button class="user-profile-badge" id="open-auth-btn" title="Çıkış yapmak için tıklayın">
@@ -114,9 +136,95 @@ class App {
           </button>
         `;
       }
+
+      // Kullanıcı değiştiğinde o kullanıcıya ait soru ilerlemesini ve ayarları yükle
+      await this.loadUserSettingsAndProgress();
+      if (this.allQuestions && this.allQuestions.length > 0) {
+        this.applyFilter();
+      }
+      if (this.settingsModal) {
+        this.settingsModal.refreshUI();
+      }
     });
 
     AuthService.initAuthListener();
+  }
+
+  // 2.1. Ayarlar Modalı ve Sıralama Yönetimi
+  initSettings() {
+    this.settingsModal = new SettingsModal(this);
+
+    // Ayarlar butonu
+    const settingsBtn = document.getElementById('settings-toggle-btn');
+    if (settingsBtn) {
+      settingsBtn.addEventListener('click', () => {
+        this.settingsModal.open();
+      });
+    }
+
+    // Header hızlı sıra değiştirme butonu
+    const orderToggleBtn = document.getElementById('order-mode-toggle');
+    if (orderToggleBtn) {
+      orderToggleBtn.addEventListener('click', async () => {
+        const nextOrder = !this.settings.randomOrder;
+        await this.updateSettings({ randomOrder: nextOrder });
+      });
+    }
+  }
+
+  async loadUserSettingsAndProgress() {
+    const user = state.get().user;
+    const uid = user ? user.uid : 'anonymous';
+    this.settings = await FirestoreService.getUserSettings(uid);
+    const solvedIds = await FirestoreService.getUserSolvedQuestionIds(uid);
+    this.solvedQuestionIds = new Set(solvedIds);
+    this.updateOrderModeBadge();
+  }
+
+  updateOrderModeBadge() {
+    const badge = document.getElementById('order-mode-toggle');
+    if (!badge) return;
+    const isRandom = !!this.settings.randomOrder;
+    badge.className = `order-mode-badge ${isRandom ? 'random' : 'sequential'}`;
+    const iconEl = badge.querySelector('.order-icon');
+    const textEl = badge.querySelector('.order-text');
+    if (iconEl) iconEl.textContent = isRandom ? '🔀' : '🔢';
+    if (textEl) textEl.textContent = isRandom ? 'Karışık' : 'Sıralı';
+    badge.title = isRandom 
+      ? 'Soru Sıralaması: Karışık (Rastgele) - Tıklayarak Sıralı yap'
+      : 'Soru Sıralaması: Sınav Sırasına Göre - Tıklayarak Karışık yap';
+  }
+
+  async updateSettings(partial) {
+    const user = state.get().user;
+    const uid = user ? user.uid : 'anonymous';
+    this.settings = await FirestoreService.saveUserSettings(uid, partial);
+    this.updateOrderModeBadge();
+    if (this.settingsModal) {
+      this.settingsModal.refreshUI();
+    }
+    this.applyFilter();
+  }
+
+  async resetSolvedQuestions() {
+    const user = state.get().user;
+    const uid = user ? user.uid : 'anonymous';
+    await FirestoreService.resetSolvedQuestions(uid);
+    this.solvedQuestionIds.clear();
+    this.applyFilter();
+    if (this.settingsModal) {
+      this.settingsModal.refreshUI();
+    }
+  }
+
+  async markQuestionAsSolved(questionId) {
+    this.solvedQuestionIds.add(questionId);
+    const user = state.get().user;
+    const uid = user ? user.uid : 'anonymous';
+    await FirestoreService.markQuestionSolved(uid, questionId);
+    if (this.settingsModal) {
+      this.settingsModal.refreshUI();
+    }
   }
 
   // 3. Karalama & Çizim Alanı
@@ -228,6 +336,25 @@ class App {
         this.nextQuestion();
       }
     });
+
+    // URL Hash değiştiğinde ilgili soruya atla
+    window.addEventListener('hashchange', async () => {
+      const hash = window.location.hash.substring(1);
+      if (hash && this.allQuestions && this.allQuestions.length > 0) {
+        let idx = this.filteredQuestions.findIndex(q => q.id === hash);
+        if (idx === -1) {
+          const targetQ = this.allQuestions.find(q => q.id === hash);
+          if (targetQ) {
+            this.filteredQuestions.unshift(targetQ);
+            idx = 0;
+          }
+        }
+        if (idx !== -1 && idx !== this.currentIndex) {
+          this.currentIndex = idx;
+          await this.renderCurrentQuestion();
+        }
+      }
+    });
   }
 
   // 6. Mobil Karalama Butonu ve Ekran Yönetimi
@@ -268,7 +395,7 @@ class App {
     }
   }
 
-  // Soru Verilerini Yükleme (Firestore Veritabanı + Akıllı Fallback)
+  // Soru Verilerini Yükleme (Hafif Manifesto + Optimum 10'luk Akıllı Tampon)
   async loadQuestions() {
     const container = document.getElementById('question-container');
     if (container) {
@@ -281,47 +408,80 @@ class App {
     }
 
     try {
-      const { questions, source } = await FirestoreService.getQuestions();
-      this.allQuestions = questions;
+      const { manifest, source } = await questionBufferService.loadManifest();
+      this.allQuestions = manifest;
       this.dataSource = source;
-      this.updateDbStatusBadge(source);
-      this.applyFilter();
+      await this.applyFilter();
+      this.updateBufferStatusBadge();
     } catch (err) {
       console.error('Soru verisi yüklenirken hata oluştu:', err);
-      this.updateDbStatusBadge('error');
+      this.updateBufferStatusBadge();
       if (container) {
         container.innerHTML = `<p style="color: var(--zen-error); padding: 20px;">Sorular yüklenemedi. Lütfen sayfayı yenileyin.</p>`;
       }
     }
   }
 
-  updateDbStatusBadge(source) {
+  updateBufferStatusBadge() {
     const badge = document.getElementById('db-status-badge');
     if (!badge) return;
 
     badge.className = 'db-status-badge';
     const textEl = badge.querySelector('.db-status-text');
 
-    if (source === 'firestore') {
+    const isOnline = questionBufferService.isOnline;
+    const readyCount = questionBufferService.countReadyAhead(this.filteredQuestions || [], this.currentIndex || 0);
+
+    if (questionBufferService.isFetching) {
+      badge.classList.add('loading');
+      badge.title = 'Sıradaki sorular arka planda tamponlanıyor...';
+      if (textEl) textEl.textContent = 'Tamponlanıyor...';
+    } else if (isOnline) {
       badge.classList.remove('loading', 'offline');
-      badge.title = 'Sorular canlı Firebase Firestore veritabanından başarıyla yüklendi.';
-      if (textEl) textEl.textContent = 'Firestore';
-    } else if (source === 'cache') {
-      badge.classList.add('offline');
-      badge.title = 'Sorular yerel önbellekten (çevrimdışı) yüklendi.';
-      if (textEl) textEl.textContent = 'Önbellek';
-    } else if (source === 'seed_json') {
-      badge.classList.add('offline');
-      badge.title = 'Sorular statik veri kaynağından yüklendi.';
-      if (textEl) textEl.textContent = 'Statik';
+      badge.title = `Firestore bağlantısı aktif. Tamponda sıradaki ${readyCount} soru hazır. İnternet kopsa dahi kesintisiz çözebilirsiniz.`;
+      if (textEl) textEl.textContent = `Firestore (${readyCount} Hazır)`;
     } else {
       badge.classList.add('offline');
-      badge.title = 'Veritabanı bağlantısı kurulamadı.';
-      if (textEl) textEl.textContent = 'Çevrimdışı';
+      badge.title = `İnternet bağlantısı kesildi. Tampondaki ${readyCount} soruyu çevrimdışı çözmeye devam edebilirsiniz.`;
+      if (textEl) textEl.textContent = `Çevrimdışı (${readyCount} Hazır)`;
     }
   }
 
-  applyFilter() {
+  // 5.1. Bağlantılı Soru Gruplarını Koruyan Rastgele Karıştırma Algoritması
+  shuffleQuestionsPreservingGroups(questions) {
+    if (!questions || questions.length <= 1) return [...questions];
+
+    // Soruları bağımsız sorular veya bağlantılı soru grupları halinde kümele
+    const groupsMap = new Map();
+    const groupOrder = [];
+
+    questions.forEach((q, idx) => {
+      const groupKey = (q.isGroupQuestion && q.groupId) ? `grp_${q.groupId}` : `single_${q.id || idx}`;
+      if (!groupsMap.has(groupKey)) {
+        groupsMap.set(groupKey, []);
+        groupOrder.push(groupKey);
+      }
+      groupsMap.get(groupKey).push(q);
+    });
+
+    // Her küme içindeki soruları kendi orijinal sıra numaralarına göre tut
+    const groupArrays = groupOrder.map(key => {
+      const items = groupsMap.get(key);
+      items.sort((a, b) => (a.number || 0) - (b.number || 0));
+      return items;
+    });
+
+    // Kümeleri Fisher-Yates algoritması ile rastgele karıştır
+    for (let i = groupArrays.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [groupArrays[i], groupArrays[j]] = [groupArrays[j], groupArrays[i]];
+    }
+
+    // Düzleştirilmiş listeyi döndür
+    return groupArrays.flat();
+  }
+
+  async applyFilter(targetQuestionId = null) {
     const questionPanel = document.getElementById('question-panel');
     const canvasPanel = document.getElementById('canvas-panel');
     const analyticsPanel = document.getElementById('analytics-panel');
@@ -369,32 +529,92 @@ class App {
       result = result.filter(q => q.subject === this.selectedMode);
     }
 
+    // Çözülen soruları gizleme filtresi (Hata Defteri hariç)
+    if (this.settings.hideSolved && this.selectedMode !== 'mistakes') {
+      result = result.filter(q => !this.solvedQuestionIds.has(q.id));
+    }
+
+    // Sıralama (Rastgele Karışık veya Orijinal Sınav Sırasına Göre)
+    if (this.settings.randomOrder) {
+      result = this.shuffleQuestionsPreservingGroups(result);
+    } else {
+      result.sort((a, b) => (a.orderIndex || a.number || 0) - (b.orderIndex || b.number || 0));
+    }
+
     this.filteredQuestions = result;
-    this.currentIndex = 0;
-    this.renderCurrentQuestion();
+    
+    // Belirli bir soru hedefi var mı (parametre, URL query veya URL hash)
+    const target = targetQuestionId || new URLSearchParams(window.location.search).get('q') || (window.location.hash ? window.location.hash.substring(1) : null);
+    if (target) {
+      if (!result.some(q => q.id === target)) {
+        const targetQ = this.allQuestions.find(q => q.id === target);
+        if (targetQ) result.unshift(targetQ);
+      }
+      this.filteredQuestions = result;
+      const targetIdx = this.filteredQuestions.findIndex(q => q.id === target);
+      this.currentIndex = targetIdx !== -1 ? targetIdx : 0;
+    } else {
+      this.filteredQuestions = result;
+      this.currentIndex = 0;
+    }
+
+    // İlk 10 soruluk akıllı tamponu önden yükle
+    await questionBufferService.ensureBufferAhead(this.filteredQuestions, this.currentIndex);
+    await this.renderCurrentQuestion();
   }
 
-  renderCurrentQuestion() {
-    if (this.filteredQuestions.length === 0) return;
-
+  async renderCurrentQuestion() {
     this.isEvaluating = false;
     this.resetScrollPositions();
-    const question = this.filteredQuestions[this.currentIndex];
     const container = document.getElementById('question-container');
+    const counterEl = document.getElementById('question-counter');
+    const prevBtn = document.getElementById('prev-question-btn');
+    const nextNavBtn = document.getElementById('next-nav-btn');
+
+    // Eğer çözülenler gizlendiğinde veya filtrelendiğinde havuzda soru kalmadıysa
+    if (!this.filteredQuestions || this.filteredQuestions.length === 0) {
+      if (counterEl) counterEl.textContent = '0 / 0 (Tamamlandı)';
+      if (prevBtn) prevBtn.disabled = true;
+      if (nextNavBtn) nextNavBtn.disabled = true;
+      if (this.timer) this.timer.stop();
+
+      this.renderAllCompletedState(container);
+      return;
+    }
+
+    if (this.currentIndex >= this.filteredQuestions.length) {
+      this.currentIndex = 0;
+    }
+
+    let question = this.filteredQuestions[this.currentIndex];
+
+    // Eğer soru tam içeriği henüz tampona gelmemişse hızlıca indir ve birleştir
+    if (!question || !question.questionText) {
+      await questionBufferService.ensureBufferAhead(this.filteredQuestions, this.currentIndex);
+      const fullQ = questionBufferService.getQuestion(question.id);
+      if (fullQ) {
+        Object.assign(question, fullQ);
+      }
+    }
+
+    if (question && question.id) {
+      history.replaceState(null, '', '#' + question.id);
+    }
 
     // Soru sayacını ve ok butonlarını güncelle
-    const counterEl = document.getElementById('question-counter');
     if (counterEl) {
       counterEl.textContent = `Soru ${this.currentIndex + 1} / ${this.filteredQuestions.length}`;
     }
-    const prevBtn = document.getElementById('prev-question-btn');
     if (prevBtn) {
       prevBtn.disabled = this.currentIndex === 0;
     }
-    const nextNavBtn = document.getElementById('next-nav-btn');
     if (nextNavBtn) {
-      nextNavBtn.disabled = this.currentIndex === this.filteredQuestions.length - 1;
+      nextNavBtn.disabled = this.currentIndex >= this.filteredQuestions.length - 1;
     }
+
+    // Arka planda sıradaki 10 soruyu tamponla ve durum rozetini tazele
+    questionBufferService.checkAndPrefetch(this.filteredQuestions, this.currentIndex);
+    this.updateBufferStatusBadge();
 
     // KaTeX ile soruyu ve şıkları render et
     QuizRenderer.renderQuestion(question, container, (selectedKey, buttonEl) => {
@@ -425,6 +645,66 @@ class App {
     this.timer.start(targetSeconds);
   }
 
+  renderAllCompletedState(container) {
+    if (!container) return;
+
+    const modeLabels = {
+      all: 'Tüm Sınav Havuzundaki',
+      matematik: 'Matematik & Geometri Dersindeki',
+      turkce: 'Türkçe Dersindeki',
+      mantik: 'Sözel Mantık Dersindeki',
+      mistakes: 'Hata Defterindeki'
+    };
+
+    const label = modeLabels[this.selectedMode] || 'Seçili Kategorideki';
+    const totalSolved = this.solvedQuestionIds ? this.solvedQuestionIds.size : 0;
+    const totalQuestions = this.allQuestions ? this.allQuestions.length : 300;
+
+    container.innerHTML = `
+      <div class="all-completed-card">
+        <div class="completed-icon-wrapper">🏆</div>
+        <h2 class="completed-title">Tebrikler! Sorular Tamamlandı</h2>
+        <p class="completed-subtitle">
+          ${label} mevcut tüm soruları başarıyla çözdünüz. İlerlemenizi sıfırlayarak tüm soruları yeniden çözebilir veya ayarları değiştirebilirsiniz.
+        </p>
+
+        <div style="margin-bottom: 24px; padding: 12px 18px; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 13.5px; color: var(--text-secondary);">
+          📊 Toplam Çözülen Soru Sayısı: <strong style="color: var(--accent-primary);">${totalSolved}</strong> / ${totalQuestions}
+        </div>
+
+        <div class="completed-actions">
+          <button type="button" class="completed-primary-btn" id="empty-state-reset-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+              <path d="M3 3v5h5"/>
+            </svg>
+            <span>Çözülen Soruları Sıfırla</span>
+          </button>
+          
+          <button type="button" class="completed-secondary-btn" id="empty-state-show-all-btn">
+            <span>👁️ Tüm Soruları Göster (Çözülenler Dahil)</span>
+          </button>
+        </div>
+      </div>
+    `;
+
+    const resetBtn = container.querySelector('#empty-state-reset-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', async () => {
+        if (confirm('Çözülen soruları sıfırlayarak soruları tekrar havuzunuza eklemek istiyor musunuz?')) {
+          await this.resetSolvedQuestions();
+        }
+      });
+    }
+
+    const showAllBtn = container.querySelector('#empty-state-show-all-btn');
+    if (showAllBtn) {
+      showAllBtn.addEventListener('click', async () => {
+        await this.updateSettings({ hideSolved: false });
+      });
+    }
+  }
+
   async handleOptionSelection(selectedKey, buttonEl, question) {
     if (this.isEvaluating) return;
     this.isEvaluating = true;
@@ -450,14 +730,13 @@ class App {
     const questionPanel = document.getElementById('question-panel');
     if (solutionCard && questionPanel) {
       solutionCard.classList.add('active');
-      // scrollIntoView pencereyi kaydırdığı için yerine yalnızca questionPanel içi kaydırma yapılır
       setTimeout(() => {
         const targetScroll = solutionCard.offsetTop - 20;
         questionPanel.scrollTo({ top: targetScroll, behavior: 'smooth' });
       }, 50);
     }
 
-    // Sonucu yerel önbellek ve Firestore'a kaydet
+    // Sonucu yerel önbellek ve Firestore'a kaydet (hesaba özel)
     await FirestoreService.saveAttempt({
       questionId: question.id,
       category: question.category,
@@ -465,8 +744,11 @@ class App {
       isCorrect,
       timeSpentSeconds: elapsedSeconds,
       targetTimeSec: question.targetTimeSec || 75,
-      usedCanvas: this.canvasManager.history.undoStack.length > 0
+      usedCanvas: this.canvasManager ? this.canvasManager.history.undoStack.length > 0 : false
     });
+
+    // Soruyu çözüldü olarak işaretle
+    await this.markQuestionAsSolved(question.id);
   }
 
   resetScrollPositions() {
@@ -482,26 +764,41 @@ class App {
     }
   }
 
-  prevQuestion() {
+  async prevQuestion() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
-      this.renderCurrentQuestion();
+      await this.renderCurrentQuestion();
       this.resetScrollPositions();
     }
   }
 
-  nextQuestion() {
-    if (this.currentIndex + 1 < this.filteredQuestions.length) {
-      this.currentIndex++;
+  async nextQuestion() {
+    const currentQ = this.filteredQuestions[this.currentIndex];
+
+    // Eğer 'Çözülenleri Gizle' aktifse ve mevcut soru az önce çözülmüşse:
+    // Bu soru artık havuzdan çıkarılır ve bir sonraki soruya geçilir.
+    if (this.settings.hideSolved && this.selectedMode !== 'mistakes' && currentQ && this.solvedQuestionIds.has(currentQ.id)) {
+      this.filteredQuestions.splice(this.currentIndex, 1);
+      
+      // Eğer listenin sonundaysak ve soru kaldıysa başa al
+      if (this.currentIndex >= this.filteredQuestions.length) {
+        this.currentIndex = 0;
+      }
     } else {
-      this.currentIndex = 0; // Başa dön
+      // Normal ilerleme
+      if (this.currentIndex + 1 < this.filteredQuestions.length) {
+        this.currentIndex++;
+      } else {
+        this.currentIndex = 0;
+      }
     }
-    this.renderCurrentQuestion();
+
+    await this.renderCurrentQuestion();
     this.resetScrollPositions();
   }
 }
 
 // Uygulamayı başlat
 document.addEventListener('DOMContentLoaded', () => {
-  new App();
+  window.app = new App();
 });

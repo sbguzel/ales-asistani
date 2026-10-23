@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 250" width="100%" height="230">
+  <defs>
+    <style>
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.28); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.28); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+      .geo-dashed { stroke-dasharray: 4 4; }
+      .cell-bg { fill: rgba(255, 255, 255, 0.04); }
+      .cell-highlight { fill: rgba(56, 189, 248, 0.25); stroke: var(--accent-primary, #38bdf8); stroke-width: 2; }
+      .cell-highlight-yellow { fill: rgba(245, 158, 11, 0.25); stroke: #f59e0b; stroke-width: 2; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+        .cell-bg { fill: rgba(0, 0, 0, 0.02); }
+      }
+    </style>
+</defs>
+  <!-- Masa Yüzeyi -->
+  <rect x="25" y="15" width="230" height="220" rx="8" fill="rgba(244, 63, 94, 0.08)" stroke="#f43f5e" stroke-opacity="0.4" stroke-width="2" />
+
+  <!-- d Çubuğu (Dikey sol) -->
+  <g transform="rotate(-6, 65, 120)">
+    <rect x="55" y="25" width="20" height="195" rx="3" fill="#cbd5e1" stroke="#334155" stroke-width="1.5" />
+    <text x="65" y="38" class="geo-text" fill="#0f172a">d</text>
+    <text x="65" y="208" class="geo-text" fill="#0f172a">d</text>
+  </g>
+
+  <!-- b Çubuğu -->
+  <g transform="rotate(22, 140, 110)">
+    <rect x="20" y="100" width="180" height="18" rx="3" fill="#cbd5e1" stroke="#334155" stroke-width="1.5" />
+    <text x="190" y="109" class="geo-text" fill="#0f172a">b</text>
+  </g>
+
+  <!-- e Çubuğu -->
+  <g transform="rotate(38, 140, 130)">
+    <rect x="30" y="122" width="180" height="18" rx="3" fill="#cbd5e1" stroke="#334155" stroke-width="1.5" />
+    <text x="200" y="131" class="geo-text" fill="#0f172a">e</text>
+  </g>
+
+  <!-- a Çubuğu -->
+  <g transform="rotate(12, 140, 160)">
+    <rect x="25" y="152" width="185" height="18" rx="3" fill="#cbd5e1" stroke="#334155" stroke-width="1.5" />
+    <text x="200" y="161" class="geo-text" fill="#0f172a">a</text>
+  </g>
+
+  <!-- f Çubuğu -->
+  <g transform="rotate(8, 140, 125)">
+    <rect x="20" y="116" width="185" height="18" rx="3" fill="#cbd5e1" stroke="#334155" stroke-width="1.5" />
+    <text x="195" y="125" class="geo-text" fill="#0f172a">f</text>
+  </g>
+
+  <!-- c Çubuğu (En üstte, yatay) -->
+  <g>
+    <rect x="20" y="108" width="155" height="20" rx="3" fill="#cbd5e1" stroke="#334155" stroke-width="1.8" />
+    <text x="165" y="118" class="geo-text" fill="#0f172a">c</text>
+  </g>
+</svg>

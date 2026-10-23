@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 334 260" width="100%" height="240">
+  <defs>
+    <style>
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.28); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.28); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+      .geo-dashed { stroke-dasharray: 4 4; }
+      .cell-bg { fill: rgba(255, 255, 255, 0.04); }
+      .cell-highlight { fill: rgba(56, 189, 248, 0.25); stroke: var(--accent-primary, #38bdf8); stroke-width: 2; }
+      .cell-highlight-yellow { fill: rgba(245, 158, 11, 0.25); stroke: #f59e0b; stroke-width: 2; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+        .cell-bg { fill: rgba(0, 0, 0, 0.02); }
+      }
+    </style>
+</defs>
+  <rect x="10" y="10" width="314" height="236" rx="12" fill="none" stroke="var(--border-subtle, rgba(255,255,255,0.12))" stroke-width="1.5" />
+  <text x="167" y="26" class="geo-text" font-size="15" letter-spacing="1">MAYIS</text>
+  <line x1="10" y1="36" x2="324" y2="36" stroke="var(--border-subtle, rgba(255,255,255,0.1))" stroke-width="1" />
+  <text x="41.0" y="38" class="geo-text-muted">Pt</text><text x="83.0" y="38" class="geo-text-muted">Sa</text><text x="125.0" y="38" class="geo-text-muted">Ça</text><text x="167.0" y="38" class="geo-text-muted">Pe</text><text x="209.0" y="38" class="geo-text-muted">Cu</text><text x="251.0" y="38" class="geo-text-muted">Ct</text><text x="293.0" y="38" class="geo-text-muted">Pz</text><circle cx="251.0" cy="66.0" r="14" class="geo-shaded-yellow" /><text x="251.0" y="66.0" class="geo-text-accent">1</text><text x="293.0" y="66.0" class="geo-text">2</text><text x="41.0" y="98.0" class="geo-text">3</text><text x="83.0" y="98.0" class="geo-text">4</text><text x="125.0" y="98.0" class="geo-text">5</text><text x="167.0" y="98.0" class="geo-text">6</text><text x="209.0" y="98.0" class="geo-text">7</text><circle cx="251.0" cy="98.0" r="14" class="geo-shaded-yellow" /><text x="251.0" y="98.0" class="geo-text-accent">8</text><text x="293.0" y="98.0" class="geo-text">9</text><text x="41.0" y="130.0" class="geo-text">10</text><text x="83.0" y="130.0" class="geo-text">11</text><text x="125.0" y="130.0" class="geo-text">12</text><text x="167.0" y="130.0" class="geo-text">13</text><text x="209.0" y="130.0" class="geo-text">14</text><text x="251.0" y="130.0" class="geo-text">15</text><circle cx="293.0" cy="130.0" r="14" class="geo-shaded-yellow" /><text x="293.0" y="130.0" class="geo-text-accent">16</text><text x="41.0" y="162.0" class="geo-text">17</text><text x="83.0" y="162.0" class="geo-text">18</text><text x="125.0" y="162.0" class="geo-text">19</text><text x="167.0" y="162.0" class="geo-text">20</text><text x="209.0" y="162.0" class="geo-text">21</text><circle cx="251.0" cy="162.0" r="14" class="geo-shaded-yellow" /><text x="251.0" y="162.0" class="geo-text-accent">22</text><text x="293.0" y="162.0" class="geo-text">23</text><text x="41.0" y="194.0" class="geo-text">24</text><text x="83.0" y="194.0" class="geo-text">25</text><text x="125.0" y="194.0" class="geo-text">26</text><text x="167.0" y="194.0" class="geo-text">27</text><text x="209.0" y="194.0" class="geo-text">28</text><text x="251.0" y="194.0" class="geo-text">29</text><circle cx="293.0" cy="194.0" r="14" class="geo-shaded-yellow" /><text x="293.0" y="194.0" class="geo-text-accent">30</text><text x="41.0" y="226.0" class="geo-text">31</text>
+</svg>

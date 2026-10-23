@@ -1,0 +1,2702 @@
+[
+  {
+    "id": "2021_ales1_mat_01",
+    "number": 1,
+    "subject": "matematik",
+    "category": "rasyonel_sayilar",
+    "orderIndex": 1,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_02",
+    "number": 2,
+    "subject": "matematik",
+    "category": "uslu_sayilar",
+    "orderIndex": 2,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_03",
+    "number": 3,
+    "subject": "matematik",
+    "category": "koklu_sayilar",
+    "orderIndex": 3,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_04",
+    "number": 4,
+    "subject": "matematik",
+    "category": "faktoriyel",
+    "orderIndex": 4,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_05",
+    "number": 5,
+    "subject": "matematik",
+    "category": "basamak_kavrami",
+    "orderIndex": 5,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_06",
+    "number": 6,
+    "subject": "matematik",
+    "category": "esitsizlikler",
+    "orderIndex": 6,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_07",
+    "number": 7,
+    "subject": "matematik",
+    "category": "birinci_dereceden_denklemler",
+    "orderIndex": 7,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_08",
+    "number": 8,
+    "subject": "matematik",
+    "category": "tek_cift_sayilar",
+    "orderIndex": 8,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_09",
+    "number": 9,
+    "subject": "matematik",
+    "category": "koklu_sayilar",
+    "orderIndex": 9,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_10",
+    "number": 10,
+    "subject": "matematik",
+    "category": "mutlak_deger",
+    "orderIndex": 10,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_11",
+    "number": 11,
+    "subject": "matematik",
+    "category": "uslu_sayilar",
+    "orderIndex": 11,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_12",
+    "number": 12,
+    "subject": "matematik",
+    "category": "fonksiyonlar",
+    "orderIndex": 12,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_13",
+    "number": 13,
+    "subject": "matematik",
+    "category": "kumeler",
+    "orderIndex": 13,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_14",
+    "number": 14,
+    "subject": "matematik",
+    "category": "bolunebilme",
+    "orderIndex": 14,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_15",
+    "number": 15,
+    "subject": "matematik",
+    "category": "basamak_kavrami",
+    "orderIndex": 15,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_16",
+    "number": 16,
+    "subject": "matematik",
+    "category": "kar_zarar_problemleri",
+    "orderIndex": 16,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_17",
+    "number": 17,
+    "subject": "matematik",
+    "category": "yas_problemleri",
+    "orderIndex": 17,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_18",
+    "number": 18,
+    "subject": "matematik",
+    "category": "yuzde_problemleri",
+    "orderIndex": 18,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_19",
+    "number": 19,
+    "subject": "matematik",
+    "category": "mantiksal_cikarim",
+    "orderIndex": 19,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_20",
+    "number": 20,
+    "subject": "matematik",
+    "category": "hareket_problemleri",
+    "orderIndex": 20,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_21",
+    "number": 21,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 21,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_22",
+    "number": 22,
+    "subject": "matematik",
+    "category": "kombinasyon",
+    "orderIndex": 22,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_23",
+    "number": 23,
+    "subject": "matematik",
+    "category": "sayi_kesir_problemleri",
+    "orderIndex": 23,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_ceren"
+  },
+  {
+    "id": "2021_ales1_mat_24",
+    "number": 24,
+    "subject": "matematik",
+    "category": "sayi_kesir_problemleri",
+    "orderIndex": 24,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_ceren"
+  },
+  {
+    "id": "2021_ales1_mat_25",
+    "number": 25,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 25,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_toplar"
+  },
+  {
+    "id": "2021_ales1_mat_26",
+    "number": 26,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 26,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_toplar"
+  },
+  {
+    "id": "2021_ales1_mat_27",
+    "number": 27,
+    "subject": "matematik",
+    "category": "tablo_grafik",
+    "orderIndex": 27,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_magaza"
+  },
+  {
+    "id": "2021_ales1_mat_28",
+    "number": 28,
+    "subject": "matematik",
+    "category": "tablo_grafik",
+    "orderIndex": 28,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_magaza"
+  },
+  {
+    "id": "2021_ales1_mat_29",
+    "number": 29,
+    "subject": "matematik",
+    "category": "oran_oranti",
+    "orderIndex": 29,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_mandira"
+  },
+  {
+    "id": "2021_ales1_mat_30",
+    "number": 30,
+    "subject": "matematik",
+    "category": "oran_oranti",
+    "orderIndex": 30,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_mandira"
+  },
+  {
+    "id": "2021_ales1_mat_31",
+    "number": 31,
+    "subject": "matematik",
+    "category": "oran_oranti",
+    "orderIndex": 31,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_mandira"
+  },
+  {
+    "id": "2021_ales1_mat_32",
+    "number": 32,
+    "subject": "matematik",
+    "category": "tablo_grafik",
+    "orderIndex": 32,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_yas_grafik"
+  },
+  {
+    "id": "2021_ales1_mat_33",
+    "number": 33,
+    "subject": "matematik",
+    "category": "tablo_grafik",
+    "orderIndex": 33,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_yas_grafik"
+  },
+  {
+    "id": "2021_ales1_mat_34",
+    "number": 34,
+    "subject": "matematik",
+    "category": "tablo_grafik",
+    "orderIndex": 34,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_yas_grafik"
+  },
+  {
+    "id": "2021_ales1_mat_35",
+    "number": 35,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 35,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_yasin"
+  },
+  {
+    "id": "2021_ales1_mat_36",
+    "number": 36,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 36,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_yasin"
+  },
+  {
+    "id": "2021_ales1_mat_37",
+    "number": 37,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 37,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_yasin"
+  },
+  {
+    "id": "2021_ales1_mat_38",
+    "number": 38,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 38,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_top_cekme"
+  },
+  {
+    "id": "2021_ales1_mat_39",
+    "number": 39,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 39,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_top_cekme"
+  },
+  {
+    "id": "2021_ales1_mat_40",
+    "number": 40,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 40,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_top_cekme"
+  },
+  {
+    "id": "2021_ales1_mat_41",
+    "number": 41,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 41,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_tablo410"
+  },
+  {
+    "id": "2021_ales1_mat_42",
+    "number": 42,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 42,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_tablo410"
+  },
+  {
+    "id": "2021_ales1_mat_43",
+    "number": 43,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 43,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mat_g_tablo410"
+  },
+  {
+    "id": "2021_ales1_mat_44",
+    "number": 44,
+    "subject": "matematik",
+    "category": "geometri_ucgende_aci",
+    "orderIndex": 44,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_45",
+    "number": 45,
+    "subject": "matematik",
+    "category": "geometri_ucgende_alan",
+    "orderIndex": 45,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_46",
+    "number": 46,
+    "subject": "matematik",
+    "category": "geometri_kare",
+    "orderIndex": 46,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_47",
+    "number": 47,
+    "subject": "matematik",
+    "category": "geometri_dikdortgen",
+    "orderIndex": 47,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_48",
+    "number": 48,
+    "subject": "matematik",
+    "category": "geometri_cember_daire",
+    "orderIndex": 48,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_49",
+    "number": 49,
+    "subject": "matematik",
+    "category": "kati_cisimler",
+    "orderIndex": 49,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_mat_50",
+    "number": 50,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 50,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_01",
+    "number": 1,
+    "subject": "turkce",
+    "category": "sozcukte_anlam",
+    "orderIndex": 51,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_02",
+    "number": 2,
+    "subject": "turkce",
+    "category": "sozcukte_anlam",
+    "orderIndex": 52,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_03",
+    "number": 3,
+    "subject": "turkce",
+    "category": "paragrafta_bosluk_doldurma",
+    "orderIndex": 53,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_04",
+    "number": 4,
+    "subject": "turkce",
+    "category": "paragrafta_bosluk_doldurma",
+    "orderIndex": 54,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_05",
+    "number": 5,
+    "subject": "turkce",
+    "category": "paragrafta_bosluk_doldurma",
+    "orderIndex": 55,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_06",
+    "number": 6,
+    "subject": "turkce",
+    "category": "paragrafta_bosluk_doldurma",
+    "orderIndex": 56,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_07",
+    "number": 7,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 57,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_08",
+    "number": 8,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 58,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_09",
+    "number": 9,
+    "subject": "turkce",
+    "category": "cumle_olusturma",
+    "orderIndex": 59,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_10",
+    "number": 10,
+    "subject": "turkce",
+    "category": "cumle_olusturma",
+    "orderIndex": 60,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_11",
+    "number": 11,
+    "subject": "turkce",
+    "category": "paragraf_olusturma",
+    "orderIndex": 61,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_12",
+    "number": 12,
+    "subject": "turkce",
+    "category": "paragraf_olusturma",
+    "orderIndex": 62,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_13",
+    "number": 13,
+    "subject": "turkce",
+    "category": "cumle_yer_degistirme",
+    "orderIndex": 63,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_14",
+    "number": 14,
+    "subject": "turkce",
+    "category": "cumle_yer_degistirme",
+    "orderIndex": 64,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_15",
+    "number": 15,
+    "subject": "turkce",
+    "category": "cumle_yer_degistirme",
+    "orderIndex": 65,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_16",
+    "number": 16,
+    "subject": "turkce",
+    "category": "akisi_bozan_cumle",
+    "orderIndex": 66,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_17",
+    "number": 17,
+    "subject": "turkce",
+    "category": "akisi_bozan_cumle",
+    "orderIndex": 67,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_18",
+    "number": 18,
+    "subject": "turkce",
+    "category": "akisi_bozan_cumle",
+    "orderIndex": 68,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_19",
+    "number": 19,
+    "subject": "turkce",
+    "category": "paragraf_ana_fikir",
+    "orderIndex": 69,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_20",
+    "number": 20,
+    "subject": "turkce",
+    "category": "paragraf_yardimci_fikir",
+    "orderIndex": 70,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_21",
+    "number": 21,
+    "subject": "turkce",
+    "category": "paragraf_yardimci_fikir",
+    "orderIndex": 71,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_22",
+    "number": 22,
+    "subject": "turkce",
+    "category": "paragraf_yardimci_fikir",
+    "orderIndex": 72,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_23",
+    "number": 23,
+    "subject": "turkce",
+    "category": "paragrafta_olumsuz_kok",
+    "orderIndex": 73,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_24",
+    "number": 24,
+    "subject": "turkce",
+    "category": "paragraf_ana_fikir",
+    "orderIndex": 74,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_25",
+    "number": 25,
+    "subject": "turkce",
+    "category": "paragrafta_olumsuz_kok",
+    "orderIndex": 75,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_26",
+    "number": 26,
+    "subject": "turkce",
+    "category": "paragrafta_olumsuz_kok",
+    "orderIndex": 76,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_27",
+    "number": 27,
+    "subject": "turkce",
+    "category": "paragraf_ana_fikir",
+    "orderIndex": 77,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_28",
+    "number": 28,
+    "subject": "turkce",
+    "category": "paragrafta_olumsuz_kok",
+    "orderIndex": 78,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_29",
+    "number": 29,
+    "subject": "turkce",
+    "category": "paragraf_ana_fikir",
+    "orderIndex": 79,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_30",
+    "number": 30,
+    "subject": "turkce",
+    "category": "paragraf_yardimci_fikir",
+    "orderIndex": 80,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_31",
+    "number": 31,
+    "subject": "turkce",
+    "category": "paragraf_ana_fikir",
+    "orderIndex": 81,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_32",
+    "number": 32,
+    "subject": "turkce",
+    "category": "paragraf_yardimci_fikir",
+    "orderIndex": 82,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales1_turkce_33",
+    "number": 33,
+    "subject": "turkce",
+    "category": "coklu_paragraf",
+    "orderIndex": 83,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_g_mischel"
+  },
+  {
+    "id": "2021_ales1_turkce_34",
+    "number": 34,
+    "subject": "turkce",
+    "category": "coklu_paragraf",
+    "orderIndex": 84,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_g_mischel"
+  },
+  {
+    "id": "2021_ales1_turkce_35",
+    "number": 35,
+    "subject": "turkce",
+    "category": "coklu_paragraf",
+    "orderIndex": 85,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_g_mischel"
+  },
+  {
+    "id": "2021_ales1_turkce_36",
+    "number": 36,
+    "subject": "turkce",
+    "category": "coklu_paragraf",
+    "orderIndex": 86,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_g_chaplin"
+  },
+  {
+    "id": "2021_ales1_turkce_37",
+    "number": 37,
+    "subject": "turkce",
+    "category": "coklu_paragraf",
+    "orderIndex": 87,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_g_chaplin"
+  },
+  {
+    "id": "2021_ales1_turkce_38",
+    "number": 38,
+    "subject": "turkce",
+    "category": "coklu_paragraf",
+    "orderIndex": 88,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_g_chaplin"
+  },
+  {
+    "id": "2021_ales1_turkce_39",
+    "number": 39,
+    "subject": "turkce",
+    "category": "coklu_paragraf",
+    "orderIndex": 89,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_g_empati"
+  },
+  {
+    "id": "2021_ales1_turkce_40",
+    "number": 40,
+    "subject": "turkce",
+    "category": "coklu_paragraf",
+    "orderIndex": 90,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_g_empati"
+  },
+  {
+    "id": "2021_ales1_turkce_41",
+    "number": 41,
+    "subject": "turkce",
+    "category": "coklu_paragraf",
+    "orderIndex": 91,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_g_empati"
+  },
+  {
+    "id": "2021_ales1_turkce_42",
+    "number": 42,
+    "subject": "turkce",
+    "category": "coklu_paragraf",
+    "orderIndex": 92,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_g_empati"
+  },
+  {
+    "id": "2021_ales1_mantik_43",
+    "number": 43,
+    "subject": "mantik",
+    "category": "sozel_mantik_tablo",
+    "orderIndex": 93,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mantik_g1"
+  },
+  {
+    "id": "2021_ales1_mantik_44",
+    "number": 44,
+    "subject": "mantik",
+    "category": "sozel_mantik_tablo",
+    "orderIndex": 94,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mantik_g1"
+  },
+  {
+    "id": "2021_ales1_mantik_45",
+    "number": 45,
+    "subject": "mantik",
+    "category": "sozel_mantik_tablo",
+    "orderIndex": 95,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mantik_g1"
+  },
+  {
+    "id": "2021_ales1_mantik_46",
+    "number": 46,
+    "subject": "mantik",
+    "category": "sozel_mantik_tablo",
+    "orderIndex": 96,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mantik_g1"
+  },
+  {
+    "id": "2021_ales1_mantik_47",
+    "number": 47,
+    "subject": "mantik",
+    "category": "sozel_mantik_eslestirme",
+    "orderIndex": 97,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mantik_g2"
+  },
+  {
+    "id": "2021_ales1_mantik_48",
+    "number": 48,
+    "subject": "mantik",
+    "category": "sozel_mantik_eslestirme",
+    "orderIndex": 98,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mantik_g2"
+  },
+  {
+    "id": "2021_ales1_mantik_49",
+    "number": 49,
+    "subject": "mantik",
+    "category": "sozel_mantik_eslestirme",
+    "orderIndex": 99,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mantik_g2"
+  },
+  {
+    "id": "2021_ales1_mantik_50",
+    "number": 50,
+    "subject": "mantik",
+    "category": "sozel_mantik_eslestirme",
+    "orderIndex": 100,
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_mantik_g2"
+  },
+  {
+    "id": "2021_ales2_mat_01",
+    "number": 1,
+    "subject": "matematik",
+    "category": "rasyonel_sayilar",
+    "orderIndex": 101,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_02",
+    "number": 2,
+    "subject": "matematik",
+    "category": "uslu_sayilar",
+    "orderIndex": 102,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_03",
+    "number": 3,
+    "subject": "matematik",
+    "category": "koklu_sayilar",
+    "orderIndex": 103,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_04",
+    "number": 4,
+    "subject": "matematik",
+    "category": "ondalik_sayilar",
+    "orderIndex": 104,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_05",
+    "number": 5,
+    "subject": "matematik",
+    "category": "faktoriyel",
+    "orderIndex": 105,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_06",
+    "number": 6,
+    "subject": "matematik",
+    "category": "basamak_kavrami",
+    "orderIndex": 106,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_07",
+    "number": 7,
+    "subject": "matematik",
+    "category": "birinci_dereceden_denklemler",
+    "orderIndex": 107,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_08",
+    "number": 8,
+    "subject": "matematik",
+    "category": "basit_esitsizlikler",
+    "orderIndex": 108,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_09",
+    "number": 9,
+    "subject": "matematik",
+    "category": "sayilar_teklik_ciftlik",
+    "orderIndex": 109,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_10",
+    "number": 10,
+    "subject": "matematik",
+    "category": "uslu_sayilar",
+    "orderIndex": 110,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_11",
+    "number": 11,
+    "subject": "matematik",
+    "category": "kumeler",
+    "orderIndex": 111,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_12",
+    "number": 12,
+    "subject": "matematik",
+    "category": "mutlak_deger",
+    "orderIndex": 112,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_13",
+    "number": 13,
+    "subject": "matematik",
+    "category": "fonksiyonlar",
+    "orderIndex": 113,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_14",
+    "number": 14,
+    "subject": "matematik",
+    "category": "bolunebilme_kurallari",
+    "orderIndex": 114,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_15",
+    "number": 15,
+    "subject": "matematik",
+    "category": "basamak_kavrami",
+    "orderIndex": 115,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_16",
+    "number": 16,
+    "subject": "matematik",
+    "category": "denklem_kurma_problemleri",
+    "orderIndex": 116,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_17",
+    "number": 17,
+    "subject": "matematik",
+    "category": "kume_problemleri",
+    "orderIndex": 117,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_18",
+    "number": 18,
+    "subject": "matematik",
+    "category": "yuzde_problemleri",
+    "orderIndex": 118,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_19",
+    "number": 19,
+    "subject": "matematik",
+    "category": "yas_problemleri",
+    "orderIndex": 119,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_20",
+    "number": 20,
+    "subject": "matematik",
+    "category": "grafik_ve_tablo_yorumlama",
+    "orderIndex": 120,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_21",
+    "number": 21,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 121,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_22",
+    "number": 22,
+    "subject": "matematik",
+    "category": "sayma_ve_olasilik",
+    "orderIndex": 122,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_23",
+    "number": 23,
+    "subject": "matematik",
+    "category": "oran_oranti_problemleri",
+    "orderIndex": 123,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_24",
+    "number": 24,
+    "subject": "matematik",
+    "category": "oran_oranti_problemleri",
+    "orderIndex": 124,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_25",
+    "number": 25,
+    "subject": "matematik",
+    "category": "grafik_ve_tablo_yorumlama",
+    "orderIndex": 125,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_26",
+    "number": 26,
+    "subject": "matematik",
+    "category": "grafik_ve_tablo_yorumlama",
+    "orderIndex": 126,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_27",
+    "number": 27,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 127,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_28",
+    "number": 28,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 128,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_29",
+    "number": 29,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "orderIndex": 129,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_30",
+    "number": 30,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "orderIndex": 130,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_31",
+    "number": 31,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "orderIndex": 131,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_32",
+    "number": 32,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 132,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_33",
+    "number": 33,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 133,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_34",
+    "number": 34,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 134,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_35",
+    "number": 35,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 135,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_36",
+    "number": 36,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 136,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_37",
+    "number": 37,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 137,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_38",
+    "number": 38,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 138,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_39",
+    "number": 39,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 139,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_40",
+    "number": 40,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 140,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_41",
+    "number": 41,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 141,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_42",
+    "number": 42,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 142,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_43",
+    "number": 43,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 143,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_44",
+    "number": 44,
+    "subject": "matematik",
+    "category": "geometri_ucgende_acilar",
+    "orderIndex": 144,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_45",
+    "number": 45,
+    "subject": "matematik",
+    "category": "geometri_ucgende_alan",
+    "orderIndex": 145,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_46",
+    "number": 46,
+    "subject": "matematik",
+    "category": "geometri_dortgenler",
+    "orderIndex": 146,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_47",
+    "number": 47,
+    "subject": "matematik",
+    "category": "geometri_dikdortgen_alan",
+    "orderIndex": 147,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_48",
+    "number": 48,
+    "subject": "matematik",
+    "category": "geometri_cember_daire",
+    "orderIndex": 148,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_49",
+    "number": 49,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 149,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_mat_50",
+    "number": 50,
+    "subject": "matematik",
+    "category": "geometri_kati_cisimler",
+    "orderIndex": 150,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_01",
+    "number": 1,
+    "subject": "turkce",
+    "category": "sozcukte_anlam",
+    "orderIndex": 151,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_02",
+    "number": 2,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 152,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_03",
+    "number": 3,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 153,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_04",
+    "number": 4,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 154,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_05",
+    "number": 5,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 155,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_06",
+    "number": 6,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 156,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_07",
+    "number": 7,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 157,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_08",
+    "number": 8,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 158,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_09",
+    "number": 9,
+    "subject": "turkce",
+    "category": "anlatim_teknikleri",
+    "orderIndex": 159,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_10",
+    "number": 10,
+    "subject": "turkce",
+    "category": "anlatim_teknikleri",
+    "orderIndex": 160,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_11",
+    "number": 11,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 161,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_12",
+    "number": 12,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 162,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_13",
+    "number": 13,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 163,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_14",
+    "number": 14,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 164,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_15",
+    "number": 15,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 165,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_16",
+    "number": 16,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 166,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_17",
+    "number": 17,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 167,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_18",
+    "number": 18,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 168,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_19",
+    "number": 19,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 169,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_20",
+    "number": 20,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 170,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_21",
+    "number": 21,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 171,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_22",
+    "number": 22,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 172,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_23",
+    "number": 23,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 173,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_24",
+    "number": 24,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 174,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_25",
+    "number": 25,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 175,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_26",
+    "number": 26,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 176,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_27",
+    "number": 27,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 177,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_28",
+    "number": 28,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 178,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_29",
+    "number": 29,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 179,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_30",
+    "number": 30,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 180,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_31",
+    "number": 31,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 181,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_32",
+    "number": 32,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 182,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_33",
+    "number": 33,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 183,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_34",
+    "number": 34,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 184,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_35",
+    "number": 35,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 185,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_36",
+    "number": 36,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 186,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_37",
+    "number": 37,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 187,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_38",
+    "number": 38,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 188,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_39",
+    "number": 39,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 189,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_40",
+    "number": 40,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 190,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_41",
+    "number": 41,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 191,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_42",
+    "number": 42,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 192,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_43",
+    "number": 43,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 193,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_44",
+    "number": 44,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 194,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_45",
+    "number": 45,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 195,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_46",
+    "number": 46,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 196,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_47",
+    "number": 47,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 197,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_48",
+    "number": 48,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 198,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_49",
+    "number": 49,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 199,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales2_soz_50",
+    "number": 50,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 200,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_01",
+    "number": 1,
+    "subject": "matematik",
+    "category": "rasyonel_sayilar",
+    "orderIndex": 201,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_02",
+    "number": 2,
+    "subject": "matematik",
+    "category": "uslu_sayilar",
+    "orderIndex": 202,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_03",
+    "number": 3,
+    "subject": "matematik",
+    "category": "koklu_sayilar",
+    "orderIndex": 203,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_04",
+    "number": 4,
+    "subject": "matematik",
+    "category": "faktoriyel",
+    "orderIndex": 204,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_05",
+    "number": 5,
+    "subject": "matematik",
+    "category": "basamak_kavrami",
+    "orderIndex": 205,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_06",
+    "number": 6,
+    "subject": "matematik",
+    "category": "basit_esitsizlikler",
+    "orderIndex": 206,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_07",
+    "number": 7,
+    "subject": "matematik",
+    "category": "birinci_dereceden_denklemler",
+    "orderIndex": 207,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_08",
+    "number": 8,
+    "subject": "matematik",
+    "category": "sayilar_teklik_ciftlik",
+    "orderIndex": 208,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_09",
+    "number": 9,
+    "subject": "matematik",
+    "category": "sayilar_isaret_incelemesi",
+    "orderIndex": 209,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_10",
+    "number": 10,
+    "subject": "matematik",
+    "category": "mutlak_deger",
+    "orderIndex": 210,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_11",
+    "number": 11,
+    "subject": "matematik",
+    "category": "uslu_sayilar",
+    "orderIndex": 211,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_12",
+    "number": 12,
+    "subject": "matematik",
+    "category": "ozel_tanimli_islemler",
+    "orderIndex": 212,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_13",
+    "number": 13,
+    "subject": "matematik",
+    "category": "kumeler",
+    "orderIndex": 213,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_14",
+    "number": 14,
+    "subject": "matematik",
+    "category": "bolunebilme_kurallari",
+    "orderIndex": 214,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_15",
+    "number": 15,
+    "subject": "matematik",
+    "category": "basamak_kavrami",
+    "orderIndex": 215,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_16",
+    "number": 16,
+    "subject": "matematik",
+    "category": "denklem_kurma_problemleri",
+    "orderIndex": 216,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_17",
+    "number": 17,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "orderIndex": 217,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_18",
+    "number": 18,
+    "subject": "matematik",
+    "category": "yuzde_problemleri",
+    "orderIndex": 218,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_19",
+    "number": 19,
+    "subject": "matematik",
+    "category": "hiz_problemleri",
+    "orderIndex": 219,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_20",
+    "number": 20,
+    "subject": "matematik",
+    "category": "kesir_problemleri",
+    "orderIndex": 220,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_21",
+    "number": 21,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 221,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_22",
+    "number": 22,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 222,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_23",
+    "number": 23,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "orderIndex": 223,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_24",
+    "number": 24,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "orderIndex": 224,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_25",
+    "number": 25,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 225,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_26",
+    "number": 26,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 226,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_27",
+    "number": 27,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 227,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_28",
+    "number": 28,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 228,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_29",
+    "number": 29,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "orderIndex": 229,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_30",
+    "number": 30,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "orderIndex": 230,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_31",
+    "number": 31,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "orderIndex": 231,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_32",
+    "number": 32,
+    "subject": "matematik",
+    "category": "tablo_ve_grafik_problemleri",
+    "orderIndex": 232,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_33",
+    "number": 33,
+    "subject": "matematik",
+    "category": "yuzde_problemleri",
+    "orderIndex": 233,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_34",
+    "number": 34,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "orderIndex": 234,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_35",
+    "number": 35,
+    "subject": "matematik",
+    "category": "karisim_problemleri",
+    "orderIndex": 235,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_36",
+    "number": 36,
+    "subject": "matematik",
+    "category": "karisim_problemleri",
+    "orderIndex": 236,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_37",
+    "number": 37,
+    "subject": "matematik",
+    "category": "oran_oranti_problemleri",
+    "orderIndex": 237,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_38",
+    "number": 38,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 238,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_39",
+    "number": 39,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 239,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_40",
+    "number": 40,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 240,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_41",
+    "number": 41,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 241,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_42",
+    "number": 42,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 242,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_43",
+    "number": 43,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 243,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_44",
+    "number": 44,
+    "subject": "matematik",
+    "category": "geometri_ucgende_acilar",
+    "orderIndex": 244,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_45",
+    "number": 45,
+    "subject": "matematik",
+    "category": "geometri_ucgende_alan",
+    "orderIndex": 245,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_46",
+    "number": 46,
+    "subject": "matematik",
+    "category": "geometri_cokgenler",
+    "orderIndex": 246,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_47",
+    "number": 47,
+    "subject": "matematik",
+    "category": "geometri_kare_alan",
+    "orderIndex": 247,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_48",
+    "number": 48,
+    "subject": "matematik",
+    "category": "geometri_cember_daire",
+    "orderIndex": 248,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_49",
+    "number": 49,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "orderIndex": 249,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_mat_50",
+    "number": 50,
+    "subject": "matematik",
+    "category": "geometri_kati_cisimler",
+    "orderIndex": 250,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_01",
+    "number": 1,
+    "subject": "turkce",
+    "category": "sozcukte_anlam",
+    "orderIndex": 251,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_02",
+    "number": 2,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 252,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_03",
+    "number": 3,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 253,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_04",
+    "number": 4,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 254,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_05",
+    "number": 5,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 255,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_06",
+    "number": 6,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 256,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_07",
+    "number": 7,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 257,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_08",
+    "number": 8,
+    "subject": "turkce",
+    "category": "cumlede_anlam",
+    "orderIndex": 258,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_09",
+    "number": 9,
+    "subject": "turkce",
+    "category": "anlatim_teknikleri",
+    "orderIndex": 259,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_10",
+    "number": 10,
+    "subject": "turkce",
+    "category": "anlatim_teknikleri",
+    "orderIndex": 260,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_11",
+    "number": 11,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 261,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_12",
+    "number": 12,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 262,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_13",
+    "number": 13,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 263,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_14",
+    "number": 14,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 264,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_15",
+    "number": 15,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 265,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_16",
+    "number": 16,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 266,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_17",
+    "number": 17,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 267,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_18",
+    "number": 18,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 268,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_19",
+    "number": 19,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 269,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_20",
+    "number": 20,
+    "subject": "turkce",
+    "category": "paragraf_yapisi",
+    "orderIndex": 270,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_21",
+    "number": 21,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 271,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_22",
+    "number": 22,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 272,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_23",
+    "number": 23,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 273,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_24",
+    "number": 24,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 274,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_25",
+    "number": 25,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 275,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_26",
+    "number": 26,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 276,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_27",
+    "number": 27,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 277,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_28",
+    "number": 28,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 278,
+    "isGroupQuestion": false,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_29",
+    "number": 29,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 279,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_30",
+    "number": 30,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 280,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_31",
+    "number": 31,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 281,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_32",
+    "number": 32,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 282,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_33",
+    "number": 33,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 283,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_34",
+    "number": 34,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 284,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_35",
+    "number": 35,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 285,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_36",
+    "number": 36,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 286,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_37",
+    "number": 37,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 287,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_38",
+    "number": 38,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 288,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_39",
+    "number": 39,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 289,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_40",
+    "number": 40,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 290,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_41",
+    "number": 41,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 291,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_42",
+    "number": 42,
+    "subject": "turkce",
+    "category": "paragrafta_anlam",
+    "orderIndex": 292,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_43",
+    "number": 43,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 293,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_44",
+    "number": 44,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 294,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_45",
+    "number": 45,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 295,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_46",
+    "number": 46,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 296,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_47",
+    "number": 47,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 297,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_48",
+    "number": 48,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 298,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_49",
+    "number": 49,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 299,
+    "isGroupQuestion": true,
+    "groupId": null
+  },
+  {
+    "id": "2021_ales3_soz_50",
+    "number": 50,
+    "subject": "mantik",
+    "category": "sozel_mantik",
+    "orderIndex": 300,
+    "isGroupQuestion": true,
+    "groupId": null
+  }
+]

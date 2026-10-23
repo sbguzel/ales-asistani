@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 200" width="100%" height="180">
+  <defs>
+    <style>
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.35); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.35); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-blue { fill: rgba(56, 189, 248, 0.35); stroke: #38bdf8; stroke-width: 2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+      .geo-dashed { stroke-dasharray: 4 4; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+      }
+    </style>
+</defs>
+  
+  <!-- Şekil I: 4x5 Grid (Ok sol üstte güneydoğu yönünde) -->
+  <g transform="translate(15, 20)">
+    <text x="45" y="10" class="geo-text-muted" font-weight="700">Şekil I</text>
+    <!-- 4 satır, 5 sütun (her kare 18x18) -->
+    <rect x="0" y="20" width="90" height="72" fill="none" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <!-- Yatay & Dikey Çizgiler -->
+    <line x1="0" y1="38" x2="90" y2="38" stroke="var(--border-subtle, rgba(255,255,255,0.15))" />
+    <line x1="0" y1="56" x2="90" y2="56" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="4 4" />
+    <line x1="0" y1="74" x2="90" y2="74" stroke="var(--border-subtle, rgba(255,255,255,0.15))" />
+    <line x1="18" y1="20" x2="18" y2="92" stroke="var(--border-subtle, rgba(255,255,255,0.15))" />
+    <line x1="36" y1="20" x2="36" y2="92" stroke="var(--border-subtle, rgba(255,255,255,0.15))" />
+    <line x1="54" y1="20" x2="54" y2="92" stroke="var(--border-subtle, rgba(255,255,255,0.15))" />
+    <line x1="72" y1="20" x2="72" y2="92" stroke="var(--border-subtle, rgba(255,255,255,0.15))" />
+    
+    <!-- Ok İşareti (Sol-Üst Hücrede: 0-18 x 20-38) -->
+    <line x1="3" y1="23" x2="15" y2="35" stroke="#f59e0b" stroke-width="2.5" />
+    <polygon points="15,35 15,28 8,35" fill="#f59e0b" />
+
+    <!-- Katlama Oku (Aşağı Doğru) -->
+    <path d="M 98,40 Q 108,56 98,70" fill="none" stroke="#38bdf8" stroke-width="1.8" />
+  </g>
+
+  <!-- Şekil II: Yatay Katlanmış (2x5 Grid, Dikey Kesikli Doğru) -->
+  <g transform="translate(145, 20)">
+    <text x="45" y="10" class="geo-text-muted" font-weight="700">Şekil II</text>
+    <rect x="0" y="38" width="90" height="36" fill="none" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <line x1="0" y1="56" x2="90" y2="56" stroke="var(--border-subtle, rgba(255,255,255,0.15))" />
+    <line x1="45" y1="38" x2="45" y2="74" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="4 4" />
+
+    <!-- Ok İşareti (Yansımış) -->
+    <line x1="3" y1="71" x2="15" y2="59" stroke="#f59e0b" stroke-width="2.5" />
+    <polygon points="15,59 8,59 15,66" fill="#f59e0b" />
+  </g>
+
+  <!-- Şekil III: Köşegen Katlama -->
+  <g transform="translate(275, 20)">
+    <text x="35" y="10" class="geo-text-muted" font-weight="700">Şekil III</text>
+    <rect x="0" y="38" width="45" height="36" fill="none" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <line x1="0" y1="74" x2="45" y2="38" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Doğru Sonuç (Seçenek A: Üçgen İçinde Ok) -->
+  <g transform="translate(150, 120)">
+    <polygon points="0,40 40,0 40,40" class="geo-shaded" />
+    <!-- Ok -->
+    <line x1="20" y1="12" x2="20" y2="30" stroke="#f59e0b" stroke-width="2.5" />
+    <polygon points="20,30 16,23 24,23" fill="#f59e0b" />
+    <text x="75" y="25" class="geo-text-accent">Sonuç (A)</text>
+  </g>
+</svg>

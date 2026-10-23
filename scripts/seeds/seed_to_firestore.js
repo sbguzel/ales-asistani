@@ -8,6 +8,7 @@ import {
   doc, 
   writeBatch, 
   getDocs, 
+  setDoc,
   serverTimestamp 
 } from 'firebase/firestore';
 
@@ -78,6 +79,24 @@ async function seedQuestions() {
   console.log('⏳ Firestore Toplu Yazma (Batch) İşlemi Gönderiliyor...');
   await batch.commit();
   console.log('✅ Tüm sorular Firestore "questions" koleksiyonuna başarıyla yüklendi!');
+
+  // Hafif soru manifestosunu system/manifest dokümanına kaydet
+  const manifest = questions.map((q, idx) => ({
+    id: q.id,
+    number: q.number,
+    subject: q.subject,
+    category: q.category,
+    orderIndex: q.orderIndex || idx + 1,
+    isGroupQuestion: !!q.isGroupQuestion,
+    groupId: q.groupId || null
+  }));
+  const manifestRef = doc(db, 'system', 'manifest');
+  await setDoc(manifestRef, {
+    total: manifest.length,
+    items: manifest,
+    updatedAt: serverTimestamp()
+  }, { merge: true });
+  console.log('📋 Soru manifestosu "system/manifest" dokümanına başarıyla kaydedildi!');
 
   // Doğrulama: Koleksiyonu oku ve doğrula
   console.log('🔍 Doğrulama yapılıyor...');

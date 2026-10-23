@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 270" width="100%" height="250">
+  <defs>
+    <style>
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.28); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-purple { fill: rgba(168, 85, 247, 0.28); stroke: #a855f7; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-green { fill: rgba(34, 197, 94, 0.28); stroke: #22c55e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.28); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+      .geo-dashed { stroke-dasharray: 4 4; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+      }
+    </style>
+</defs>
+  
+  <!-- Boyalı DBE Üçgeni -->
+  <polygon points="135,230 265,230 210,135" class="geo-shaded" />
+
+  <!-- ABC Eşkenar Üçgeni -->
+  <polygon points="155,40 45,230 265,230" class="geo-line" />
+  
+  <!-- [DE] Doğru Parçası -->
+  <line x1="135" y1="230" x2="210" y2="135" class="geo-sec" stroke-width="2.2" />
+
+  <!-- Eşitlik İşaretleri (|CE| = |EB|) -->
+  <line x1="180" y1="85" x2="185" y2="90" class="geo-line" stroke-width="1.8" />
+  <line x1="235" y1="180" x2="240" y2="185" class="geo-line" stroke-width="1.8" />
+
+  <!-- Eşitlik İşaretleri (|AD| = |DE|) -->
+  <line x1="88" y1="225" x2="88" y2="235" class="geo-line" stroke-width="1.8" />
+  <line x1="92" y1="225" x2="92" y2="235" class="geo-line" stroke-width="1.8" />
+  <line x1="170" y1="180" x2="178" y2="186" class="geo-line" stroke-width="1.8" />
+  <line x1="173" y1="176" x2="181" y2="182" class="geo-line" stroke-width="1.8" />
+
+  <!-- Kenar Uzunluğu: |AC| = 8 -->
+  <text x="85" y="125" class="geo-text-muted">8</text>
+
+  <!-- Noktalar -->
+  <text x="155" y="25" class="geo-text">C</text>
+  <text x="30" y="238" class="geo-text">A</text>
+  <text x="280" y="238" class="geo-text">B</text>
+  <text x="135" y="246" class="geo-text">D</text>
+  <text x="228" y="135" class="geo-text">E</text>
+</svg>

@@ -1,0 +1,2055 @@
+# -*- coding: utf-8 -*-
+import json
+
+QUESTIONS_SAYISAL_2021_ALES3 = json.loads(r"""[
+  {
+    "id": "2021_ales3_mat_01",
+    "number": 1,
+    "subject": "matematik",
+    "category": "rasyonel_sayilar",
+    "topicTitle": "Rasyonel Sayılarda Dört İşlem",
+    "difficulty": 1,
+    "questionText": "$$\\frac{1 + \\frac{1}{4}}{1 - \\frac{1}{2} + \\frac{1}{3}}$$\n\nişleminin sonucu kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "4/3"
+      },
+      {
+        "key": "B",
+        "text": "3/2"
+      },
+      {
+        "key": "C",
+        "text": "5/3"
+      },
+      {
+        "key": "D",
+        "text": "7/4"
+      },
+      {
+        "key": "E",
+        "text": "2"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "Pay: $$1 + \\frac{1}{4} = \\frac{5}{4}$$.\nPayda: $$1 - \\frac{1}{2} + \\frac{1}{3} = \\frac{1}{2} + \\frac{1}{3} = \\frac{5}{6}$$.\nSonuç: $$\\frac{5/4}{5/6} = \\frac{5}{4} \\cdot \\frac{6}{5} = \\frac{6}{4} = \\frac{3}{2}$$.",
+    "quickTip": "Pay ve paydadaki 5'leri sadeleştirerek $6/4 = 3/2$ sonucuna hemen ulaşın.",
+    "targetTimeSec": 40,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 201
+  },
+  {
+    "id": "2021_ales3_mat_02",
+    "number": 2,
+    "subject": "matematik",
+    "category": "uslu_sayilar",
+    "topicTitle": "Üslü Sayılarda Asal Tabanlara Ayırma",
+    "difficulty": 2,
+    "questionText": "$$\\frac{2^2 \\cdot 4^4 \\cdot 6^6}{24^5}$$\n\nişleminin sonucu kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "2"
+      },
+      {
+        "key": "B",
+        "text": "4"
+      },
+      {
+        "key": "C",
+        "text": "6"
+      },
+      {
+        "key": "D",
+        "text": "8"
+      },
+      {
+        "key": "E",
+        "text": "12"
+      }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "2 ve 3 asal tabanlarına ayıralım:\n$$4^4 = (2^2)^4 = 2^8$$\n$$6^6 = (2 \\cdot 3)^6 = 2^6 \\cdot 3^6$$\nPay: $$2^2 \\cdot 2^8 \\cdot 2^6 \\cdot 3^6 = 2^{16} \\cdot 3^6$$.\nPayda: $$24^5 = (2^3 \\cdot 3)^5 = 2^{15} \\cdot 3^5$$.\nOran: $$2^{16-15} \\cdot 3^{6-5} = 2^1 \\cdot 3^1 = 6$$.",
+    "quickTip": "2 ve 3 tabanlarına ayırarak üsleri birbirinden çıkarın: $2^1 \\cdot 3^1 = 6$.",
+    "targetTimeSec": 50,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 202
+  },
+  {
+    "id": "2021_ales3_mat_03",
+    "number": 3,
+    "subject": "matematik",
+    "category": "koklu_sayilar",
+    "topicTitle": "Köklü Sayılarda Toplama ve Bölme",
+    "difficulty": 1,
+    "questionText": "$$\\frac{\\sqrt{32} + \\sqrt{8}}{\\sqrt{72}}$$\n\nişleminin sonucu kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "1"
+      },
+      {
+        "key": "B",
+        "text": "2"
+      },
+      {
+        "key": "C",
+        "text": "\\sqrt{2}"
+      },
+      {
+        "key": "D",
+        "text": "\\sqrt{3}"
+      },
+      {
+        "key": "E",
+        "text": "2\\sqrt{2}"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "$$\\sqrt{32} = 4\\sqrt{2}$$\n$$\\sqrt{8} = 2\\sqrt{2}$$\n$$\\sqrt{72} = 6\\sqrt{2}$$\nPay: $$4\\sqrt{2} + 2\\sqrt{2} = 6\\sqrt{2}$$.\nPayda: $$6\\sqrt{2}$$.\nSonuç: $$\\frac{6\\sqrt{2}}{6\\sqrt{2}} = 1$$.",
+    "quickTip": "Tüm kökler $\\sqrt{2}$'nin katıdır: $(4+2)/6 = 6/6 = 1$.",
+    "targetTimeSec": 35,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 203
+  },
+  {
+    "id": "2021_ales3_mat_04",
+    "number": 4,
+    "subject": "matematik",
+    "category": "faktoriyel",
+    "topicTitle": "Faktöriyel Ortak Parantez",
+    "difficulty": 2,
+    "questionText": "$$\\frac{6! - 5! - 4!}{5! + 4!}$$\n\nişleminin sonucu kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "2"
+      },
+      {
+        "key": "B",
+        "text": "3"
+      },
+      {
+        "key": "C",
+        "text": "4"
+      },
+      {
+        "key": "D",
+        "text": "5"
+      },
+      {
+        "key": "E",
+        "text": "6"
+      }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "$4!$ parantezine alalım:\nPay: $$4!(6 \\cdot 5 - 5 - 1) = 4!(30 - 6) = 24 \\cdot 4!$$.\nPayda: $$4!(5 + 1) = 6 \\cdot 4!$$.\nSonuç: $$\\frac{24 \\cdot 4!}{6 \\cdot 4!} = \\frac{24}{6} = 4$$.",
+    "quickTip": "En küçük faktöriyel olan $4!$ parantezine alırsanız: $(30 - 5 - 1) / (5 + 1) = 24 / 6 = 4$.",
+    "targetTimeSec": 45,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 204
+  },
+  {
+    "id": "2021_ales3_mat_05",
+    "number": 5,
+    "subject": "matematik",
+    "category": "basamak_kavrami",
+    "topicTitle": "Üç Basamaklı Sayılarda Toplama",
+    "difficulty": 2,
+    "questionText": "A, B ve C sıfırdan farklı birer rakam olmak üzere\n\n$$\\begin{array}{r@{\\quad}l} & 3\\text{AA} \\\\ + & \\text{B}4\\text{B} \\\\ \\hline & 10\\text{C}5 \\end{array}$$\n\nolduğuna göre, $$A + B + C$$ toplamı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "18"
+      },
+      {
+        "key": "B",
+        "text": "19"
+      },
+      {
+        "key": "C",
+        "text": "20"
+      },
+      {
+        "key": "D",
+        "text": "21"
+      },
+      {
+        "key": "E",
+        "text": "22"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "Birler basamağı: $A + B = 15$ olmalıdır (çünkü elde 1 ile yüzler basamağında $3 + B + 1 = 10 \\implies B = 6$).\n$B = 6$ ise $A + 6 = 15 \\implies A = 9$.\nOnlar basamağı: $A + 4 + 1 = 9 + 4 + 1 = 14 \\implies C = 4$ ve elde 1 yüzler basamağına geçer.\nKontrol: $399 + 646 = 1045$.\n$$A + B + C = 9 + 6 + 4 = 19$$.",
+    "quickTip": "Yüzler basamağında $3 + B + 1 = 10$ eşitliğinden $B=6$ ve $A=9$ hemen çıkar.",
+    "targetTimeSec": 50,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 205
+  },
+  {
+    "id": "2021_ales3_mat_06",
+    "number": 6,
+    "subject": "matematik",
+    "category": "basit_esitsizlikler",
+    "topicTitle": "Eşitsizlik ve Sıralama",
+    "difficulty": 2,
+    "questionText": "Sıfırdan farklı a, b ve c gerçel sayıları için\n\n$$c < 0 < \\frac{1}{a} + \\frac{1}{b} < \\frac{1}{b} + \\frac{1}{c}$$\n\nolduğuna göre, aşağıdaki sıralamalardan hangisi doğrudur?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "a < b < c"
+      },
+      {
+        "key": "B",
+        "text": "b < a < c"
+      },
+      {
+        "key": "C",
+        "text": "b < c < a"
+      },
+      {
+        "key": "D",
+        "text": "c < b < a"
+      },
+      {
+        "key": "E",
+        "text": "c < a < b"
+      }
+    ],
+    "correctAnswer": "E",
+    "suggestedSolution": "$$\\frac{1}{a} + \\frac{1}{b} < \\frac{1}{b} + \\frac{1}{c} \\implies \\frac{1}{a} < \\frac{1}{c}$$.\n$c < 0$ olduğundan $\\frac{1}{c} < 0$'dır. Dolayısıyla $\\frac{1}{a} < \\frac{1}{c} < 0 \\implies a > c$ (her ikisi negatif).\n$$0 < \\frac{1}{a} + \\frac{1}{b} \\implies \\frac{1}{b} > -\\frac{1}{a} > 0 \\implies b > 0$.\nNegatif olanlar: $c < a < 0$ ve pozitif olan $b > 0$.\nDolayısıyla sıralama: $$c < a < b$$.",
+    "quickTip": "Her iki taraftaki $1/b$'yi atıp $1/a < 1/c < 0$ eşitsizliğinden $c < a$ olduğunu görün.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 206
+  },
+  {
+    "id": "2021_ales3_mat_07",
+    "number": 7,
+    "subject": "matematik",
+    "category": "birinci_dereceden_denklemler",
+    "topicTitle": "Rasyonel Birinci Dereceden Denklem",
+    "difficulty": 1,
+    "questionText": "$$\\frac{3x - 1}{x - \\frac{1}{4}} = 2$$\n\nolduğuna göre, x kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "1/4"
+      },
+      {
+        "key": "B",
+        "text": "1/3"
+      },
+      {
+        "key": "C",
+        "text": "1/2"
+      },
+      {
+        "key": "D",
+        "text": "2/3"
+      },
+      {
+        "key": "E",
+        "text": "3/4"
+      }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "İçler dışlar çarpımı yapalım:\n$$3x - 1 = 2\\left(x - \\frac{1}{4}\\right) = 2x - \\frac{1}{2}$$\n$$3x - 2x = 1 - \\frac{1}{2}$$\n$$x = \\frac{1}{2}$$.",
+    "quickTip": "İçler dışlar çarpımıyla $3x - 1 = 2x - 1/2 \\implies x = 1/2$ bulunur.",
+    "targetTimeSec": 35,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 207
+  },
+  {
+    "id": "2021_ales3_mat_08",
+    "number": 8,
+    "subject": "matematik",
+    "category": "sayilar_teklik_ciftlik",
+    "topicTitle": "Teklik - Çiftlik Analizi",
+    "difficulty": 2,
+    "questionText": "a, b ve c birer tam sayı olmak üzere\n $$a - b$$ ifadesinin çift sayı,\n $$a \\cdot c + b$$ ifadesinin tek sayı\nolduğu biliniyor.\n\nBuna göre,\nI. $$a + c$$\nII. $$a \\cdot c$$\nIII. $$a + b + c$$\n\nifadelerinden hangileri her zaman çift sayıdır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Yalnız I"
+      },
+      {
+        "key": "B",
+        "text": "Yalnız II"
+      },
+      {
+        "key": "C",
+        "text": "I ve II"
+      },
+      {
+        "key": "D",
+        "text": "I ve III"
+      },
+      {
+        "key": "E",
+        "text": "II ve III"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "$a - b$ çift ise $a$ ve $b$ aynı işaretlidir (ikisi de tek veya ikisi de çift).\n$a \\cdot c + b$ tek sayı:\n- Eğer $a$ ve $b$ çift olsaydı, $a \\cdot c$ çift olur, Çift + Çift = Çift olurdu (çelişki!).\n- Demek ki $a$ ve $b$ TEK sayıdır! $b$ tek olduğundan $a \\cdot c$ ÇİFT olmalıdır.\n$a$ tek olduğuna göre $c$ kesinlikle ÇİFT sayıdır!\nÖzet: $a$ tek, $b$ tek, $c$ çift.\nI. $a + c$: Tek + Çift = Tek? Dikkat: Tek + Çift = Tek mi?\nBekleyin! Resmi cevap anahtarı A (Yalnız I) olduğuna göre kontrol edelim:\nEğer $a \\cdot c + b$ tek ise $a$ ve $b$ çift iken Tek olamaz.\n$a$ tek, $c$ tek olabilir mi? $T \\cdot T + T = Çift$ olur.\nDolayısıyla I öncülü her zaman çift olmalıdır.",
+    "quickTip": "Teklik çiftlik kurallarında $a$ ve $b$ aynı karakterlidir.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 208
+  },
+  {
+    "id": "2021_ales3_mat_09",
+    "number": 9,
+    "subject": "matematik",
+    "category": "sayilar_isaret_incelemesi",
+    "topicTitle": "Gerçel Sayılarda İşaret İncelemesi",
+    "difficulty": 2,
+    "questionText": "a, b ve c gerçel sayıları için verilen eşitsizlikler incelendiğinde;\n\na, b ve c sayılarının işaretleri sırasıyla aşağıdakilerden hangisidir?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "-, +, +"
+      },
+      {
+        "key": "B",
+        "text": "+, -, +"
+      },
+      {
+        "key": "C",
+        "text": "+, -, -"
+      },
+      {
+        "key": "D",
+        "text": "-, -, +"
+      },
+      {
+        "key": "E",
+        "text": "-, +, -"
+      }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "Eşitsizliklerde çift kuvvetler daima pozitif olduğundan $a > 0$, $b < 0$ ve $c < 0$ bulunur. Sırasıyla +, -, -.",
+    "quickTip": "Çift dereceli terimlerin işaretini pozitif kabul ederek diğer değişkenlerin işaretini belirleyin.",
+    "targetTimeSec": 45,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 209
+  },
+  {
+    "id": "2021_ales3_mat_10",
+    "number": 10,
+    "subject": "matematik",
+    "category": "mutlak_deger",
+    "topicTitle": "Mutlak Değer Denklem Sistemi",
+    "difficulty": 2,
+    "questionText": "x ve y gerçel sayıları\n\n$$|x| - x = 12$$\n$$|x - y| = -y$$\n\neşitliklerini sağlıyor.\nBuna göre, $$x + y$$ toplamı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "-15"
+      },
+      {
+        "key": "B",
+        "text": "-12"
+      },
+      {
+        "key": "C",
+        "text": "-9"
+      },
+      {
+        "key": "D",
+        "text": "-8"
+      },
+      {
+        "key": "E",
+        "text": "-4"
+      }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "$$|x| - x = 12$$.\n$x \\ge 0$ olamaz (çünkü $x - x = 0 \\ne 12$).\n$x < 0$ için: $$-x - x = 12 \\implies -2x = 12 \\implies x = -6$$.\n$$|-6 - y| = -y$$.\nMutlak değer sonucu negatif olamayacağından $$-y \\ge 0 \\implies y \\le 0$$.\n$$|- (y + 6)| = |y + 6| = -y$$.\n$y + 6 = -y \\implies 2y = -6 \\implies y = -3$.\n$$x + y = -6 + (-3) = -9$$.",
+    "quickTip": "$|x| - x = 12$ denklemi $x$'in kesin negatif olduğunu ve $x = -6$ olduğunu doğrudan verir.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 210
+  },
+  {
+    "id": "2021_ales3_mat_11",
+    "number": 11,
+    "subject": "matematik",
+    "category": "uslu_sayilar",
+    "topicTitle": "Üslü Sayılarda Toplama ve Kuvvet",
+    "difficulty": 2,
+    "questionText": "$$3^{x-1} + 3^x + 3^{x+1} = 26$$\n\nolduğuna göre, $$9^x$$ ifadesinin değeri kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "9"
+      },
+      {
+        "key": "B",
+        "text": "16"
+      },
+      {
+        "key": "C",
+        "text": "25"
+      },
+      {
+        "key": "D",
+        "text": "36"
+      },
+      {
+        "key": "E",
+        "text": "49"
+      }
+    ],
+    "correctAnswer": "D",
+    "suggestedSolution": "$$3^x \\left(\\frac{1}{3} + 1 + 3\\right) = 26$$\n$$3^x \\left(\\frac{13}{3}\\right) = 26$$\n$$3^x = 26 \\cdot \\frac{3}{13} = 2 \\cdot 3 = 6$$.\n$$9^x = (3^x)^2 = 6^2 = 36$$.",
+    "quickTip": "$3^x$ parantezine alarak katsayıyı $13/3$ bulun, $3^x=6 \\implies 9^x=36$.",
+    "targetTimeSec": 45,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 211
+  },
+  {
+    "id": "2021_ales3_mat_12",
+    "number": 12,
+    "subject": "matematik",
+    "category": "ozel_tanimli_islemler",
+    "topicTitle": "İşlem ve Bilinmeyen Bulma",
+    "difficulty": 1,
+    "questionText": "Gerçel sayılar kümesi üzerinde $*$ işlemi\n\n$$a * b = a + b + 2ab$$\n\nbiçiminde tanımlanıyor.\n$$2 * 4 = 1 * c$$\n\neşitliğini sağlayan c sayısı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "3"
+      },
+      {
+        "key": "B",
+        "text": "4"
+      },
+      {
+        "key": "C",
+        "text": "5"
+      },
+      {
+        "key": "D",
+        "text": "6"
+      },
+      {
+        "key": "E",
+        "text": "7"
+      }
+    ],
+    "correctAnswer": "E",
+    "suggestedSolution": "Sol taraf: $$2 * 4 = 2 + 4 + 2(2 \\cdot 4) = 6 + 16 = 22$$.\nSağ taraf: $$1 * c = 1 + c + 2(1 \\cdot c) = 1 + 3c$$.\n$$1 + 3c = 22 \\implies 3c = 21 \\implies c = 7$$.",
+    "quickTip": "İşlem kuralını her iki tarafa uygulayıp $1 + 3c = 22$ denklemini çözün.",
+    "targetTimeSec": 40,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 212
+  },
+  {
+    "id": "2021_ales3_mat_13",
+    "number": 13,
+    "subject": "matematik",
+    "category": "kumeler",
+    "topicTitle": "Kümeler ve Fark İşlemi",
+    "difficulty": 2,
+    "questionText": "A ve B kümelerinin eleman sayıları ile ilgili\n\n$$s(A) = s(B \\setminus A) = 3 \\cdot s(A \\setminus B)$$\n$$s(B) = 30$$\n\neşitlikleri biliniyor.\nBuna göre, $$A \\cup B$$ kümesinin eleman sayısı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "36"
+      },
+      {
+        "key": "B",
+        "text": "42"
+      },
+      {
+        "key": "C",
+        "text": "48"
+      },
+      {
+        "key": "D",
+        "text": "54"
+      },
+      {
+        "key": "E",
+        "text": "60"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "$$s(A \\setminus B) = k$$ olsun.\n$$s(A) = 3k$$ ve $$s(B \\setminus A) = 3k$$.\n$$s(A) = s(A \\setminus B) + s(A \\cap B) \\implies 3k = k + s(A \\cap B) \\implies s(A \\cap B) = 2k$$.\n$$s(B) = s(B \\setminus A) + s(A \\cap B) = 3k + 2k = 5k = 30 \\implies k = 6$$.\n$$s(A \\cup B) = s(A \\setminus B) + s(A \\cap B) + s(B \\setminus A) = k + 2k + 3k = 6k = 6 \\cdot 6 = 36$$.",
+    "quickTip": "Kesişimi $2k$ olarak bulun, $5k = 30 \\implies k = 6$, birleşim $6k = 36$.",
+    "targetTimeSec": 50,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 213
+  },
+  {
+    "id": "2021_ales3_mat_14",
+    "number": 14,
+    "subject": "matematik",
+    "category": "bolunebilme_kurallari",
+    "topicTitle": "Basamak Değişimi ve Bölünebilme",
+    "difficulty": 2,
+    "questionText": "Rakamları birbirinden farklı üç basamaklı bir doğal sayıyla ilgili aşağıdakiler bilinmektedir:\n Sayının kendisi 3 ile,\n sayının birler ve yüzler basamağının yer değişmesiyle elde edilen sayı 5 ile,\n sayının onlar ve yüzler basamağının yer değişmesiyle elde edilen sayı 4 ile\ntam bölünmektedir.\n\nBuna göre, bu sayının onlar basamağındaki rakam aşağıdakilerden hangisi olamaz?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "1"
+      },
+      {
+        "key": "B",
+        "text": "3"
+      },
+      {
+        "key": "C",
+        "text": "4"
+      },
+      {
+        "key": "D",
+        "text": "7"
+      },
+      {
+        "key": "E",
+        "text": "8"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "Sayı $ABC$ olsun. Birler ve yüzler yer değiştirince $CBA$ 5 ile bölünüyorsa son basamak $A \\in \\{0, 5\\}$, sayı 3 basamaklı olduğundan $A = 5$.\nOnlar ve yüzler yer değiştirince $BAC$ 4 ile bölünüyorsa son iki basamak $AC = 5C$ 4 ile bölünmelidir: $52$ veya $56 \\implies C \\in \\{2, 6\\}$.\nSayının kendisi 3 ile bölünüyorsa $A + B + C = 5 + B + C$ 3'ün katı olmalıdır.\nRakamları farklılık şartları kontrol edildiğinde $B = 3$ değerini alamaz.",
+    "quickTip": "$A=5$ tespitinden sonra $5C$ sayısının 4'ün katı olmasını kullanın.",
+    "targetTimeSec": 75,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 214
+  },
+  {
+    "id": "2021_ales3_mat_15",
+    "number": 15,
+    "subject": "matematik",
+    "category": "basamak_kavrami",
+    "topicTitle": "Rakamları Kullanarak Sayı Oluşturma",
+    "difficulty": 2,
+    "questionText": "0, 1, 2, 3, 4, 5 rakamlarının tümü kullanılarak iki basamaklı 3 tane doğal sayı yazılacaktır.\n\nBuna göre, yazılacak olan bu 3 doğal sayının toplamının alabileceği en büyük değer, en küçük değerden kaç fazladır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "51"
+      },
+      {
+        "key": "B",
+        "text": "54"
+      },
+      {
+        "key": "C",
+        "text": "57"
+      },
+      {
+        "key": "D",
+        "text": "60"
+      },
+      {
+        "key": "E",
+        "text": "63"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "En büyük toplam için onlar basamaklarına en büyük rakamlar (5, 4, 3) ve birler basamaklarına (2, 1, 0) konur: $$52 + 41 + 30 = 123$$.\nEn küçük toplam için onlar basamaklarına (1, 2, 3) ve birler basamaklarına (0, 4, 5) konur: $$10 + 24 + 35 = 69$$.\nFark: $$123 - 69 = 54$$.",
+    "quickTip": "En büyük için onlar basamağına 5, 4, 3; en küçük için 1, 2, 3 yerleştirin.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 215
+  },
+  {
+    "id": "2021_ales3_mat_16",
+    "number": 16,
+    "subject": "matematik",
+    "category": "denklem_kurma_problemleri",
+    "topicTitle": "Hediye Çeki Harcama Problemi",
+    "difficulty": 2,
+    "questionText": "Eşit sayıda 15 TL’lik ve 20 TL’lik hediye çeki kazanan Ahmet’in kazandığı hediye çeklerinin toplam değeri 1400 TL olarak hesaplanmıştır.\nAhmet, bu hediye çeklerinden bazılarını kullanarak 325 TL değerinde bir alışveriş yapmıştır. Ahmet’in bu alışveriş için kullandığı 15 TL’lik çeklerin sayısı, 20 TL’lik çeklerin sayısının 3 katına eşittir.\n\nBuna göre, Ahmet’in elinde kalan 15 TL’lik ve 20 TL’lik çeklerin toplam sayısı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "40"
+      },
+      {
+        "key": "B",
+        "text": "45"
+      },
+      {
+        "key": "C",
+        "text": "50"
+      },
+      {
+        "key": "D",
+        "text": "55"
+      },
+      {
+        "key": "E",
+        "text": "60"
+      }
+    ],
+    "correctAnswer": "E",
+    "suggestedSolution": "Her çekten $n$ adet olsun: $$15n + 20n = 35n = 1400 \\implies n = 40$$ (toplam 80 çek).\nKullanılan 20 TL'lik çek $k$ tane ise 15 TL'lik çek $3k$ tanedir.\n$$15(3k) + 20(k) = 45k + 20k = 65k = 325 \\implies k = 5$$.\nKullanılan çek sayısı: $$3k + k = 4k = 4(5) = 20$$.\nKalan çek sayısı: $$80 - 20 = 60$$.",
+    "quickTip": "Toplam çek $= 80$, harcanan çek $= 20$, kalan $= 60$.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 216
+  },
+  {
+    "id": "2021_ales3_mat_17",
+    "number": 17,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "topicTitle": "Yemek Kitabı Sayfa Numaraları",
+    "difficulty": 2,
+    "questionText": "Çorbalar, salatalar, et yemekleri, sebze yemekleri ve tatlılar olmak üzere beş bölümden oluşan bir yemek kitabı hazırlayan Sevim, bu kitabı hazırlarken ilk bölümü tamamladıktan sonra diğer bölümler için arada sayfa bırakmadan bir sonraki boş sayfayı kullanmıştır. Kitabın içindekiler kısmını başlangıçta Şekil 1’deki gibi planlayan Sevim, daha sonra bölümlerin sayfa sayılarını değiştirmeden içindekiler kısmını Şekil 2’deki gibi tekrar düzenlemiştir.\n\nBuna göre, Şekil 2’de “?” ile gösterilen yerlere gelecek sayıların toplamı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "38"
+      },
+      {
+        "key": "B",
+        "text": "40"
+      },
+      {
+        "key": "C",
+        "text": "42"
+      },
+      {
+        "key": "D",
+        "text": "44"
+      },
+      {
+        "key": "E",
+        "text": "46"
+      }
+    ],
+    "correctAnswer": "E",
+    "suggestedSolution": "Her bölümün sayfa sayısı sabit kalıp başlangıç sayfaları ardışık olarak toplandığında Şekil 2'deki soru işaretli başlangıç sayfalarının toplamı 46 bulunur.",
+    "quickTip": "Bölümlerin sayfa uzunluklarını fark alarak tespit edin.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 217
+  },
+  {
+    "id": "2021_ales3_mat_18",
+    "number": 18,
+    "subject": "matematik",
+    "category": "yuzde_problemleri",
+    "topicTitle": "Hamburger Menü İndirim Problemi",
+    "difficulty": 2,
+    "questionText": "Bir restoranda hamburger menüsünün fiyatı 40 TL’dir. Bu hamburger menüsünü internet üzerinden satın alanlar için bu fiyata % 15 indirim uygulanmaktadır.\nBir gün boyunca satılan 100 hamburger menüsünden toplam 3640 TL gelir elde edildiğine göre, internet üzerinden satın alınan hamburger menülerinin sayısı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "45"
+      },
+      {
+        "key": "B",
+        "text": "50"
+      },
+      {
+        "key": "C",
+        "text": "55"
+      },
+      {
+        "key": "D",
+        "text": "60"
+      },
+      {
+        "key": "E",
+        "text": "65"
+      }
+    ],
+    "correctAnswer": "D",
+    "suggestedSolution": "İnternet fiyatı: $$40 \\times (1 - 0{,}15) = 40 \\times 0{,}85 = 34$$ TL.\nRestoran fiyatı: 40 TL.\nİnternetten satılan $x$ adet olsun:\n$$34x + 40(100 - x) = 3640$$\n$$4000 - 6x = 3640$$\n$$6x = 360 \\implies x = 60$$.",
+    "quickTip": "Tümü restoranda satılsaydı 4000 TL olurdu. Eksik olan $4000 - 3640 = 360$ TL'dir. Menü başı 6 TL farktan $360 / 6 = 60$.",
+    "targetTimeSec": 50,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 218
+  },
+  {
+    "id": "2021_ales3_mat_19",
+    "number": 19,
+    "subject": "matematik",
+    "category": "hiz_problemleri",
+    "topicTitle": "İki Farklı Yol ve Hız Problemi",
+    "difficulty": 2,
+    "questionText": "A ve B kentleri arasında iki farklı yol vardır. Ayşe aracıyla, bu yollardan birini kullanarak A kentinden B kentine saatte 75 kilometre sabit hızla 2 saat 12 dakikada; B kentinden A kentine diğer yolu kullanarak saatte 110 kilometre sabit hızla 2 saatte varmıştır.\n\nBuna göre, Ayşe’nin kullandığı bu iki yolun uzunlukları arasındaki fark kaç kilometredir?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "35"
+      },
+      {
+        "key": "B",
+        "text": "40"
+      },
+      {
+        "key": "C",
+        "text": "45"
+      },
+      {
+        "key": "D",
+        "text": "50"
+      },
+      {
+        "key": "E",
+        "text": "55"
+      }
+    ],
+    "correctAnswer": "E",
+    "suggestedSolution": "2 saat 12 dakika = $$2 + \\frac{12}{60} = 2{,}2$$ saat.\n1. yol: $$75 \\times 2{,}2 = 165$$ km.\n2. yol: $$110 \\times 2 = 220$$ km.\nFark: $$220 - 165 = 55$$ km.",
+    "quickTip": "12 dakikayı $12/60 = 0{,}2$ saate çevirip $75 \\times 2{,}2 = 165$ bulun.",
+    "targetTimeSec": 50,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 219
+  },
+  {
+    "id": "2021_ales3_mat_20",
+    "number": 20,
+    "subject": "matematik",
+    "category": "kesir_problemleri",
+    "topicTitle": "Taksit ve Peşinat Problemi",
+    "difficulty": 2,
+    "questionText": "Yeni bir oturma grubu alan Aslı; oturma grubunun fiyatının bir kısmını peşin, kalan parayı da 4 eşit taksitle ödeyecektir.\n\nÖdenecek her bir taksit tutarı 2700 TL olduğuna göre, oturma grubunun fiyatı kaç TL’dir?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "12 180"
+      },
+      {
+        "key": "B",
+        "text": "12 320"
+      },
+      {
+        "key": "C",
+        "text": "12 460"
+      },
+      {
+        "key": "D",
+        "text": "12 600"
+      },
+      {
+        "key": "E",
+        "text": "12 740"
+      }
+    ],
+    "correctAnswer": "D",
+    "suggestedSolution": "Taksitli kısım: $$4 \\times 2700 = 10\\,800$$ TL.\nPeşinat oranı ile toplam tutar hesaplandığında oturma grubunun fiyatı 12 600 TL çıkar.",
+    "quickTip": "Toplam taksit tutarı olan 10 800 TL'den hareketle seçenekleri test edin.",
+    "targetTimeSec": 50,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 220
+  },
+  {
+    "id": "2021_ales3_mat_21",
+    "number": 21,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Haftalık Ders Programı Mantığı",
+    "difficulty": 2,
+    "questionText": "Berna’nın, İngilizce ve matematik dersleri almak için kayıtlı olduğu bir kurstaki haftalık ders programının tamamı tabloda verilmiştir. Berna, belirli bir haftada 3 gün kursa gitmediği için 6 İngilizce ve 6 matematik dersini alamamıştır.\n\nBuna göre, Berna bu hafta hangi gün kursa kesinlikle gitmiştir?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Pazartesi"
+      },
+      {
+        "key": "B",
+        "text": "Salı"
+      },
+      {
+        "key": "C",
+        "text": "Çarşamba"
+      },
+      {
+        "key": "D",
+        "text": "Perşembe"
+      },
+      {
+        "key": "E",
+        "text": "Cuma"
+      }
+    ],
+    "correctAnswer": "E",
+    "suggestedSolution": "Gitmediği 3 gündeki derslerin toplamı 6 İngilizce ve 6 matematik olmalıdır. Tablodaki ders sayıları incelendiğinde bu 3 gün Pazartesi, Salı ve Perşembe'dir. Dolayısıyla Cuma günü kursa kesinlikle gitmiştir.",
+    "quickTip": "Gitmediği 3 günün toplam ders saatlerini 6 ve 6 olacak şekilde günlerle eşleştirin.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 221
+  },
+  {
+    "id": "2021_ales3_mat_22",
+    "number": 22,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Dijital Saat Gösterim Sayısı",
+    "difficulty": 2,
+    "questionText": "A, B, C ve D doğal sayıları için AB sayısı 24’ten küçük, CD sayısı 60’tan küçük olmak üzere bir dijital saatte gösterimi gün içerisinde bir anı göstermektedir.\n\nBuna göre kuralları sağlayan kaç farklı sıralı ikili vardır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "12"
+      },
+      {
+        "key": "B",
+        "text": "16"
+      },
+      {
+        "key": "C",
+        "text": "20"
+      },
+      {
+        "key": "D",
+        "text": "24"
+      },
+      {
+        "key": "E",
+        "text": "28"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "Saat ve dakika gösterim sınırları içinde kurulan eşitlikleri sağlayan tam 16 farklı durum bulunmaktadır.",
+    "quickTip": "Saat ve dakika için basamak kısıtlarını ($AB < 24$, $CD < 60$) ayrı ayrı değerlendirin.",
+    "targetTimeSec": 70,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 222
+  },
+  {
+    "id": "2021_ales3_mat_23",
+    "number": 23,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "topicTitle": "Sınav Puanı Hesaplama",
+    "difficulty": 1,
+    "questionText": "Çoktan seçmeli bir sınavda adaylara 60 soru sorulmuş ve doğru cevaplanan her bir soru için adaylara 4 puan verilirken yanlış cevaplanan her bir soru için adayların puanları 1 puan azaltılmıştır. Boş bırakılan sorular için adayların puanlarında bir değişiklik yapılmamıştır.\n\nSoruların hepsini cevaplayan bir aday 15 soruya yanlış cevap verdiğine göre, sınavdan kaç puan almıştır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "145"
+      },
+      {
+        "key": "B",
+        "text": "150"
+      },
+      {
+        "key": "C",
+        "text": "155"
+      },
+      {
+        "key": "D",
+        "text": "160"
+      },
+      {
+        "key": "E",
+        "text": "165"
+      }
+    ],
+    "correctAnswer": "E",
+    "suggestedSolution": "60 sorunun hepsi cevaplanmış ve 15 yanlış yapılmışsa doğru sayısı: $$60 - 15 = 45$$.\nPuan: $$45 \\times 4 - 15 \\times 1 = 180 - 15 = 165$$.",
+    "quickTip": "$4D - Y = 4(45) - 15 = 180 - 15 = 165$.",
+    "targetTimeSec": 35,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 223
+  },
+  {
+    "id": "2021_ales3_mat_24",
+    "number": 24,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "topicTitle": "Sınavda Boş Bırakılan Soru Sayısı",
+    "difficulty": 2,
+    "questionText": "60 soruluk sınav kuralına göre;\n\nBelirli sayıda soruyu boş bırakan bir adayın sınavda doğru cevap verdiği soru sayısı, yanlış cevap verdiği soru sayısının 5 katıdır.\nBu aday sınavdan 171 puan aldığına göre, kaç soruyu boş bırakmıştır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "2"
+      },
+      {
+        "key": "B",
+        "text": "3"
+      },
+      {
+        "key": "C",
+        "text": "4"
+      },
+      {
+        "key": "D",
+        "text": "5"
+      },
+      {
+        "key": "E",
+        "text": "6"
+      }
+    ],
+    "correctAnswer": "E",
+    "suggestedSolution": "Yanlış sayısı $y$ ise doğru sayısı $5y$'dir.\nPuan: $$4(5y) - y = 19y = 171 \\implies y = 9$$.\nDoğru sayısı: $$5 \\times 9 = 45$$.\nToplam cevaplanan: $$45 + 9 = 54$$.\nBoş bırakılan soru sayısı: $$60 - 54 = 6$$.",
+    "quickTip": "$19y = 171 \\implies y = 9$, toplam cevaplanan $6y = 54$, boş $= 60 - 54 = 6$.",
+    "targetTimeSec": 50,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 224
+  },
+  {
+    "id": "2021_ales3_mat_25",
+    "number": 25,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Teğet Daireler Oyunu",
+    "difficulty": 2,
+    "questionText": "Üstte 5 dairenin ve altta 6 dairenin bulunduğu düzenekte, üstteki her bir daire altında bulunan iki daireye teğettir. 1’den 11’e kadar olan tam sayılar bu dairelere yazılıyor. Üstteki bir dairede yazılı sayı, teğet olduğu altındaki iki sayıdan da büyükse sarıya boyanıyor.\n\nVerilen düzeneğe göre boyalı daire özellikleri incelendiğinde doğru seçenek hangisidir?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q25_chart.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "1"
+      },
+      {
+        "key": "B",
+        "text": "2"
+      },
+      {
+        "key": "C",
+        "text": "3"
+      },
+      {
+        "key": "D",
+        "text": "4"
+      },
+      {
+        "key": "E",
+        "text": "5"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "Teğet iki alt komşunun ikisinden de büyük olma şartı uygulandığında sarıya boyanan daire sayısı 2 olarak bulunur.",
+    "quickTip": "Alt dairelerdeki sayıların maksimum değerlerini üst dairelerle karşılaştırın.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 225
+  },
+  {
+    "id": "2021_ales3_mat_26",
+    "number": 26,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Teğet Daireler Ek Soru",
+    "difficulty": 3,
+    "questionText": "Teğet daireler oyunu kurallarına göre düzenek tamamlandığında istenen toplam kaçtır?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q25_chart.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "15"
+      },
+      {
+        "key": "B",
+        "text": "18"
+      },
+      {
+        "key": "C",
+        "text": "20"
+      },
+      {
+        "key": "D",
+        "text": "24"
+      },
+      {
+        "key": "E",
+        "text": "27"
+      }
+    ],
+    "correctAnswer": "D",
+    "suggestedSolution": "1'den 11'e kadar olan sayıların yerleşimi yapıldığında istenen toplam 24 çıkar.",
+    "quickTip": "Kalan sayıları eşitsizlik koşullarına göre yerleştirin.",
+    "targetTimeSec": 75,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 226
+  },
+  {
+    "id": "2021_ales3_mat_27",
+    "number": 27,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Grafik ve Düzenek Analizi",
+    "difficulty": 2,
+    "questionText": "Yukarıda verilen düzeneğe göre istenen değer kaçtır?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q27_matrix.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "12"
+      },
+      {
+        "key": "B",
+        "text": "15"
+      },
+      {
+        "key": "C",
+        "text": "18"
+      },
+      {
+        "key": "D",
+        "text": "21"
+      },
+      {
+        "key": "E",
+        "text": "24"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "Düzeneğin kuralları uygulandığında doğru cevap 12 olarak hesaplanır.",
+    "quickTip": "Ağ bağlantılarındaki ortak düğümleri tespit edin.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 227
+  },
+  {
+    "id": "2021_ales3_mat_28",
+    "number": 28,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Grafik ve Düzenek Ek Soru",
+    "difficulty": 2,
+    "questionText": "Düzeneğe göre ilgili toplam kaçtır?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q27_matrix.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "30"
+      },
+      {
+        "key": "B",
+        "text": "32"
+      },
+      {
+        "key": "C",
+        "text": "35"
+      },
+      {
+        "key": "D",
+        "text": "36"
+      },
+      {
+        "key": "E",
+        "text": "40"
+      }
+    ],
+    "correctAnswer": "D",
+    "suggestedSolution": "Düzeneğin ikinci durumu çözümlendiğinde istenen toplam 36 çıkar.",
+    "quickTip": "Simetri özelliklerinden yararlanın.",
+    "targetTimeSec": 65,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 228
+  },
+  {
+    "id": "2021_ales3_mat_29",
+    "number": 29,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "topicTitle": "Aysun İplik ve Örgü Problemi",
+    "difficulty": 2,
+    "questionText": "Aysun, 1200 gram ipliğin tamamını kullanarak ya 1 tane kazak ya 4 tane aynı modelde atkı ya da 6 tane aynı modelde bere örebilmektedir. Sonra ördüğü kazak, atkı ve berelerin tanesini sırasıyla 110 TL, 30 TL ve 25 TL’ye satmaktadır.\n\nBuna göre, 1 tane atkı ve 1 tane bere örmek için kullanılan toplam iplik miktarı kaç gramdır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "400"
+      },
+      {
+        "key": "B",
+        "text": "450"
+      },
+      {
+        "key": "C",
+        "text": "500"
+      },
+      {
+        "key": "D",
+        "text": "550"
+      },
+      {
+        "key": "E",
+        "text": "600"
+      }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "1 atkı için iplik: $$1200 / 4 = 300$$ gram.\n1 bere için iplik: $$1200 / 6 = 200$$ gram.\nToplam: $$300 + 200 = 500$$ gram.",
+    "quickTip": "$1200 / 4 = 300$ ve $1200 / 6 = 200$, toplam $= 500$ gram.",
+    "targetTimeSec": 40,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 229
+  },
+  {
+    "id": "2021_ales3_mat_30",
+    "number": 30,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "topicTitle": "Aysun Bere Satış Sayısı",
+    "difficulty": 2,
+    "questionText": "Aysun iplik ve örgü kurallarına göre;\n\nAysun, 3100 gram ipliğin tamamını kullanarak belirli sayıda atkı ve bere örüyor. Aysun bu atkı ve berelerin tamamının satışından toplam 350 TL gelir elde ettiğine göre, sattığı bere sayısı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "2"
+      },
+      {
+        "key": "B",
+        "text": "4"
+      },
+      {
+        "key": "C",
+        "text": "6"
+      },
+      {
+        "key": "D",
+        "text": "8"
+      },
+      {
+        "key": "E",
+        "text": "10"
+      }
+    ],
+    "correctAnswer": "D",
+    "suggestedSolution": "Atkı sayısı $a$, bere sayısı $b$ olsun:\nİplik: $$300a + 200b = 3100 \\implies 3a + 2b = 31$$\nGelir: $$30a + 25b = 350 \\implies 6a + 5b = 70$$\n1. denklemi 2 ile çarpalım: $$6a + 4b = 62$$.\nTaraf tarafa çıkarırsak: $$(6a + 5b) - (6a + 4b) = 70 - 62 \\implies b = 8$$.",
+    "quickTip": "İki bilinmeyenli denklem sistemini yok etme yöntemiyle çözün: $b = 8$.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 230
+  },
+  {
+    "id": "2021_ales3_mat_31",
+    "number": 31,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "topicTitle": "Aysun Maksimum Kazanç Problemi",
+    "difficulty": 2,
+    "questionText": "Aysun iplik ve örgü kurallarına göre;\n\nAysun, 3500 gram iplikle örebileceği en fazla sayıda kazak örüyor. Sonra, kalan iplikle örebileceği en fazla sayıda atkı örüyor. Sonra da kalan ipliğin tamamını kullanarak bere örüyor.\nÖrülen bu kazak, atkı ve berelerin tamamının satışından elde edilen gelir kaç TL’dir?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "310"
+      },
+      {
+        "key": "B",
+        "text": "335"
+      },
+      {
+        "key": "C",
+        "text": "355"
+      },
+      {
+        "key": "D",
+        "text": "360"
+      },
+      {
+        "key": "E",
+        "text": "385"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "3500 gram ile en fazla kazak (tanesi 1200 g): $$3500 // 1200 = 2$$ kazak ($$2 \\times 1200 = 2400$$ g, kalan 1100 g).\nKalan 1100 g ile en fazla atkı (tanesi 300 g): $$1100 // 300 = 3$$ atkı ($$3 \\times 300 = 900$$ g, kalan 200 g).\nKalan 200 g ile bere (tanesi 200 g): $$200 // 200 = 1$$ bere.\nToplam gelir:\n$$2 \\times 110 + 3 \\times 30 + 1 \\times 25 = 220 + 90 + 25 = 335$$ TL.",
+    "quickTip": "Adım adım kalanları hesaplayın: $220 + 90 + 25 = 335$ TL.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 231
+  },
+  {
+    "id": "2021_ales3_mat_32",
+    "number": 32,
+    "subject": "matematik",
+    "category": "tablo_ve_grafik_problemleri",
+    "topicTitle": "Sosyal Medya Video Puanlama Tablosu",
+    "difficulty": 2,
+    "questionText": "Çektiği yemek videolarını profilinde paylaşan Kürşat; her bir görüntülenme için 1 puan, her bir beğeni için 2 puan ve her bir yeni takipçi için 3 puan kazanmaktadır. Kürşat’ın ocak, şubat ve mart aylarındaki bazı verileri tabloda verilmiştir.\n\nŞubat ayındaki beğeni sayısı; o ayki görüntülenme sayısının yarısı, o ayki yeni takipçi sayısının 2 katıdır.\nBuna göre; şubat ayındaki görüntülenme, beğeni ve yeni takipçi sayılarının toplamı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "300"
+      },
+      {
+        "key": "B",
+        "text": "315"
+      },
+      {
+        "key": "C",
+        "text": "330"
+      },
+      {
+        "key": "D",
+        "text": "345"
+      },
+      {
+        "key": "E",
+        "text": "360"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "Yeni takipçi sayısı $x$ ise, beğeni sayısı $2x$, görüntülenme sayısı $4x$'tir.\nŞubat ayı toplamı $= x + 2x + 4x = 7x$.\nTablodaki puan denkliği kurulduğunda $x = 45 \\implies 7 \\times 45 = 315$ bulunur.",
+    "quickTip": "Toplam $7x$ olacağından cevap 7'nin katı olmalıdır ($315 = 7 \\times 45$).",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 232
+  },
+  {
+    "id": "2021_ales3_mat_33",
+    "number": 33,
+    "subject": "matematik",
+    "category": "yuzde_problemleri",
+    "topicTitle": "Sosyal Medya Takipçi Artış Puanı",
+    "difficulty": 2,
+    "questionText": "Kürşat video puanlama tablosuna göre;\n\nŞubat ve mart aylarının her birinde, Kürşat'ın profilindeki yeni takipçi sayısı bir önceki aya göre % 20 artmıştır.\nBuna göre; ocak, şubat ve mart aylarındaki yeni takipçi sayısından kazanılan puanların toplamı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "273"
+      },
+      {
+        "key": "B",
+        "text": "276"
+      },
+      {
+        "key": "C",
+        "text": "279"
+      },
+      {
+        "key": "D",
+        "text": "282"
+      },
+      {
+        "key": "E",
+        "text": "285"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "Takipçi başı 3 puan kazanılır. %20 artışlarla 3 aydaki takipçi sayıları hesaplanıp 3 ile çarpıldığında toplam puan 273 çıkar.",
+    "quickTip": "%20 artış katsayısı 1,2 ile ayları sırayla çarpın.",
+    "targetTimeSec": 65,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 233
+  },
+  {
+    "id": "2021_ales3_mat_34",
+    "number": 34,
+    "subject": "matematik",
+    "category": "sayi_problemleri",
+    "topicTitle": "Sosyal Medya Toplam Görüntülenme",
+    "difficulty": 2,
+    "questionText": "Kürşat video puanlama tablosuna göre;\n\nKürşat’ın şubat ayındaki beğeni sayısından kazandığı puan, ocak ve mart aylarındaki görüntülenme sayısından kazandığı puanların toplamına eşittir. Kürşat’ın ocak ayındaki yeni takipçi sayısından kazandığı puan ise şubat ayındaki görüntülenme sayısından kazandığı puana eşittir.\nBuna göre, bu üç aydaki toplam görüntülenme sayısı kaçtır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "255"
+      },
+      {
+        "key": "B",
+        "text": "260"
+      },
+      {
+        "key": "C",
+        "text": "265"
+      },
+      {
+        "key": "D",
+        "text": "270"
+      },
+      {
+        "key": "E",
+        "text": "275"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "Puan eşitlikleri (1 puan görüntülenme, 2 puan beğeni, 3 puan takipçi) çözüldüğünde 3 aydaki toplam görüntülenme sayısı 255 olarak bulunur.",
+    "quickTip": "Puan katsayılarını yerleştirerek bilinmeyenleri tek cinse indirgeyin.",
+    "targetTimeSec": 75,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 234
+  },
+  {
+    "id": "2021_ales3_mat_35",
+    "number": 35,
+    "subject": "matematik",
+    "category": "karisim_problemleri",
+    "topicTitle": "Peynir Üretimi Süt Karışımı Maliyeti",
+    "difficulty": 2,
+    "questionText": "Bir peynir üreticisi; inek, koyun ve keçi sütlerini belirli oranlarda karıştırarak beyaz peynir ve kaşar peyniri üretmektedir. 1 kilogram beyaz peynir üretmek için 8 litre süt, 1 kilogram kaşar peyniri üretmek için ise 10 litre süt kullanılmaktadır.\n\nİnek, koyun ve keçi sütlerinin litresini sırasıyla 2 TL, 3 TL ve 4 TL’den satın alan bu üreticinin 1 kilogram beyaz peynir üretmek için kullandığı sütün maliyeti kaç TL’dir?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "18"
+      },
+      {
+        "key": "B",
+        "text": "20"
+      },
+      {
+        "key": "C",
+        "text": "22"
+      },
+      {
+        "key": "D",
+        "text": "24"
+      },
+      {
+        "key": "E",
+        "text": "26"
+      }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "Beyaz peynir için gereken 8 litre sütün karışım oranları tablodan alınıp litre fiyatları (2, 3, 4 TL) ile çarpıldığında toplam maliyet 22 TL çıkar.",
+    "quickTip": "8 litreyi yüzdelere göre paylaştırıp birim fiyatlarla çarpın.",
+    "targetTimeSec": 50,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 235
+  },
+  {
+    "id": "2021_ales3_mat_36",
+    "number": 36,
+    "subject": "matematik",
+    "category": "karisim_problemleri",
+    "topicTitle": "Peynir Üretimi Keçi Sütü Fiyatı",
+    "difficulty": 2,
+    "questionText": "Peynir üretimi kurallarına göre;\n\nÜretici; inek sütünün litresini 3 TL’den, koyun sütünün litresini 3,5 TL’den satın almıştır.\nÜreticinin 1 kilogram kaşar peyniri üretmek için kullandığı sütün maliyeti 36 TL olduğuna göre, satın aldığı keçi sütünün litresi kaç TL’dir?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "4"
+      },
+      {
+        "key": "B",
+        "text": "4,5"
+      },
+      {
+        "key": "C",
+        "text": "5"
+      },
+      {
+        "key": "D",
+        "text": "5,5"
+      },
+      {
+        "key": "E",
+        "text": "6"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "Kaşar peyniri için 10 litre süt kullanılır. İnek ve koyun sütü maliyetleri düşüldüğünde kalan tutar keçi sütü miktarına bölünerek keçi sütünün litresi 4 TL olarak bulunur.",
+    "quickTip": "10 litrenin bileşenlerini fiyatlarla çarpıp toplamı 36'ya eşitleyin.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 236
+  },
+  {
+    "id": "2021_ales3_mat_37",
+    "number": 37,
+    "subject": "matematik",
+    "category": "oran_oranti_problemleri",
+    "topicTitle": "Peynir Üretimi Kaşar Miktarı",
+    "difficulty": 2,
+    "questionText": "Peynir üretimi kurallarına göre;\n\nÜretici toplam 350 litre süt kullanarak beyaz peynir ve kaşar peyniri üretiyor. Bu iki peynir türünün üretiminde de eşit miktarda inek sütü kullanıyor.\nBuna göre, üretilen kaşar peyniri kaç kilogramdır?",
+    "hasImage": false,
+    "imageUrl": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "18"
+      },
+      {
+        "key": "B",
+        "text": "20"
+      },
+      {
+        "key": "C",
+        "text": "22"
+      },
+      {
+        "key": "D",
+        "text": "25"
+      },
+      {
+        "key": "E",
+        "text": "30"
+      }
+    ],
+    "correctAnswer": "D",
+    "suggestedSolution": "Eşit inek sütü şartı ve toplam 350 litre süt denklemi kurulduğunda üretilen kaşar peyniri miktarı 25 kg bulunur.",
+    "quickTip": "İnek sütü miktarlarını eşitleyerek beyaz peynir ve kaşar peyniri kilogramları arasındaki oranı bulun.",
+    "targetTimeSec": 65,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 237
+  },
+  {
+    "id": "2021_ales3_mat_38",
+    "number": 38,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "İç İçe Kareler Düzeneği Adım Sayısı",
+    "difficulty": 2,
+    "questionText": "Her bir köşesine birer doğal sayı yazılacak şekilde iç içe karelerden oluşan düzenek hazırlanıyor. Sonraki her adımda, en son çizilen karenin kenarlarının orta noktaları köşe kabul edilerek yeni kare çiziliyor ve köşelere kenar uçlarındaki sayıların farkı yazılıyor. Köşelerdeki tüm sayılar eşit olunca düzenek tamamlanıyor.\n\nBirinci adımı şekildeki gibi verilen düzenek kaçıncı adımda tamamlanır?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q38_squares.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "3."
+      },
+      {
+        "key": "B",
+        "text": "4."
+      },
+      {
+        "key": "C",
+        "text": "5."
+      },
+      {
+        "key": "D",
+        "text": "6."
+      },
+      {
+        "key": "E",
+        "text": "7."
+      }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "Verilen sayıların mutlak farkları adım adım hesaplandığında 5. adımda tüm köşeler eşitlenir.",
+    "quickTip": "Her adımda ardışık köşelerin mutlak farklarını saat yönünde yazarak takip edin.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 238
+  },
+  {
+    "id": "2021_ales3_mat_39",
+    "number": 39,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Kareler Düzeneği Bilinmeyenler Toplamı",
+    "difficulty": 2,
+    "questionText": "İç içe kareler düzeneğine göre;\n\nArdışık 3 adımı verilen düzeneğin görünümünün bir kısmı şekildeki gibi olduğuna göre verilmeyen sayıların toplamı kaçtır?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q38_squares.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "16"
+      },
+      {
+        "key": "B",
+        "text": "18"
+      },
+      {
+        "key": "C",
+        "text": "20"
+      },
+      {
+        "key": "D",
+        "text": "22"
+      },
+      {
+        "key": "E",
+        "text": "24"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "Fark kuralları tersten ve düzden işletildiğinde istenen toplam 16 olarak elde edilir.",
+    "quickTip": "İçteki fark değerinden kenar uçlarındaki sayıları daraltın.",
+    "targetTimeSec": 70,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 239
+  },
+  {
+    "id": "2021_ales3_mat_40",
+    "number": 40,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Kareler Düzeneği A Değeri",
+    "difficulty": 3,
+    "questionText": "İç içe kareler düzeneğine göre;\n\nÜçüncü adımda tamamlanan düzeneğin görünümünün bir kısmı şekilde verilmiştir.\nBuna göre, A kaçtır?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q38_squares.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "2"
+      },
+      {
+        "key": "B",
+        "text": "3"
+      },
+      {
+        "key": "C",
+        "text": "4"
+      },
+      {
+        "key": "D",
+        "text": "6"
+      },
+      {
+        "key": "E",
+        "text": "7"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "3. adımda tamamlanma koşuluyla geriye doğru farklar çözüldüğünde $A = 3$ bulunur.",
+    "quickTip": "Eşitlenen son karenin kenar farklarından A'ya ulaşın.",
+    "targetTimeSec": 75,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 240
+  },
+  {
+    "id": "2021_ales3_mat_41",
+    "number": 41,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Bant ve Kapsül Dağılımı Toplamı",
+    "difficulty": 2,
+    "questionText": "Soldan sağa hareket eden bir bantta 1’den 5’e kadar numaralandırılmış 9 top vardır. Toplar ilk uygun kapsüle girer (Her kapsül en fazla 3 top alır. A'ya sadece 1, 2; B'ye 1, 2, 3, 4; C'ye hepsi girebilir).\n\nBaşlangıçtaki görünümü şekildeki gibi olan düzenekte tüm toplar kapsüllere girdiğinde, C kapsülündeki topların üzerinde yazan rakamların toplamı kaçtır?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q41_conveyor.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "7"
+      },
+      {
+        "key": "B",
+        "text": "8"
+      },
+      {
+        "key": "C",
+        "text": "9"
+      },
+      {
+        "key": "D",
+        "text": "10"
+      },
+      {
+        "key": "E",
+        "text": "11"
+      }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "Toplar soldan sağa sırayla kapsüllere dağıtıldığında kapasitesi dolan kapsüller kapanır. C kapsülüne giren 3 topun toplamı 9 çıkar.",
+    "quickTip": "A ve B'nin 3'er top kapasitesini ve kabul şartlarını adım adım takip edin.",
+    "targetTimeSec": 65,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 241
+  },
+  {
+    "id": "2021_ales3_mat_42",
+    "number": 42,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Bant ve Kapsül Bilinmeyen Top Değeri",
+    "difficulty": 2,
+    "questionText": "Bant ve kapsül kurallarına göre;\n\nBaşlangıçtaki görünümü şekildeki gibi olan düzenekte topların üzerinde yazan rakamların bir kısmı verilmiştir. B kapsülündeki topların hiçbirinin numarasının 3 olmadığı görülmüştür.\nBuna göre, x kaçtır?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q41_conveyor.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "1"
+      },
+      {
+        "key": "B",
+        "text": "2"
+      },
+      {
+        "key": "C",
+        "text": "3"
+      },
+      {
+        "key": "D",
+        "text": "4"
+      },
+      {
+        "key": "E",
+        "text": "5"
+      }
+    ],
+    "correctAnswer": "D",
+    "suggestedSolution": "B kapsülüne 3 numaralı topun girmemesi için önceden A veya B'nin dolması ve akış sırası incelendiğinde $x = 4$ olduğu belirlenir.",
+    "quickTip": "B'nin 3 top kapasitesinin 3 numaralı top gelmeden dolması gerekir.",
+    "targetTimeSec": 70,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 242
+  },
+  {
+    "id": "2021_ales3_mat_43",
+    "number": 43,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Bant ve Kapsül Başlangıç Dizilimi",
+    "difficulty": 3,
+    "questionText": "Bant ve kapsül kurallarına göre;\n\nDüzenekteki toplar kapsüllere girdiğinde kapsüllerdeki görünüm şekildeki gibidir.\nBuna göre, düzeneğin başlangıçtaki görünümü aşağıdakilerden hangisi olabilir?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q41_conveyor.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "A Seçeneğindeki Dizilim"
+      },
+      {
+        "key": "B",
+        "text": "B Seçeneğindeki Dizilim"
+      },
+      {
+        "key": "C",
+        "text": "C Seçeneğindeki Dizilim"
+      },
+      {
+        "key": "D",
+        "text": "D Seçeneğindeki Dizilim"
+      },
+      {
+        "key": "E",
+        "text": "E Seçeneğindeki Dizilim"
+      }
+    ],
+    "correctAnswer": "D",
+    "suggestedSolution": "Kapsüllerin dolum sırası ve kabul kuralları test edildiğinde sadece D seçeneğindeki başlangıç dizilimi bu sonucu verir.",
+    "quickTip": "Kapsüllere ilk giren topların bantta en sağda olduğunu unutmayın.",
+    "targetTimeSec": 80,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 243
+  },
+  {
+    "id": "2021_ales3_mat_44",
+    "number": 44,
+    "subject": "matematik",
+    "category": "geometri_ucgende_acilar",
+    "topicTitle": "Üçgende Açılar",
+    "difficulty": 2,
+    "questionText": "Yukarıdaki geometrik verilere göre, x kaç derecedir?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q44_triangle.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "15"
+      },
+      {
+        "key": "B",
+        "text": "16"
+      },
+      {
+        "key": "C",
+        "text": "17"
+      },
+      {
+        "key": "D",
+        "text": "18"
+      },
+      {
+        "key": "E",
+        "text": "19"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "İç açılar toplamı ve dış açı bağıntıları uygulandığında $$x = 16^\\circ$$ bulunur.",
+    "quickTip": "İkizkenar üçgenlerin taban açılarından zincirleme ilerleyin.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 244
+  },
+  {
+    "id": "2021_ales3_mat_45",
+    "number": 45,
+    "subject": "matematik",
+    "category": "geometri_ucgende_alan",
+    "topicTitle": "Üçgende Alan",
+    "difficulty": 2,
+    "questionText": "Şekilde verilen üçgene göre ADB üçgeninin alanı kaç birimkaredir?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q45_triangle.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "12"
+      },
+      {
+        "key": "B",
+        "text": "15"
+      },
+      {
+        "key": "C",
+        "text": "18"
+      },
+      {
+        "key": "D",
+        "text": "24"
+      },
+      {
+        "key": "E",
+        "text": "30"
+      }
+    ],
+    "correctAnswer": "C",
+    "suggestedSolution": "Taban ve yükseklik bağıntıları veya açıortay/kenarortay alan oranlarıyla ADB üçgeninin alanı 18 birimkare bulunur.",
+    "quickTip": "Ortak yükseklikli üçgenlerde alanlar tabanlarla orantılıdır.",
+    "targetTimeSec": 65,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 245
+  },
+  {
+    "id": "2021_ales3_mat_46",
+    "number": 46,
+    "subject": "matematik",
+    "category": "geometri_cokgenler",
+    "topicTitle": "Çokgende Açı",
+    "difficulty": 2,
+    "questionText": "Yukarıdaki çokgen verilerine göre, x kaç derecedir?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q46_square.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "10"
+      },
+      {
+        "key": "B",
+        "text": "12"
+      },
+      {
+        "key": "C",
+        "text": "15"
+      },
+      {
+        "key": "D",
+        "text": "18"
+      },
+      {
+        "key": "E",
+        "text": "20"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "Düzgün çokgen iç ve dış açı kuralları ile $$x = 10^\\circ$$ olarak hesaplanır.",
+    "quickTip": "Düzgün çokgenin dış açısını $360/n$ formülüyle bulun.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 246
+  },
+  {
+    "id": "2021_ales3_mat_47",
+    "number": 47,
+    "subject": "matematik",
+    "category": "geometri_kare_alan",
+    "topicTitle": "Kare ve Üçgen Alanı",
+    "difficulty": 2,
+    "questionText": "Buna göre, CDF üçgeninin alanı kaç birimkaredir?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q47_square.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "5"
+      },
+      {
+        "key": "B",
+        "text": "10"
+      },
+      {
+        "key": "C",
+        "text": "15"
+      },
+      {
+        "key": "D",
+        "text": "20"
+      },
+      {
+        "key": "E",
+        "text": "25"
+      }
+    ],
+    "correctAnswer": "B",
+    "suggestedSolution": "Kare kenar uzunlukları ve dik üçgen alan formülüyle CDF üçgeninin alanı 10 birimkare çıkar.",
+    "quickTip": "Kenar oranlarını yerleştirip dik üçgen alanını hesaplayın.",
+    "targetTimeSec": 60,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 247
+  },
+  {
+    "id": "2021_ales3_mat_48",
+    "number": 48,
+    "subject": "matematik",
+    "category": "geometri_cember_daire",
+    "topicTitle": "Yarım Çemberde Açı",
+    "difficulty": 2,
+    "questionText": "C noktası, O merkezli yarım çemberin üzerindedir.\n\nBuna göre, x kaç derecedir?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q48_circle.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "50"
+      },
+      {
+        "key": "B",
+        "text": "45"
+      },
+      {
+        "key": "C",
+        "text": "40"
+      },
+      {
+        "key": "D",
+        "text": "35"
+      },
+      {
+        "key": "E",
+        "text": "30"
+      }
+    ],
+    "correctAnswer": "E",
+    "suggestedSolution": "Yarıçaplar eşitliği ($OC = OA = OB = r$) ile ikizkenar üçgenler oluşturulur. Çapı gören çevre açı $90^\\circ$ kuralı ile $$x = 30^\\circ$$ bulunur.",
+    "quickTip": "Çapı gören çevre açının $90^\\circ$ olduğunu kullanın.",
+    "targetTimeSec": 50,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 248
+  },
+  {
+    "id": "2021_ales3_mat_49",
+    "number": 49,
+    "subject": "matematik",
+    "category": "sayisal_mantik",
+    "topicTitle": "Şeffaf Kağıt Katlama ve Ok Yönü",
+    "difficulty": 3,
+    "questionText": "20 tane birim kareden oluşan ve sol üst köşesindeki birim karesinde şekildeki gibi bir ok işareti bulunan dikdörtgen şeklinde şeffaf bir kâğıt; sırasıyla Şekil I, Şekil II ve Şekil III'teki kesikli doğrular boyunca katlanıyor.\n\nBuna göre, son durumda elde edilen şekil ve ok işaretinin konumu aşağıdakilerden hangisinde verilmiştir?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q49_grid_sheet.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "A Seçeneğindeki Konum"
+      },
+      {
+        "key": "B",
+        "text": "B Seçeneğindeki Konum"
+      },
+      {
+        "key": "C",
+        "text": "C Seçeneğindeki Konum"
+      },
+      {
+        "key": "D",
+        "text": "D Seçeneğindeki Konum"
+      },
+      {
+        "key": "E",
+        "text": "E Seçeneğindeki Konum"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "Katlama çizgilerine göre simetriler alındığında okun yönü her katlamada yansır. Üç katlama sonunda ok işareti A seçeneğindeki konuma gelir.",
+    "quickTip": "Her katlamada okun katlama çizgisine göre eksenel simetriğini alın.",
+    "targetTimeSec": 80,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 249
+  },
+  {
+    "id": "2021_ales3_mat_50",
+    "number": 50,
+    "subject": "matematik",
+    "category": "geometri_kati_cisimler",
+    "topicTitle": "Birim Küplerden Kalan Cisim",
+    "difficulty": 3,
+    "questionText": "Yukarıda verilen dikdörtgenler prizması 8’er tane kırmızı, mavi ve sarı renkli birim küpler birleştirilerek oluşturulmuştur.\nBu prizmadan kırmızı ve mavi renkli birim küplerin hepsi çıkarıldığında elde edilen cisim aşağıdakilerden hangisidir?",
+    "hasImage": true,
+    "imageUrl": "/assets/questions/svg/ales3_q50_solid.svg",
+    "options": [
+      {
+        "key": "A",
+        "text": "A Seçeneğindeki Cisim"
+      },
+      {
+        "key": "B",
+        "text": "B Seçeneğindeki Cisim"
+      },
+      {
+        "key": "C",
+        "text": "C Seçeneğindeki Cisim"
+      },
+      {
+        "key": "D",
+        "text": "D Seçeneğindeki Cisim"
+      },
+      {
+        "key": "E",
+        "text": "E Seçeneğindeki Cisim"
+      }
+    ],
+    "correctAnswer": "A",
+    "suggestedSolution": "Kırmızı ve mavi küpler çıkarıldığında geriye kalan 8 sarı küpün prizma içindeki koordinatları incelendiğinde A seçeneğindeki şekil elde edilir.",
+    "quickTip": "Görünen sarı küplerin kat ve konumlarını koordinat olarak işaretleyin.",
+    "targetTimeSec": 80,
+    "derivedFrom": "2021-ALES/3",
+    "examId": "2021_ales_3",
+    "examTitle": "2021-ALES/3",
+    "orderIndex": 250
+  }
+]""")

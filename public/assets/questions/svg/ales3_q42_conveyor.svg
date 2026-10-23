@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 160" width="100%" height="145">
+  <defs>
+    <style>
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.35); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.35); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-blue { fill: rgba(56, 189, 248, 0.35); stroke: #38bdf8; stroke-width: 2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+      .geo-dashed { stroke-dasharray: 4 4; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+      }
+    </style>
+</defs>
+  
+  <polygon points="30,45 270,45 250,75 10,75" fill="var(--bg-secondary, #334155)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" stroke-width="1.5" />
+  <polygon points="270,45 295,45 275,75 250,75" fill="var(--bg-card, #1e293b)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" stroke-width="1.5" />
+
+  <rect x="290" y="65" width="16" height="55" rx="8" class="geo-line" fill="rgba(56, 189, 248, 0.12)" />
+  <text x="298" y="135" class="geo-text" font-weight="700">A</text>
+
+  <rect x="316" y="65" width="16" height="55" rx="8" class="geo-line" fill="rgba(56, 189, 248, 0.12)" />
+  <text x="324" y="135" class="geo-text" font-weight="700">B</text>
+
+  <rect x="342" y="65" width="16" height="55" rx="8" class="geo-line" fill="rgba(56, 189, 248, 0.12)" />
+  <text x="350" y="135" class="geo-text" font-weight="700">C</text>
+
+  <!-- 9 Top: 1, 2, 3, x, 1, 4, 5, 2, 4 -->
+  <circle cx="45" cy="48" r="10" class="geo-shaded-yellow" /><text x="45" y="48" class="geo-text" fill="#0f172a">1</text><circle cx="68" cy="48" r="10" class="geo-shaded-yellow" /><text x="68" y="48" class="geo-text" fill="#0f172a">2</text><circle cx="91" cy="48" r="10" class="geo-shaded-yellow" /><text x="91" y="48" class="geo-text" fill="#0f172a">3</text><circle cx="114" cy="48" r="10" class="geo-shaded-yellow" /><text x="114" y="48" class="geo-text" fill="#0f172a">x</text><circle cx="137" cy="48" r="10" class="geo-shaded-yellow" /><text x="137" y="48" class="geo-text" fill="#0f172a">1</text><circle cx="160" cy="48" r="10" class="geo-shaded-yellow" /><text x="160" y="48" class="geo-text" fill="#0f172a">4</text><circle cx="183" cy="48" r="10" class="geo-shaded-yellow" /><text x="183" y="48" class="geo-text" fill="#0f172a">5</text><circle cx="206" cy="48" r="10" class="geo-shaded-yellow" /><text x="206" y="48" class="geo-text" fill="#0f172a">2</text><circle cx="229" cy="48" r="10" class="geo-shaded-yellow" /><text x="229" y="48" class="geo-text" fill="#0f172a">4</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 230" width="100%" height="210">
+  <defs>
+    <style>
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.35); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.35); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-blue { fill: rgba(56, 189, 248, 0.35); stroke: #38bdf8; stroke-width: 2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+      .geo-dashed { stroke-dasharray: 4 4; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+      }
+    </style>
+</defs>
+  
+  <g transform="translate(130, 40)">
+    <!-- 2x3x4 Prizma Blokları -->
+    <!-- Kat 1 (Üst Kat: Sarı ve Mavi Küpler) -->
+    <!-- Üst Yüzey -->
+    <polygon points="0,0 60,-35 120,0 60,35" fill="#f59e0b" fill-opacity="0.8" stroke="#f59e0b" stroke-width="1.5" />
+    
+    <!-- Ön Yüzey (Kırmızı Küpler) -->
+    <polygon points="0,0 60,35 60,95 0,60" fill="#f43f5e" fill-opacity="0.8" stroke="#f43f5e" stroke-width="1.5" />
+    
+    <!-- Sağ Yüzey (Mavi Küpler) -->
+    <polygon points="60,35 120,0 120,60 60,95" fill="#38bdf8" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1.5" />
+
+    <!-- Küp Izgaraları (2 x 3 x 4) -->
+    <!-- Ön Yüz Bölmeleri (4 sütun x 2 satır) -->
+    <line x1="15" y1="8.7" x2="15" y2="68.7" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+    <line x1="30" y1="17.5" x2="30" y2="77.5" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+    <line x1="45" y1="26.2" x2="45" y2="86.2" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+    <line x1="0" y1="30" x2="60" y2="65" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+
+    <!-- Sağ Yüz Bölmeleri (3 sütun x 2 satır) -->
+    <line x1="80" y1="23.3" x2="80" y2="83.3" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+    <line x1="100" y1="11.6" x2="100" y2="71.6" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+    <line x1="60" y1="65" x2="120" y2="30" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+
+    <!-- Üst Yüz Bölmeleri (4x3 ızgara) -->
+    <line x1="20" y1="-11.6" x2="80" y2="23.3" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+    <line x1="40" y1="-23.3" x2="100" y2="11.6" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+    <line x1="15" y1="8.7" x2="75" y2="-26.3" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+    <line x1="30" y1="17.5" x2="90" y2="-17.5" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+    <line x1="45" y1="26.2" x2="105" y2="-8.8" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+  </g>
+
+  <!-- Lejant -->
+  <text x="160" y="175" class="geo-text" font-size="13">2 × 3 × 4 Dikdörtgenler Prizması</text>
+  <text x="160" y="195" class="geo-text-muted" font-size="12">8 Kırmızı, 8 Mavi, 8 Sarı Birim Küp</text>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 320" width="100%" height="300">
+  <defs>
+    <style>
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.28); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-purple { fill: rgba(168, 85, 247, 0.28); stroke: #a855f7; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-green { fill: rgba(34, 197, 94, 0.28); stroke: #22c55e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.28); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+      .geo-dashed { stroke-dasharray: 4 4; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+      }
+    </style>
+</defs>
+  
+  <!-- Maket I (Sol: Pencere, Sağ: TV & Sehpa) -->
+  <g transform="translate(30, 20)">
+    <rect x="0" y="0" width="150" height="120" rx="6" fill="var(--bg-card, #1e293b)" stroke="var(--border-subtle, rgba(255,255,255,0.12))" />
+    <text x="15" y="18" class="geo-text-accent" font-weight="700">I.</text>
+    <!-- Zemin -->
+    <polygon points="75,65 130,85 75,105 20,85" fill="rgba(245, 158, 11, 0.15)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <!-- Sol Duvar -->
+    <polygon points="20,40 75,20 75,65 20,85" fill="rgba(255,255,255,0.03)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <!-- Sağ Duvar -->
+    <polygon points="75,20 130,40 130,85 75,65" fill="rgba(255,255,255,0.06)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <!-- Pencere (Sol Duvar) -->
+    <polygon points="32,55 58,45 58,68 32,78" fill="#38bdf8" fill-opacity="0.4" stroke="#38bdf8" stroke-width="1.2" />
+    <!-- TV & Kırmızı Sehpa (Sağ Duvar) -->
+    <polygon points="90,48 112,56 112,72 90,64" fill="#f43f5e" fill-opacity="0.6" stroke="#f43f5e" stroke-width="1.2" />
+  </g>
+
+  <!-- Maket II (Sol: Kapı, Sağ: Pencere) -->
+  <g transform="translate(200, 20)">
+    <rect x="0" y="0" width="150" height="120" rx="6" fill="var(--bg-card, #1e293b)" stroke="var(--border-subtle, rgba(255,255,255,0.12))" />
+    <text x="15" y="18" class="geo-text-accent" font-weight="700">II.</text>
+    <polygon points="75,65 130,85 75,105 20,85" fill="rgba(245, 158, 11, 0.15)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <polygon points="20,40 75,20 75,65 20,85" fill="rgba(255,255,255,0.03)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <polygon points="75,20 130,40 130,85 75,65" fill="rgba(255,255,255,0.06)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <!-- Kapı (Sol Duvar) -->
+    <polygon points="38,48 58,40 58,78 38,86" fill="#a16207" fill-opacity="0.5" stroke="#a16207" stroke-width="1.2" />
+    <!-- Pencere (Sağ Duvar) -->
+    <polygon points="92,48 118,58 118,80 92,70" fill="#38bdf8" fill-opacity="0.4" stroke="#38bdf8" stroke-width="1.2" />
+  </g>
+
+  <!-- Maket III (Sol: 2 Tablo, Sağ: Kapı) -->
+  <g transform="translate(30, 160)">
+    <rect x="0" y="0" width="150" height="120" rx="6" fill="var(--bg-card, #1e293b)" stroke="var(--border-subtle, rgba(255,255,255,0.12))" />
+    <text x="15" y="18" class="geo-text-accent" font-weight="700">III.</text>
+    <polygon points="75,65 130,85 75,105 20,85" fill="rgba(245, 158, 11, 0.15)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <polygon points="20,40 75,20 75,65 20,85" fill="rgba(255,255,255,0.03)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <polygon points="75,20 130,40 130,85 75,65" fill="rgba(255,255,255,0.06)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <!-- 2 Tablo (Sol Duvar) -->
+    <polygon points="28,52 44,46 44,62 28,68" fill="#22c55e" fill-opacity="0.5" stroke="#22c55e" stroke-width="1" />
+    <polygon points="50,44 66,38 66,54 50,60" fill="#f59e0b" fill-opacity="0.5" stroke="#f59e0b" stroke-width="1" />
+    <!-- Kapı (Sağ Duvar) -->
+    <polygon points="95,54 115,62 115,96 95,88" fill="#a16207" fill-opacity="0.5" stroke="#a16207" stroke-width="1.2" />
+  </g>
+
+  <!-- Maket IV (Sol: TV & Sehpa, Sağ: 2 Tablo) -->
+  <g transform="translate(200, 160)">
+    <rect x="0" y="0" width="150" height="120" rx="6" fill="var(--bg-card, #1e293b)" stroke="var(--border-subtle, rgba(255,255,255,0.12))" />
+    <text x="15" y="18" class="geo-text-accent" font-weight="700">IV.</text>
+    <polygon points="75,65 130,85 75,105 20,85" fill="rgba(245, 158, 11, 0.15)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <polygon points="20,40 75,20 75,65 20,85" fill="rgba(255,255,255,0.03)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <polygon points="75,20 130,40 130,85 75,65" fill="rgba(255,255,255,0.06)" stroke="var(--border-subtle, rgba(255,255,255,0.2))" />
+    <!-- TV & Kırmızı Sehpa (Sol Duvar) -->
+    <polygon points="35,62 58,54 58,78 35,86" fill="#f43f5e" fill-opacity="0.6" stroke="#f43f5e" stroke-width="1.2" />
+    <!-- 2 Tablo (Sağ Duvar) -->
+    <polygon points="84,46 100,52 100,68 84,62" fill="#22c55e" fill-opacity="0.5" stroke="#22c55e" stroke-width="1" />
+    <polygon points="106,54 122,60 122,76 106,70" fill="#f59e0b" fill-opacity="0.5" stroke="#f59e0b" stroke-width="1" />
+  </g>
+</svg>

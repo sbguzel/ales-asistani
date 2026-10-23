@@ -410,6 +410,10 @@ html, body {
     display: none;
   }
 
+  .db-status-badge.offline {
+    display: inline-flex !important;
+  }
+
   .header-center {
     order: 2;
     display: flex;
