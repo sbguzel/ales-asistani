@@ -2020,6 +2020,10 @@
   transition: all var(--transition-fast);
 }
 
+.btn-start-question * {
+  pointer-events: none;
+}
+
 .btn-start-question:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 24px var(--accent-glow);

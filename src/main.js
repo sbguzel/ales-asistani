@@ -665,30 +665,45 @@ class App {
     });
   }
 
-  startCurrentQuestion() {
+  async startCurrentQuestion() {
     if (this.isQuestionStarted) return;
-    this.isQuestionStarted = true;
 
-    const question = this.filteredQuestions[this.currentIndex];
-    if (!question) return;
+    try {
+      let question = this.filteredQuestions[this.currentIndex];
+      if (!question) return;
 
-    const container = document.getElementById('question-container');
+      // Eğer soru tam içeriği henüz yüklenmediyse yükle
+      if (!question.questionText || !question.options) {
+        await questionBufferService.ensureBufferAhead(this.filteredQuestions, this.currentIndex);
+        const fullQ = questionBufferService.getQuestion(question.id);
+        if (fullQ) {
+          Object.assign(question, fullQ);
+        }
+      }
 
-    // KaTeX ile soruyu ve şıkları render et
-    QuizRenderer.renderQuestion(question, container, (selectedKey, buttonEl) => {
-      this.handleOptionSelection(selectedKey, buttonEl, question);
-    });
+      this.isQuestionStarted = true;
 
-    // Sonraki soru butonunu bağla
-    const nextBtn = document.getElementById('next-question-btn');
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => this.nextQuestion());
-    }
+      const container = document.getElementById('question-container');
 
-    // Kronometreyi başlat (hedef süreye göre)
-    const targetSeconds = question.targetTimeSec || 75;
-    if (this.timer) {
-      this.timer.start(targetSeconds);
+      // KaTeX ile soruyu ve şıkları render et
+      QuizRenderer.renderQuestion(question, container, (selectedKey, buttonEl) => {
+        this.handleOptionSelection(selectedKey, buttonEl, question);
+      });
+
+      // Sonraki soru butonunu bağla
+      const nextBtn = document.getElementById('next-question-btn');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => this.nextQuestion());
+      }
+
+      // Kronometreyi başlat (hedef süreye göre)
+      const targetSeconds = question.targetTimeSec || 75;
+      if (this.timer) {
+        this.timer.start(targetSeconds);
+      }
+    } catch (err) {
+      console.error('[startCurrentQuestion] Hata oluştu:', err);
+      this.isQuestionStarted = false;
     }
   }
 

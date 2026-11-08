@@ -6,7 +6,14 @@ export class QuizRenderer {
    * Metin içindeki LaTeX formüllerini ($...$ ve $$...$$) KaTeX HTML'ine dönüştürür
    */
   static renderLatex(text) {
-    if (!text) return '';
+    if (text === null || text === undefined) return '';
+    if (typeof text === 'object') {
+      text = text.content || text.text || text.value || '';
+    }
+    if (typeof text !== 'string') {
+      text = String(text);
+    }
+    if (!text.trim()) return '';
 
     // 1. Blok formüller: $$...$$ (çok satırlı destek)
     let parsed = text.replace(/\$\$([\s\S]+?)\$\$/g, (match, formula) => {
@@ -58,17 +65,25 @@ export class QuizRenderer {
       `<span class="diff-dot ${level <= question.difficulty ? 'active' : ''}"></span>`
     ).join('');
 
+    const sharedText = typeof question.sharedContext === 'object' && question.sharedContext !== null
+      ? (question.sharedContext.content || question.sharedContext.text || '')
+      : (question.sharedContext || '');
+
+    const groupHeader = question.groupHeader || 
+      (typeof question.sharedContext === 'object' && question.sharedContext ? question.sharedContext.title : null) || 
+      'Ortak Bilgilendirme';
+
     const groupHtml = question.isGroupQuestion ? `
       <div class="group-context-card">
         <div class="group-header-banner">
           <div class="group-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-            <span>Bağlantılı Soru Metni (${question.groupIndex} / ${question.groupTotal})</span>
+            <span>Bağlantılı Soru Metni (${question.groupIndex || 1} / ${question.groupTotal || 1})</span>
           </div>
-          <span class="group-title">${question.groupHeader || 'Ortak Bilgilendirme'}</span>
+          <span class="group-title">${groupHeader}</span>
         </div>
         <div class="group-context-body">
-          ${this.renderLatex(question.sharedContext || '')}
+          ${this.renderLatex(sharedText)}
         </div>
       </div>
     ` : '';
@@ -88,7 +103,8 @@ export class QuizRenderer {
       ? `<div class="question-text">${this.renderLatex(question.questionText)}</div>`
       : '';
 
-    const optionsHtml = question.options.map(opt => `
+    const optionsList = Array.isArray(question.options) ? question.options : [];
+    const optionsHtml = optionsList.map(opt => `
       <button class="option-btn" data-key="${opt.key}">
         <div class="option-key">${opt.key}</div>
         <div class="option-text">${this.renderLatex(opt.text)}</div>
