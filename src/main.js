@@ -566,7 +566,10 @@ class App {
     
     // Belirli bir soru hedefi var mı (parametre, URL query veya URL hash)
     let target = targetQuestionId || new URLSearchParams(window.location.search).get('q');
-    if (!target && !ignoreHash && window.location.hash) {
+    
+    // Yalnızca sıralı moddaysak ve hash yok sayılmadıysa URL hash'i hedef olarak kullan
+    // Karışık (rastgele) moddayken sayfa yenilendiğinde her zaman taze rastgele soru seçilir
+    if (!target && !ignoreHash && !this.settings.randomOrder && window.location.hash) {
       target = window.location.hash.substring(1);
     }
 
@@ -574,8 +577,10 @@ class App {
       this.currentIndex = result.findIndex(q => q.id === target);
     } else {
       this.currentIndex = 0;
-      if (result.length > 0 && result[0]?.id) {
+      if (result.length > 0 && result[0]?.id && !this.settings.randomOrder) {
         history.replaceState(null, '', '#' + result[0].id);
+      } else if (this.settings.randomOrder && window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
       }
     }
 
@@ -619,8 +624,11 @@ class App {
       }
     }
 
-    if (question && question.id) {
+    // Yalnızca sıralı modda URL hash'ini güncelle (Rastgele modda sayfa yenilenince yeni soru gelsin diye hash tutulmaz)
+    if (question && question.id && !this.settings.randomOrder) {
       history.replaceState(null, '', '#' + question.id);
+    } else if (this.settings.randomOrder && window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
     }
 
     // Soru sayacını ve ok butonlarını güncelle
