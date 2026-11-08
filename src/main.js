@@ -297,6 +297,13 @@ class App {
         this.switchMode(mode);
       });
     });
+
+    const brandHome = document.getElementById('brand-home');
+    if (brandHome) {
+      brandHome.addEventListener('click', () => {
+        this.switchMode('all');
+      });
+    }
   }
 
   switchMode(mode) {
@@ -309,7 +316,7 @@ class App {
         b.classList.remove('active');
       }
     });
-    this.applyFilter();
+    this.applyFilter(null, true);
   }
 
   // 6. Soru Gezinme ve Klavye Kısayolları
@@ -361,15 +368,8 @@ class App {
     // URL Hash değiştiğinde ilgili soruya atla
     window.addEventListener('hashchange', async () => {
       const hash = window.location.hash.substring(1);
-      if (hash && this.allQuestions && this.allQuestions.length > 0) {
+      if (hash && this.filteredQuestions && this.filteredQuestions.length > 0) {
         let idx = this.filteredQuestions.findIndex(q => q.id === hash);
-        if (idx === -1) {
-          const targetQ = this.allQuestions.find(q => q.id === hash);
-          if (targetQ) {
-            this.filteredQuestions.unshift(targetQ);
-            idx = 0;
-          }
-        }
         if (idx !== -1 && idx !== this.currentIndex) {
           this.currentIndex = idx;
           await this.renderCurrentQuestion();
@@ -502,7 +502,7 @@ class App {
     return groupArrays.flat();
   }
 
-  async applyFilter(targetQuestionId = null) {
+  async applyFilter(targetQuestionId = null, ignoreHash = false) {
     const questionPanel = document.getElementById('question-panel');
     const canvasPanel = document.getElementById('canvas-panel');
     const analyticsPanel = document.getElementById('analytics-panel');
@@ -565,18 +565,18 @@ class App {
     this.filteredQuestions = result;
     
     // Belirli bir soru hedefi var mı (parametre, URL query veya URL hash)
-    const target = targetQuestionId || new URLSearchParams(window.location.search).get('q') || (window.location.hash ? window.location.hash.substring(1) : null);
-    if (target) {
-      if (!result.some(q => q.id === target)) {
-        const targetQ = this.allQuestions.find(q => q.id === target);
-        if (targetQ) result.unshift(targetQ);
-      }
-      this.filteredQuestions = result;
-      const targetIdx = this.filteredQuestions.findIndex(q => q.id === target);
-      this.currentIndex = targetIdx !== -1 ? targetIdx : 0;
+    let target = targetQuestionId || new URLSearchParams(window.location.search).get('q');
+    if (!target && !ignoreHash && window.location.hash) {
+      target = window.location.hash.substring(1);
+    }
+
+    if (target && result.some(q => q.id === target)) {
+      this.currentIndex = result.findIndex(q => q.id === target);
     } else {
-      this.filteredQuestions = result;
       this.currentIndex = 0;
+      if (result.length > 0 && result[0]?.id) {
+        history.replaceState(null, '', '#' + result[0].id);
+      }
     }
 
     // İlk 10 soruluk akıllı tamponu önden yükle
