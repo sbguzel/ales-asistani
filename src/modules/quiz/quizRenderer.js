@@ -96,35 +96,37 @@ export class QuizRenderer {
     `).join('');
 
     container.innerHTML = `
-      ${groupHtml}
+      <div class="question-content-active">
+        ${groupHtml}
 
-      <div class="question-header-meta">
-        <span class="question-tag">${question.topicTitle || question.subject}</span>
-        <div class="question-difficulty" title="Zorluk Derecesi: ${question.difficulty}/5">
-          ${diffDots}
+        <div class="question-header-meta">
+          <span class="question-tag">${question.topicTitle || question.subject}</span>
+          <div class="question-difficulty" title="Zorluk Derecesi: ${question.difficulty}/5">
+            ${diffDots}
+          </div>
         </div>
-      </div>
 
-      ${imageHtml}
-      ${textHtml}
+        ${imageHtml}
+        ${textHtml}
 
-      <div class="options-list">
-        ${optionsHtml}
-      </div>
+        <div class="options-list">
+          ${optionsHtml}
+        </div>
 
-      <div class="solution-card" id="solution-card">
-        <div class="solution-header">
-          <span>✓ Doğru Çözüm & ALES Analizi</span>
+        <div class="solution-card" id="solution-card">
+          <div class="solution-header">
+            <span>✓ Doğru Çözüm & ALES Analizi</span>
+          </div>
+          <div class="quick-tip-banner">
+            ${this.renderLatex(question.quickTip || '💡 ALES Taktiği: Sorularda önce şıkların büyüklük dağılımını gözlemleyin.')}
+          </div>
+          <div class="solution-body">
+            ${this.renderLatex(question.suggestedSolution || 'Detaylı çözüm hazırlanıyor.')}
+          </div>
+          <button class="next-question-btn" id="next-question-btn">
+            Sonraki Soruya Geç ➔
+          </button>
         </div>
-        <div class="quick-tip-banner">
-          ${this.renderLatex(question.quickTip || '💡 ALES Taktiği: Sorularda önce şıkların büyüklük dağılımını gözlemleyin.')}
-        </div>
-        <div class="solution-body">
-          ${this.renderLatex(question.suggestedSolution || 'Detaylı çözüm hazırlanıyor.')}
-        </div>
-        <button class="next-question-btn" id="next-question-btn">
-          Sonraki Soruya Geç ➔
-        </button>
       </div>
     `;
 
@@ -136,5 +138,96 @@ export class QuizRenderer {
         onOptionSelect(key, btn);
       });
     });
+  }
+
+  /**
+   * Soru öncesi "Başla" kartını DOM'a basar.
+   * Kullanıcı butona basana kadar soru metni ve şıklar gizlidir, süre başlamaz.
+   */
+  static renderStartCard(question, container, onStart, meta = {}) {
+    if (!question || !container) return;
+
+    const diffDots = [1, 2, 3, 4, 5].map(level => 
+      `<span class="diff-dot ${level <= (question.difficulty || 3) ? 'active' : ''}"></span>`
+    ).join('');
+
+    const targetSec = question.targetTimeSec || 75;
+    const mins = Math.floor(targetSec / 60);
+    const secs = targetSec % 60;
+    const targetTimeFormatted = mins > 0 
+      ? (secs > 0 ? `${mins} dk ${secs} sn` : `${mins} dk`) 
+      : `${secs} sn`;
+
+    const topicName = question.topicTitle || (
+      question.subject === 'matematik' ? 'Matematik' :
+      question.subject === 'turkce' ? 'Türkçe' :
+      question.subject === 'mantik' ? 'Mantık' : 'ALES'
+    );
+
+    const questionNum = (meta.currentIndex !== undefined && meta.totalCount !== undefined)
+      ? `Soru ${meta.currentIndex + 1} / ${meta.totalCount}`
+      : `Soru ${question.number || ''}`;
+
+    const groupBadge = question.isGroupQuestion
+      ? `<span class="start-badge group">Bağlantılı Soru (${question.groupIndex || 1} / ${question.groupTotal || 1})</span>`
+      : '';
+
+    container.innerHTML = `
+      <div class="question-start-screen">
+        <div class="start-header-meta">
+          <span class="question-tag">${topicName}</span>
+          <span class="start-counter-badge">${questionNum}</span>
+          ${groupBadge}
+        </div>
+
+        <div class="start-card">
+          <div class="start-icon-pulse">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+
+          <h2 class="start-title">Soru Çözümüne Hazır mısınız?</h2>
+
+          <p class="start-subtitle">
+            Rahat bir mola verebilir veya karalama alanınızı hazırlayabilirsiniz.<br>
+            <strong>Başla</strong> butonuna bastığınızda soru açılacak ve süreniz saymaya başlayacaktır.
+          </p>
+
+          <div class="start-info-grid">
+            <div class="start-info-box">
+              <span class="start-info-label">Hedef Çözüm Süresi</span>
+              <span class="start-info-value">⏱️ ${targetTimeFormatted}</span>
+            </div>
+            <div class="start-info-box">
+              <span class="start-info-label">Zorluk Seviyesi</span>
+              <div class="question-difficulty" title="Zorluk Derecesi: ${question.difficulty || 3}/5">
+                ${diffDots}
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="btn-start-question" id="btn-start-question">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="6 4 20 12 6 20 6 4"></polygon>
+            </svg>
+            <span>Başla</span>
+          </button>
+
+          <div class="start-hint-text">
+            <span>Klavyeden <strong>Boşluk (Space)</strong> veya <strong>Enter</strong> tuşuna basarak da başlatabilirsiniz</span>
+          </div>
+        </div>
+      </div>
+    `;
+
+    const startBtn = container.querySelector('#btn-start-question');
+    if (startBtn) {
+      startBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        onStart();
+      });
+    }
   }
 }

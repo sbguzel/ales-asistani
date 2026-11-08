@@ -23,6 +23,7 @@ class App {
     this.solvedQuestionIds = new Set();
     this.analyticsManager = new AnalyticsManager(this);
     this.isEvaluating = false;
+    this.isQuestionStarted = false;
 
     this.init();
   }
@@ -324,11 +325,31 @@ class App {
       nextBtn.addEventListener('click', () => this.nextQuestion());
     }
 
-    // Klavye yön tuşları ile hızlı geçiş (Sol/Sağ ok)
+    // Klavye yön tuşları ve başlatma kısayolları (Sol/Sağ ok, Boşluk, Enter)
     window.addEventListener('keydown', (e) => {
       // Eğer kullanıcı input/textarea içinde yazıyorsa yön tuşlarını engelleme
       const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
       if (activeTag === 'input' || activeTag === 'textarea') return;
+
+      const isModalOpen = document.querySelector('.modal-backdrop.active');
+      if (isModalOpen) return;
+
+      // Başla ekranındayken Space veya Enter ile soruyu başlat
+      if (!this.isQuestionStarted && (e.key === ' ' || e.key === 'Spacebar' || e.key === 'Enter')) {
+        e.preventDefault();
+        this.startCurrentQuestion();
+        return;
+      }
+
+      // Soru çözüldükten sonra çözüm kartı açıksa Enter ile sonraki soruya geç
+      if (this.isQuestionStarted) {
+        const solutionCard = document.getElementById('solution-card');
+        if (solutionCard && solutionCard.classList.contains('active') && e.key === 'Enter') {
+          e.preventDefault();
+          this.nextQuestion();
+          return;
+        }
+      }
 
       if (e.key === 'ArrowLeft') {
         this.prevQuestion();
@@ -565,6 +586,7 @@ class App {
 
   async renderCurrentQuestion() {
     this.isEvaluating = false;
+    this.isQuestionStarted = false;
     this.resetScrollPositions();
     const container = document.getElementById('question-container');
     const counterEl = document.getElementById('question-counter');
@@ -576,7 +598,7 @@ class App {
       if (counterEl) counterEl.textContent = '0 / 0 (Tamamlandı)';
       if (prevBtn) prevBtn.disabled = true;
       if (nextNavBtn) nextNavBtn.disabled = true;
-      if (this.timer) this.timer.stop();
+      if (this.timer) this.timer.reset();
 
       this.renderAllCompletedState(container);
       return;
@@ -616,17 +638,6 @@ class App {
     questionBufferService.checkAndPrefetch(this.filteredQuestions, this.currentIndex);
     this.updateBufferStatusBadge();
 
-    // KaTeX ile soruyu ve şıkları render et
-    QuizRenderer.renderQuestion(question, container, (selectedKey, buttonEl) => {
-      this.handleOptionSelection(selectedKey, buttonEl, question);
-    });
-
-    // Sonraki soru butonunu bağla
-    const nextBtn = document.getElementById('next-question-btn');
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => this.nextQuestion());
-    }
-
     // Karalama alanını akıllı yönet:
     // Eğer aynı soru grubundaysak adayın çizdiği mantık tablosunu/notlarını KORU!
     const prevQuestion = this.currentActiveQuestion;
@@ -640,9 +651,45 @@ class App {
     }
     this.currentActiveQuestion = question;
 
+    // Kronometreyi sıfırla ve hazır durumda beklet (Kullanıcı Başla butonuna basana kadar süre işlemez)
+    if (this.timer) {
+      this.timer.reset();
+    }
+
+    // Soru öncesi "Başla" ekranını render et (Kullanıcı mola verebilir, hazır olduğunda başlar)
+    QuizRenderer.renderStartCard(question, container, () => {
+      this.startCurrentQuestion();
+    }, {
+      currentIndex: this.currentIndex,
+      totalCount: this.filteredQuestions.length
+    });
+  }
+
+  startCurrentQuestion() {
+    if (this.isQuestionStarted) return;
+    this.isQuestionStarted = true;
+
+    const question = this.filteredQuestions[this.currentIndex];
+    if (!question) return;
+
+    const container = document.getElementById('question-container');
+
+    // KaTeX ile soruyu ve şıkları render et
+    QuizRenderer.renderQuestion(question, container, (selectedKey, buttonEl) => {
+      this.handleOptionSelection(selectedKey, buttonEl, question);
+    });
+
+    // Sonraki soru butonunu bağla
+    const nextBtn = document.getElementById('next-question-btn');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => this.nextQuestion());
+    }
+
     // Kronometreyi başlat (hedef süreye göre)
     const targetSeconds = question.targetTimeSec || 75;
-    this.timer.start(targetSeconds);
+    if (this.timer) {
+      this.timer.start(targetSeconds);
+    }
   }
 
   renderAllCompletedState(container) {

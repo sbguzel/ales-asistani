@@ -6,13 +6,19 @@ export class ZenTimer {
     this.seconds = 0;
     this.intervalId = null;
     this.startTime = null;
+    this.isRunning = false;
+    this.reset();
   }
 
   start(targetSeconds = 75) {
     this.stop();
+    this.isRunning = true;
     this.targetSeconds = targetSeconds;
     this.seconds = 0;
     this.startTime = performance.now();
+    if (this.element) {
+      this.element.classList.remove('idle');
+    }
     this.updateDisplay();
 
     this.intervalId = setInterval(() => {
@@ -23,6 +29,7 @@ export class ZenTimer {
   }
 
   stop() {
+    this.isRunning = false;
     if (this.intervalId) {
       clearInterval(this.intervalId);
       this.intervalId = null;
@@ -34,6 +41,11 @@ export class ZenTimer {
   reset() {
     this.stop();
     this.seconds = 0;
+    this.startTime = null;
+    if (this.element) {
+      this.element.classList.add('idle');
+      this.element.classList.remove('warning', 'overtime');
+    }
     this.updateDisplay();
   }
 
@@ -49,10 +61,12 @@ export class ZenTimer {
 
     // Görsel Zen Renk Durumları (Kesinlikle ses yok)
     this.element.classList.remove('warning', 'overtime');
-    if (this.seconds > this.targetSeconds) {
-      this.element.classList.add('overtime');
-    } else if (this.seconds >= this.targetSeconds * 0.8) {
-      this.element.classList.add('warning');
+    if (this.isRunning) {
+      if (this.seconds > this.targetSeconds) {
+        this.element.classList.add('overtime');
+      } else if (this.seconds >= this.targetSeconds * 0.8) {
+        this.element.classList.add('warning');
+      }
     }
   }
 }

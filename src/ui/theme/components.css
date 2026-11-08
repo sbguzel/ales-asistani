@@ -1871,3 +1871,223 @@
   background: var(--bg-elevated);
 }
 
+/* ==========================================================================
+   4. ZEN SORU BAŞLATMA EKRANI & KARTI (MOLA VE ZAMANLAMA YÖNETİMİ)
+   ========================================================================== */
+.question-start-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  animation: startFadeIn 240ms var(--ease-apple);
+}
+
+.start-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.start-counter-badge {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+}
+
+.start-badge.group {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.start-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 38px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.start-icon-pulse {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+  animation: pulse-start-icon 3s infinite ease-in-out;
+}
+
+@keyframes pulse-start-icon {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.15);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 26px rgba(56, 189, 248, 0.28);
+  }
+}
+
+.start-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.start-subtitle {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 440px;
+  margin-bottom: 26px;
+}
+
+.start-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 28px;
+}
+
+.start-info-box {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.start-info-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.start-info-value {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.btn-start-question {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 240px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 18px var(--accent-glow);
+  transition: all var(--transition-fast);
+}
+
+.btn-start-question:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px var(--accent-glow);
+  opacity: 0.96;
+}
+
+.btn-start-question:active {
+  transform: translateY(0);
+}
+
+.start-hint-text {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.start-hint-text strong {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Soru Başlatıldığında Aktif İçerik Geçişi */
+.question-content-active {
+  animation: questionFadeIn 220ms var(--ease-apple);
+}
+
+@keyframes questionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes startFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .start-card {
+    padding: 26px 16px;
+  }
+
+  .start-title {
+    font-size: 19px;
+  }
+
+  .start-subtitle {
+    font-size: 13px;
+  }
+
+  .btn-start-question {
+    max-width: 100%;
+  }
+
+  .start-hint-text {
+    display: none;
+  }
+}
+
+

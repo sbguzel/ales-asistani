@@ -164,6 +164,15 @@ html, body {
   transition: background 300ms ease;
 }
 
+.zen-timer.idle {
+  opacity: 0.75;
+}
+
+.zen-timer.idle .timer-dot {
+  background: var(--text-muted);
+  box-shadow: none;
+}
+
 .zen-timer.warning .timer-dot {
   background: var(--zen-warning);
   box-shadow: 0 0 8px var(--zen-warning);
