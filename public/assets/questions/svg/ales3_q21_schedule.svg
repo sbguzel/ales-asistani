@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 210" width="100%" height="195">
+  <defs>
+    <style>
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.30); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-green { fill: rgba(34, 197, 94, 0.28); stroke: #22c55e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.30); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+      }
+    </style>
+  </defs>
+  <!-- Header Row (Cols 1..5) -->
+  <rect x="105" y="15" width="335" height="30" class="geo-shaded" />
+  <rect x="20" y="45" width="420" height="150" fill="none" stroke="var(--text-primary, #f1f5f9)" stroke-width="1.6" />
+  <!-- Grid Lines -->
+  <line x1="105" y1="15" x2="105" y2="195" class="geo-line" stroke-width="1.5" />
+  <line x1="172" y1="15" x2="172" y2="195" class="geo-line" stroke-width="1.2" />
+  <line x1="239" y1="15" x2="239" y2="195" class="geo-line" stroke-width="1.2" />
+  <line x1="306" y1="15" x2="306" y2="195" class="geo-line" stroke-width="1.2" />
+  <line x1="373" y1="15" x2="373" y2="195" class="geo-line" stroke-width="1.2" />
+  <line x1="440" y1="15" x2="440" y2="195" class="geo-line" stroke-width="1.5" />
+  <line x1="105" y1="15" x2="440" y2="15" class="geo-line" stroke-width="1.5" />
+  <line x1="20" y1="75" x2="440" y2="75" class="geo-line" stroke-width="1.2" />
+  <line x1="20" y1="105" x2="440" y2="105" class="geo-line" stroke-width="1.2" />
+  <line x1="20" y1="135" x2="440" y2="135" class="geo-line" stroke-width="1.2" />
+  <line x1="20" y1="165" x2="440" y2="165" class="geo-line" stroke-width="1.2" />
+
+  <!-- Column Headers -->
+  <text x="138.5" y="30" class="geo-text" font-size="12">1. Ders</text>
+  <text x="205.5" y="30" class="geo-text" font-size="12">2. Ders</text>
+  <text x="272.5" y="30" class="geo-text" font-size="12">3. Ders</text>
+  <text x="339.5" y="30" class="geo-text" font-size="12">4. Ders</text>
+  <text x="406.5" y="30" class="geo-text" font-size="12">5. Ders</text>
+
+  <!-- Row Headers -->
+  <text x="62.5" y="60" class="geo-text" font-size="13">Pazartesi</text>
+  <text x="62.5" y="90" class="geo-text" font-size="13">Salı</text>
+  <text x="62.5" y="120" class="geo-text" font-size="13">Çarşamba</text>
+  <text x="62.5" y="150" class="geo-text" font-size="13">Perşembe</text>
+  <text x="62.5" y="180" class="geo-text" font-size="13">Cuma</text>
+
+  <!-- Pazartesi: İng, Mat, Mat -->
+  <text x="138.5" y="60" class="geo-text-accent">İng.</text>
+  <text x="205.5" y="60" class="geo-text">Mat.</text>
+  <text x="272.5" y="60" class="geo-text">Mat.</text>
+
+  <!-- Salı: Mat, Mat, İng -->
+  <text x="138.5" y="90" class="geo-text">Mat.</text>
+  <text x="205.5" y="90" class="geo-text">Mat.</text>
+  <text x="272.5" y="90" class="geo-text-accent">İng.</text>
+
+  <!-- Çarşamba: İng, İng, İng, Mat -->
+  <text x="138.5" y="120" class="geo-text-accent">İng.</text>
+  <text x="205.5" y="120" class="geo-text-accent">İng.</text>
+  <text x="272.5" y="120" class="geo-text-accent">İng.</text>
+  <text x="339.5" y="120" class="geo-text">Mat.</text>
+
+  <!-- Perşembe: Mat, İng, İng, Mat, Mat -->
+  <text x="138.5" y="150" class="geo-text">Mat.</text>
+  <text x="205.5" y="150" class="geo-text-accent">İng.</text>
+  <text x="272.5" y="150" class="geo-text-accent">İng.</text>
+  <text x="339.5" y="150" class="geo-text">Mat.</text>
+  <text x="406.5" y="150" class="geo-text">Mat.</text>
+
+  <!-- Cuma: Mat, Mat, İng, İng -->
+  <text x="138.5" y="180" class="geo-text">Mat.</text>
+  <text x="205.5" y="180" class="geo-text">Mat.</text>
+  <text x="272.5" y="180" class="geo-text-accent">İng.</text>
+  <text x="339.5" y="180" class="geo-text-accent">İng.</text>
+</svg>

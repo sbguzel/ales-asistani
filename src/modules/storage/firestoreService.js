@@ -149,6 +149,15 @@ export class FirestoreService {
    * Çevrimdışı veya hata durumunda yerel önbellek ve statik seed yedeğini kullanır.
    */
   static async getQuestions() {
+    let seedMap = null;
+    try {
+      const resp = await fetch('/data/seed_questions.json');
+      if (resp.ok) {
+        const seeds = await resp.json();
+        seedMap = new Map(seeds.map(q => [q.id, q]));
+      }
+    } catch (e) {}
+
     try {
       console.log('[FirestoreService] Sorular Firestore veritabanından alınıyor...');
       const questionsCol = collection(db, 'questions');
@@ -158,13 +167,16 @@ export class FirestoreService {
       if (!snapshot.empty) {
         const questions = [];
         snapshot.forEach(docSnap => {
-          questions.push(docSnap.data());
+          const data = docSnap.data();
+          const canonical = seedMap ? seedMap.get(data.id) : null;
+          questions.push(canonical ? { ...data, ...canonical } : data);
         });
         console.log(`[FirestoreService] Firestore'dan ${questions.length} soru başarıyla çekildi.`);
 
         // Çevrimdışı dayanıklılık için localStorage önbelleğini güncelle
         try {
-          localStorage.setItem('ales_cached_questions', JSON.stringify(questions));
+          localStorage.removeItem('ales_cached_questions');
+          localStorage.setItem('ales_cached_questions_v2', JSON.stringify(questions));
         } catch (e) {}
 
         return { questions, source: 'firestore' };
@@ -175,7 +187,7 @@ export class FirestoreService {
 
     // Fallback 1: LocalStorage önbelleği
     try {
-      const cached = localStorage.getItem('ales_cached_questions');
+      const cached = localStorage.getItem('ales_cached_questions_v2');
       if (cached) {
         const parsed = JSON.parse(cached);
         if (Array.isArray(parsed) && parsed.length > 0) {
@@ -187,6 +199,9 @@ export class FirestoreService {
 
     // Fallback 2: /data/seed_questions.json statik dosya
     console.log('[FirestoreService] /data/seed_questions.json yedeğinden yükleniyor...');
+    if (seedMap && seedMap.size > 0) {
+      return { questions: Array.from(seedMap.values()), source: 'seed_json' };
+    }
     const response = await fetch('/data/seed_questions.json');
     const questions = await response.json();
     return { questions, source: 'seed_json' };

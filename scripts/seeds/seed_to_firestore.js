@@ -73,7 +73,7 @@ async function seedQuestions() {
       orderIndex: index + 1,
       updatedAt: serverTimestamp()
     };
-    batch.set(qDocRef, dataToSave, { merge: true });
+    batch.set(qDocRef, dataToSave);
   });
 
   console.log('⏳ Firestore Toplu Yazma (Batch) İşlemi Gönderiliyor...');

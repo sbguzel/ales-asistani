@@ -1,83 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" width="100%" height="165">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 175" width="100%" height="165">
   <defs>
     <style>
       .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
       .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
       .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
       .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
-      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.28); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
-      .geo-shaded-purple { fill: rgba(168, 85, 247, 0.28); stroke: #a855f7; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.30); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
       .geo-shaded-green { fill: rgba(34, 197, 94, 0.28); stroke: #22c55e; stroke-width: 2; stroke-linejoin: round; }
-      .geo-shaded-red { fill: rgba(244, 63, 94, 0.28); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.30); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
       .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
       .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
       .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
       .geo-point { fill: var(--text-primary, #f1f5f9); }
       .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
       .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
-      .geo-dashed { stroke-dasharray: 4 4; }
 
       @media (prefers-color-scheme: light) {
         .geo-line { stroke: var(--text-primary, #0f172a); }
         .geo-sec { stroke: var(--accent-primary, #0284c7); }
-        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }
         .geo-text { fill: var(--text-primary, #0f172a); }
         .geo-text-muted { fill: var(--text-secondary, #475569); }
         .geo-text-accent { fill: var(--zen-warning, #d97706); }
         .geo-point { fill: var(--text-primary, #0f172a); }
       }
     </style>
-</defs>
-  
+  </defs>
   <!-- 1. Terazi (Dengede) -->
-  <g transform="translate(10, 10)">
-    <line x1="100" y1="40" x2="100" y2="135" class="geo-line" stroke-width="2.5" />
-    <line x1="80" y1="135" x2="120" y2="135" class="geo-line" stroke-width="3" />
-    <line x1="30" y1="40" x2="170" y2="40" class="geo-line" stroke-width="2.5" />
-    
-    <!-- Sol Kefe: 1 daire, 1 üçgen, 1 kare -->
-    <line x1="30" y1="40" x2="15" y2="80" class="geo-sec" stroke-width="1.2" />
-    <line x1="30" y1="40" x2="45" y2="80" class="geo-sec" stroke-width="1.2" />
-    <line x1="10" y1="80" x2="50" y2="80" class="geo-line" stroke-width="2" />
-    <circle cx="18" cy="72" r="5" class="geo-shaded-red" />
-    <polygon points="28,65 23,78 33,78" class="geo-shaded-yellow" />
-    <rect x="36" y="65" width="12" height="13" class="geo-shaded" />
-
-    <!-- Sağ Kefe: 3 daire, 1 kare -->
-    <line x1="170" y1="40" x2="155" y2="80" class="geo-sec" stroke-width="1.2" />
-    <line x1="170" y1="40" x2="185" y2="80" class="geo-sec" stroke-width="1.2" />
-    <line x1="150" y1="80" x2="190" y2="80" class="geo-line" stroke-width="2" />
-    <circle cx="158" cy="73" r="5" class="geo-shaded-red" />
-    <circle cx="168" cy="73" r="5" class="geo-shaded-red" />
-    <circle cx="163" cy="63" r="5" class="geo-shaded-red" />
-    <rect x="176" y="66" width="12" height="13" class="geo-shaded" />
-
-    <text x="100" y="155" class="geo-text-muted" font-weight="700">1. terazi</text>
+  <g transform="translate(10, 5)">
+    <line x1="105" y1="30" x2="105" y2="135" class="geo-line" stroke-width="3" />
+    <ellipse cx="105" cy="137" rx="26" ry="4.5" class="geo-shaded" />
+    <line x1="40" y1="30" x2="170" y2="30" class="geo-line" stroke-width="3" />
+    <!-- Sol Kefe: 1 daire, 3 kare (2 altta 1 üstte), 1 üçgen -->
+    <polygon points="40,30 5,90 75,90" class="geo-line" stroke-width="1.8" />
+    <circle cx="21" cy="82" r="6" class="geo-shaded-red" />
+    <rect x="29" y="74" width="14" height="14" class="geo-shaded" />
+    <rect x="44" y="74" width="14" height="14" class="geo-shaded" />
+    <rect x="36.5" y="59" width="14" height="14" class="geo-shaded" />
+    <polygon points="65,74 59,88 71,88" class="geo-shaded-yellow" />
+    <!-- Sağ Kefe: 2 üçgen, 4 daire -->
+    <polygon points="170,30 135,90 205,90" class="geo-line" stroke-width="1.8" />
+    <polygon points="148,74 142,88 154,88" class="geo-shaded-yellow" />
+    <polygon points="161,74 155,88 167,88" class="geo-shaded-yellow" />
+    <circle cx="174" cy="82" r="6" class="geo-shaded-red" />
+    <circle cx="186" cy="82" r="6" class="geo-shaded-red" />
+    <circle cx="198" cy="82" r="6" class="geo-shaded-red" />
+    <circle cx="180" cy="70" r="6" class="geo-shaded-red" />
+    <text x="105" y="156" class="geo-text">1. terazi</text>
   </g>
 
-  <!-- 2. Terazi (Dengede değil: Sol kefe daha aşağıda) -->
-  <g transform="translate(220, 10)">
-    <line x1="100" y1="40" x2="100" y2="135" class="geo-line" stroke-width="2.5" />
-    <line x1="80" y1="135" x2="120" y2="135" class="geo-line" stroke-width="3" />
-    <!-- Eğik Kol: sol aşağıda (y=50), sağ yukarıda (y=30) -->
-    <line x1="30" y1="50" x2="170" y2="30" class="geo-line" stroke-width="2.5" />
-
-    <!-- Sol Kefe: 1 kare, 1 üçgen (Aşağıda) -->
-    <line x1="30" y1="50" x2="15" y2="95" class="geo-sec" stroke-width="1.2" />
-    <line x1="30" y1="50" x2="45" y2="95" class="geo-sec" stroke-width="1.2" />
-    <line x1="10" y1="95" x2="50" y2="95" class="geo-line" stroke-width="2" />
-    <rect x="16" y="80" width="13" height="13" class="geo-shaded" />
-    <polygon points="38,80 32,94 44,94" class="geo-shaded-yellow" />
-
-    <!-- Sağ Kefe: 3 üçgen, 1 daire (Yukarıda) -->
-    <line x1="170" y1="30" x2="155" y2="70" class="geo-sec" stroke-width="1.2" />
-    <line x1="170" y1="30" x2="185" y2="70" class="geo-sec" stroke-width="1.2" />
-    <line x1="150" y1="70" x2="190" y2="70" class="geo-line" stroke-width="2" />
-    <polygon points="158,56 153,69 163,69" class="geo-shaded-yellow" />
-    <polygon points="168,56 163,69 173,69" class="geo-shaded-yellow" />
-    <polygon points="178,56 173,69 183,69" class="geo-shaded-yellow" />
-    <circle cx="168" cy="46" r="4.5" class="geo-shaded-red" />
-
-    <text x="100" y="155" class="geo-text-muted" font-weight="700">2. terazi</text>
+  <!-- 2. Terazi (Sağ kefe daha aşağıda/ağır) -->
+  <g transform="translate(235, 5)">
+    <line x1="105" y1="30" x2="105" y2="135" class="geo-line" stroke-width="3" />
+    <ellipse cx="105" cy="137" rx="26" ry="4.5" class="geo-shaded" />
+    <!-- Eğik kol: sol yukarıda (40,20), sağ aşağıda (170,42) -->
+    <line x1="40" y1="20" x2="170" y2="42" class="geo-line" stroke-width="3" />
+    <!-- Sol Kefe (yukarıda): 1 daire, 2 üst üste kare, 2 üçgen -->
+    <polygon points="40,20 5,78 75,78" class="geo-line" stroke-width="1.8" />
+    <circle cx="21" cy="70" r="6" class="geo-shaded-red" />
+    <rect x="30" y="62" width="14" height="14" class="geo-shaded" />
+    <rect x="30" y="47" width="14" height="14" class="geo-shaded" />
+    <polygon points="52,62 46,76 58,76" class="geo-shaded-yellow" />
+    <polygon points="65,62 59,76 71,76" class="geo-shaded-yellow" />
+    <!-- Sağ Kefe (aşağıda): 3 üçgen, 1 daire -->
+    <polygon points="170,42 135,102 205,102" class="geo-line" stroke-width="1.8" />
+    <polygon points="148,86 142,100 154,100" class="geo-shaded-yellow" />
+    <polygon points="162,86 156,100 168,100" class="geo-shaded-yellow" />
+    <polygon points="176,86 170,100 182,100" class="geo-shaded-yellow" />
+    <circle cx="192" cy="94" r="6" class="geo-shaded-red" />
+    <text x="105" y="156" class="geo-text">2. terazi</text>
   </g>
 </svg>

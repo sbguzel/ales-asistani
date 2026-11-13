@@ -12,18 +12,41 @@ import { eventBus } from '../../core/eventBus.js';
 export class QuestionBufferService {
   static BUFFER_SIZE = 10;        // Optimum soru tampon boyutu (10 soru = ~15-20 dk çalışma, ~35KB)
   static LOW_WATERMARK = 4;       // Tamponda kalan soru 4 veya altına indiğinde yeni parti çek
-  static CACHE_KEY = 'ales_offline_buffer';
-  static MANIFEST_KEY = 'ales_manifest_cache';
+  static CACHE_KEY = 'ales_offline_buffer_v2';
+  static MANIFEST_KEY = 'ales_manifest_cache_v2';
 
   constructor() {
     this.memoryCache = new Map();   // id -> question object
+    this.seedMap = null;            // id -> canonical repaired question object from /data/seed_questions.json
     this.manifest = [];             // [{ id, subject, number, orderIndex, category, isGroupQuestion, groupId }]
     this.isFetching = false;
     this.isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
     this.lastPrefetchIndex = -1;
 
+    this.clearLegacyCaches();
     this.initNetworkListeners();
     this.restoreLocalBuffer();
+  }
+
+  clearLegacyCaches() {
+    if (typeof localStorage === 'undefined') return;
+    try {
+      localStorage.removeItem('ales_offline_buffer');
+      localStorage.removeItem('ales_manifest_cache');
+      localStorage.removeItem('ales_cached_questions');
+    } catch (e) {}
+  }
+
+  async ensureSeedMap() {
+    if (this.seedMap) return this.seedMap;
+    try {
+      const resp = await fetch('/data/seed_questions.json');
+      if (resp.ok) {
+        const seeds = await resp.json();
+        this.seedMap = new Map(seeds.map(q => [q.id, q]));
+      }
+    } catch (e) {}
+    return this.seedMap;
   }
 
   // 1. Ağ durumu dinleyicileri (Online/Offline)
@@ -79,13 +102,25 @@ export class QuestionBufferService {
 
   // 3. Hafif Soru Manifestosu (Soru kimlikleri ve filtre meta verileri ~50KB)
   async loadManifest() {
+    let localManifestMap = null;
+    try {
+      const resp = await fetch('/data/questions_manifest.json');
+      if (resp.ok) {
+        const localItems = await resp.json();
+        localManifestMap = new Map(localItems.map(item => [item.id, item]));
+      }
+    } catch (e) {}
+
     // 1. Firestore meta dokümanı dene
     if (this.isOnline) {
       try {
         const manifestRef = doc(db, 'system', 'manifest');
         const snap = await getDoc(manifestRef);
         if (snap.exists() && snap.data().items) {
-          this.manifest = snap.data().items;
+          this.manifest = snap.data().items.map(item => {
+            const canonical = localManifestMap ? localManifestMap.get(item.id) : null;
+            return canonical ? { ...item, ...canonical } : item;
+          });
           localStorage.setItem(QuestionBufferService.MANIFEST_KEY, JSON.stringify(this.manifest));
           return { manifest: this.manifest, source: 'firestore' };
         }
@@ -100,20 +135,20 @@ export class QuestionBufferService {
       if (cached) {
         const parsed = JSON.parse(cached);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          this.manifest = parsed;
+          this.manifest = parsed.map(item => {
+            const canonical = localManifestMap ? localManifestMap.get(item.id) : null;
+            return canonical ? { ...item, ...canonical } : item;
+          });
           return { manifest: this.manifest, source: 'cache' };
         }
       }
     } catch (e) {}
 
     // 3. Statik JSON dosya yedeği (/data/questions_manifest.json veya seed_questions.json)
-    try {
-      const resp = await fetch('/data/questions_manifest.json');
-      if (resp.ok) {
-        this.manifest = await resp.json();
-        return { manifest: this.manifest, source: 'manifest_json' };
-      }
-    } catch (e) {}
+    if (localManifestMap && localManifestMap.size > 0) {
+      this.manifest = Array.from(localManifestMap.values());
+      return { manifest: this.manifest, source: 'manifest_json' };
+    }
 
     // 4. Son çare: seed_questions.json dosyasından derle
     const resp = await fetch('/data/seed_questions.json');
@@ -140,6 +175,8 @@ export class QuestionBufferService {
       return questionIds.map(id => this.memoryCache.get(id)).filter(Boolean);
     }
 
+    const seedMap = await this.ensureSeedMap();
+
     // Eksik soruları Firestore'dan 'in' sorgusu ile tek seferde çek (Maksimum 10-30 eleman)
     if (this.isOnline) {
       try {
@@ -155,7 +192,8 @@ export class QuestionBufferService {
           const snap = await getDocs(qQuery);
           snap.forEach(docSnap => {
             const data = docSnap.data();
-            this.memoryCache.set(data.id, data);
+            const canonical = seedMap ? seedMap.get(data.id) : null;
+            this.memoryCache.set(data.id, canonical ? { ...data, ...canonical } : data);
           });
         }
 
@@ -167,19 +205,12 @@ export class QuestionBufferService {
 
     // Eğer çevrimdışıysa ve bazı sorular hâlâ eksikse, yerel seed dosyasından tamamla
     const stillMissing = questionIds.filter(id => !this.memoryCache.has(id));
-    if (stillMissing.length > 0) {
-      try {
-        const resp = await fetch('/data/seed_questions.json');
-        if (resp.ok) {
-          const seeds = await resp.json();
-          seeds.forEach(q => {
-            if (stillMissing.includes(q.id)) {
-              this.memoryCache.set(q.id, q);
-            }
-          });
-          this.persistBuffer();
-        }
-      } catch (e) {}
+    if (stillMissing.length > 0 && seedMap) {
+      stillMissing.forEach(id => {
+        const q = seedMap.get(id);
+        if (q) this.memoryCache.set(id, q);
+      });
+      this.persistBuffer();
     }
 
     return questionIds.map(id => this.memoryCache.get(id)).filter(Boolean);

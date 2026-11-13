@@ -1,32 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 185" width="100%" height="170">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 190" width="100%" height="175">
   <defs>
     <style>
       .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
       .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
       .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
       .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
-      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.35); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
-      .geo-shaded-red { fill: rgba(244, 63, 94, 0.35); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
-      .geo-shaded-blue { fill: rgba(56, 189, 248, 0.35); stroke: #38bdf8; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.30); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-green { fill: rgba(34, 197, 94, 0.28); stroke: #22c55e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.30); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
       .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
       .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
       .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
       .geo-point { fill: var(--text-primary, #f1f5f9); }
       .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
       .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
-      .geo-dashed { stroke-dasharray: 4 4; }
 
       @media (prefers-color-scheme: light) {
         .geo-line { stroke: var(--text-primary, #0f172a); }
         .geo-sec { stroke: var(--accent-primary, #0284c7); }
-        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }
         .geo-text { fill: var(--text-primary, #0f172a); }
         .geo-text-muted { fill: var(--text-secondary, #475569); }
         .geo-text-accent { fill: var(--zen-warning, #d97706); }
         .geo-point { fill: var(--text-primary, #0f172a); }
       }
     </style>
-</defs>
+  </defs>
   <!-- Dış Kare -->
   <rect x="40" y="20" width="140" height="140" class="geo-line" />
   <!-- Orta Kare -->
@@ -34,14 +33,31 @@
   <!-- İç Kare -->
   <rect x="75" y="55" width="70" height="70" class="geo-accent" stroke-width="1.8" />
 
-  <!-- Sayılar & Harfler -->
-  <text x="30" y="12" class="geo-text">1</text>
-  <text x="190" y="12" class="geo-text">3</text>
+  <!-- Köşe Noktaları -->
+  <circle cx="40" cy="20" r="2.5" class="geo-point" />
+  <circle cx="180" cy="20" r="2.5" class="geo-point" />
+  <circle cx="40" cy="160" r="2.5" class="geo-point" />
+  <circle cx="180" cy="160" r="2.5" class="geo-point" />
+  <circle cx="110" cy="20" r="2.5" class="geo-point" />
+  <circle cx="180" cy="90" r="2.5" class="geo-point" />
+  <circle cx="110" cy="160" r="2.5" class="geo-point" />
+  <circle cx="40" cy="90" r="2.5" class="geo-point" />
+  <circle cx="75" cy="55" r="2.5" class="geo-point" />
+  <circle cx="145" cy="55" r="2.5" class="geo-point" />
+  <circle cx="75" cy="125" r="2.5" class="geo-point" />
+  <circle cx="145" cy="125" r="2.5" class="geo-point" />
+
+  <!-- Dış Kare Köşeleri: 1 (sol-üst), 3 (sağ-üst), A (sol-alt), B (sağ-alt) -->
+  <text x="30" y="14" class="geo-text">1</text>
+  <text x="190" y="14" class="geo-text">3</text>
   <text x="30" y="168" class="geo-text-accent">A</text>
   <text x="190" y="168" class="geo-text-accent">B</text>
 
-  <!-- Orta Kare Köşe Sayıları -->
-  <text x="30" y="90" class="geo-text">5</text>
-  <text x="110" y="172" class="geo-text">4</text>
-  <text x="110" y="38" class="geo-text">1</text>
+  <!-- Orta Kare Alt Köşesi: 4 -->
+  <text x="110" y="174" class="geo-text">4</text>
+
+  <!-- İç Kare Köşeleri: sol-alt=5, sağ-üst=1, sağ-alt=1 -->
+  <text x="64" y="134" class="geo-text">5</text>
+  <text x="156" y="46" class="geo-text">1</text>
+  <text x="156" y="134" class="geo-text">1</text>
 </svg>

@@ -204,7 +204,7 @@
     "category": "sayi_kesir_problemleri",
     "orderIndex": 23,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_ceren"
+    "groupId": "2021_ales1_mat_23_24"
   },
   {
     "id": "2021_ales1_mat_24",
@@ -213,7 +213,7 @@
     "category": "sayi_kesir_problemleri",
     "orderIndex": 24,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_ceren"
+    "groupId": "2021_ales1_mat_23_24"
   },
   {
     "id": "2021_ales1_mat_25",
@@ -222,7 +222,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 25,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_toplar"
+    "groupId": "2021_ales1_mat_25_26"
   },
   {
     "id": "2021_ales1_mat_26",
@@ -231,7 +231,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 26,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_toplar"
+    "groupId": "2021_ales1_mat_25_26"
   },
   {
     "id": "2021_ales1_mat_27",
@@ -240,7 +240,7 @@
     "category": "tablo_grafik",
     "orderIndex": 27,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_magaza"
+    "groupId": "2021_ales1_mat_27_28"
   },
   {
     "id": "2021_ales1_mat_28",
@@ -249,7 +249,7 @@
     "category": "tablo_grafik",
     "orderIndex": 28,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_magaza"
+    "groupId": "2021_ales1_mat_27_28"
   },
   {
     "id": "2021_ales1_mat_29",
@@ -258,7 +258,7 @@
     "category": "oran_oranti",
     "orderIndex": 29,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_mandira"
+    "groupId": "2021_ales1_mat_29_31"
   },
   {
     "id": "2021_ales1_mat_30",
@@ -267,7 +267,7 @@
     "category": "oran_oranti",
     "orderIndex": 30,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_mandira"
+    "groupId": "2021_ales1_mat_29_31"
   },
   {
     "id": "2021_ales1_mat_31",
@@ -276,7 +276,7 @@
     "category": "oran_oranti",
     "orderIndex": 31,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_mandira"
+    "groupId": "2021_ales1_mat_29_31"
   },
   {
     "id": "2021_ales1_mat_32",
@@ -285,7 +285,7 @@
     "category": "tablo_grafik",
     "orderIndex": 32,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_yas_grafik"
+    "groupId": "2021_ales1_mat_32_34"
   },
   {
     "id": "2021_ales1_mat_33",
@@ -294,7 +294,7 @@
     "category": "tablo_grafik",
     "orderIndex": 33,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_yas_grafik"
+    "groupId": "2021_ales1_mat_32_34"
   },
   {
     "id": "2021_ales1_mat_34",
@@ -303,7 +303,7 @@
     "category": "tablo_grafik",
     "orderIndex": 34,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_yas_grafik"
+    "groupId": "2021_ales1_mat_32_34"
   },
   {
     "id": "2021_ales1_mat_35",
@@ -312,7 +312,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 35,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_yasin"
+    "groupId": "2021_ales1_mat_35_37"
   },
   {
     "id": "2021_ales1_mat_36",
@@ -321,7 +321,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 36,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_yasin"
+    "groupId": "2021_ales1_mat_35_37"
   },
   {
     "id": "2021_ales1_mat_37",
@@ -330,7 +330,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 37,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_yasin"
+    "groupId": "2021_ales1_mat_35_37"
   },
   {
     "id": "2021_ales1_mat_38",
@@ -339,7 +339,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 38,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_top_cekme"
+    "groupId": "2021_ales1_mat_38_40"
   },
   {
     "id": "2021_ales1_mat_39",
@@ -348,7 +348,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 39,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_top_cekme"
+    "groupId": "2021_ales1_mat_38_40"
   },
   {
     "id": "2021_ales1_mat_40",
@@ -357,7 +357,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 40,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_top_cekme"
+    "groupId": "2021_ales1_mat_38_40"
   },
   {
     "id": "2021_ales1_mat_41",
@@ -366,7 +366,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 41,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_tablo410"
+    "groupId": "2021_ales1_mat_41_43"
   },
   {
     "id": "2021_ales1_mat_42",
@@ -375,7 +375,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 42,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_tablo410"
+    "groupId": "2021_ales1_mat_41_43"
   },
   {
     "id": "2021_ales1_mat_43",
@@ -384,7 +384,7 @@
     "category": "sayisal_mantik",
     "orderIndex": 43,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mat_g_tablo410"
+    "groupId": "2021_ales1_mat_41_43"
   },
   {
     "id": "2021_ales1_mat_44",
@@ -707,8 +707,8 @@
     "subject": "turkce",
     "category": "paragraf_ana_fikir",
     "orderIndex": 79,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_29_30"
   },
   {
     "id": "2021_ales1_turkce_30",
@@ -716,8 +716,8 @@
     "subject": "turkce",
     "category": "paragraf_yardimci_fikir",
     "orderIndex": 80,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_29_30"
   },
   {
     "id": "2021_ales1_turkce_31",
@@ -725,8 +725,8 @@
     "subject": "turkce",
     "category": "paragraf_ana_fikir",
     "orderIndex": 81,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_31_32"
   },
   {
     "id": "2021_ales1_turkce_32",
@@ -734,8 +734,8 @@
     "subject": "turkce",
     "category": "paragraf_yardimci_fikir",
     "orderIndex": 82,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales1_turkce_31_32"
   },
   {
     "id": "2021_ales1_turkce_33",
@@ -744,7 +744,7 @@
     "category": "coklu_paragraf",
     "orderIndex": 83,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_turkce_g_mischel"
+    "groupId": "2021_ales1_turkce_33_35"
   },
   {
     "id": "2021_ales1_turkce_34",
@@ -753,7 +753,7 @@
     "category": "coklu_paragraf",
     "orderIndex": 84,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_turkce_g_mischel"
+    "groupId": "2021_ales1_turkce_33_35"
   },
   {
     "id": "2021_ales1_turkce_35",
@@ -762,7 +762,7 @@
     "category": "coklu_paragraf",
     "orderIndex": 85,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_turkce_g_mischel"
+    "groupId": "2021_ales1_turkce_33_35"
   },
   {
     "id": "2021_ales1_turkce_36",
@@ -771,7 +771,7 @@
     "category": "coklu_paragraf",
     "orderIndex": 86,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_turkce_g_chaplin"
+    "groupId": "2021_ales1_turkce_36_38"
   },
   {
     "id": "2021_ales1_turkce_37",
@@ -780,7 +780,7 @@
     "category": "coklu_paragraf",
     "orderIndex": 87,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_turkce_g_chaplin"
+    "groupId": "2021_ales1_turkce_36_38"
   },
   {
     "id": "2021_ales1_turkce_38",
@@ -789,7 +789,7 @@
     "category": "coklu_paragraf",
     "orderIndex": 88,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_turkce_g_chaplin"
+    "groupId": "2021_ales1_turkce_36_38"
   },
   {
     "id": "2021_ales1_turkce_39",
@@ -798,7 +798,7 @@
     "category": "coklu_paragraf",
     "orderIndex": 89,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_turkce_g_empati"
+    "groupId": "2021_ales1_turkce_39_42"
   },
   {
     "id": "2021_ales1_turkce_40",
@@ -807,7 +807,7 @@
     "category": "coklu_paragraf",
     "orderIndex": 90,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_turkce_g_empati"
+    "groupId": "2021_ales1_turkce_39_42"
   },
   {
     "id": "2021_ales1_turkce_41",
@@ -816,7 +816,7 @@
     "category": "coklu_paragraf",
     "orderIndex": 91,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_turkce_g_empati"
+    "groupId": "2021_ales1_turkce_39_42"
   },
   {
     "id": "2021_ales1_turkce_42",
@@ -825,7 +825,7 @@
     "category": "coklu_paragraf",
     "orderIndex": 92,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_turkce_g_empati"
+    "groupId": "2021_ales1_turkce_39_42"
   },
   {
     "id": "2021_ales1_mantik_43",
@@ -834,7 +834,7 @@
     "category": "sozel_mantik_tablo",
     "orderIndex": 93,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mantik_g1"
+    "groupId": "2021_ales1_mantik_43_46"
   },
   {
     "id": "2021_ales1_mantik_44",
@@ -843,7 +843,7 @@
     "category": "sozel_mantik_tablo",
     "orderIndex": 94,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mantik_g1"
+    "groupId": "2021_ales1_mantik_43_46"
   },
   {
     "id": "2021_ales1_mantik_45",
@@ -852,7 +852,7 @@
     "category": "sozel_mantik_tablo",
     "orderIndex": 95,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mantik_g1"
+    "groupId": "2021_ales1_mantik_43_46"
   },
   {
     "id": "2021_ales1_mantik_46",
@@ -861,7 +861,7 @@
     "category": "sozel_mantik_tablo",
     "orderIndex": 96,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mantik_g1"
+    "groupId": "2021_ales1_mantik_43_46"
   },
   {
     "id": "2021_ales1_mantik_47",
@@ -870,7 +870,7 @@
     "category": "sozel_mantik_eslestirme",
     "orderIndex": 97,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mantik_g2"
+    "groupId": "2021_ales1_mantik_47_50"
   },
   {
     "id": "2021_ales1_mantik_48",
@@ -879,7 +879,7 @@
     "category": "sozel_mantik_eslestirme",
     "orderIndex": 98,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mantik_g2"
+    "groupId": "2021_ales1_mantik_47_50"
   },
   {
     "id": "2021_ales1_mantik_49",
@@ -888,7 +888,7 @@
     "category": "sozel_mantik_eslestirme",
     "orderIndex": 99,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mantik_g2"
+    "groupId": "2021_ales1_mantik_47_50"
   },
   {
     "id": "2021_ales1_mantik_50",
@@ -897,7 +897,7 @@
     "category": "sozel_mantik_eslestirme",
     "orderIndex": 100,
     "isGroupQuestion": true,
-    "groupId": "2021_ales1_mantik_g2"
+    "groupId": "2021_ales1_mantik_47_50"
   },
   {
     "id": "2021_ales2_mat_01",
@@ -1103,8 +1103,8 @@
     "subject": "matematik",
     "category": "oran_oranti_problemleri",
     "orderIndex": 123,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_23_24"
   },
   {
     "id": "2021_ales2_mat_24",
@@ -1112,8 +1112,8 @@
     "subject": "matematik",
     "category": "oran_oranti_problemleri",
     "orderIndex": 124,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_23_24"
   },
   {
     "id": "2021_ales2_mat_25",
@@ -1121,8 +1121,8 @@
     "subject": "matematik",
     "category": "grafik_ve_tablo_yorumlama",
     "orderIndex": 125,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_25_26"
   },
   {
     "id": "2021_ales2_mat_26",
@@ -1130,8 +1130,8 @@
     "subject": "matematik",
     "category": "grafik_ve_tablo_yorumlama",
     "orderIndex": 126,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_25_26"
   },
   {
     "id": "2021_ales2_mat_27",
@@ -1139,8 +1139,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 127,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_27_28"
   },
   {
     "id": "2021_ales2_mat_28",
@@ -1148,8 +1148,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 128,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_27_28"
   },
   {
     "id": "2021_ales2_mat_29",
@@ -1157,8 +1157,8 @@
     "subject": "matematik",
     "category": "sayi_problemleri",
     "orderIndex": 129,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_29_31"
   },
   {
     "id": "2021_ales2_mat_30",
@@ -1166,8 +1166,8 @@
     "subject": "matematik",
     "category": "sayi_problemleri",
     "orderIndex": 130,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_29_31"
   },
   {
     "id": "2021_ales2_mat_31",
@@ -1175,8 +1175,8 @@
     "subject": "matematik",
     "category": "sayi_problemleri",
     "orderIndex": 131,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_29_31"
   },
   {
     "id": "2021_ales2_mat_32",
@@ -1184,8 +1184,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 132,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_32_34"
   },
   {
     "id": "2021_ales2_mat_33",
@@ -1193,8 +1193,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 133,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_32_34"
   },
   {
     "id": "2021_ales2_mat_34",
@@ -1202,8 +1202,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 134,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_32_34"
   },
   {
     "id": "2021_ales2_mat_35",
@@ -1211,8 +1211,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 135,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_35_37"
   },
   {
     "id": "2021_ales2_mat_36",
@@ -1220,8 +1220,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 136,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_35_37"
   },
   {
     "id": "2021_ales2_mat_37",
@@ -1229,8 +1229,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 137,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_35_37"
   },
   {
     "id": "2021_ales2_mat_38",
@@ -1238,8 +1238,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 138,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_38_40"
   },
   {
     "id": "2021_ales2_mat_39",
@@ -1247,8 +1247,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 139,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_38_40"
   },
   {
     "id": "2021_ales2_mat_40",
@@ -1256,8 +1256,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 140,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_38_40"
   },
   {
     "id": "2021_ales2_mat_41",
@@ -1265,8 +1265,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 141,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_41_43"
   },
   {
     "id": "2021_ales2_mat_42",
@@ -1274,8 +1274,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 142,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_41_43"
   },
   {
     "id": "2021_ales2_mat_43",
@@ -1283,8 +1283,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 143,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales2_mat_41_43"
   },
   {
     "id": "2021_ales2_mat_44",
@@ -1608,7 +1608,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 179,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_29_30"
   },
   {
     "id": "2021_ales2_soz_30",
@@ -1617,7 +1617,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 180,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_29_30"
   },
   {
     "id": "2021_ales2_soz_31",
@@ -1626,7 +1626,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 181,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_31_32"
   },
   {
     "id": "2021_ales2_soz_32",
@@ -1635,7 +1635,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 182,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_31_32"
   },
   {
     "id": "2021_ales2_soz_33",
@@ -1644,7 +1644,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 183,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_33_35"
   },
   {
     "id": "2021_ales2_soz_34",
@@ -1653,7 +1653,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 184,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_33_35"
   },
   {
     "id": "2021_ales2_soz_35",
@@ -1662,7 +1662,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 185,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_33_35"
   },
   {
     "id": "2021_ales2_soz_36",
@@ -1671,7 +1671,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 186,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_36_38"
   },
   {
     "id": "2021_ales2_soz_37",
@@ -1680,7 +1680,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 187,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_36_38"
   },
   {
     "id": "2021_ales2_soz_38",
@@ -1689,7 +1689,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 188,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_36_38"
   },
   {
     "id": "2021_ales2_soz_39",
@@ -1698,7 +1698,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 189,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_39_42"
   },
   {
     "id": "2021_ales2_soz_40",
@@ -1707,7 +1707,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 190,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_39_42"
   },
   {
     "id": "2021_ales2_soz_41",
@@ -1716,7 +1716,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 191,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_39_42"
   },
   {
     "id": "2021_ales2_soz_42",
@@ -1725,7 +1725,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 192,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_39_42"
   },
   {
     "id": "2021_ales2_soz_43",
@@ -1734,7 +1734,7 @@
     "category": "sozel_mantik",
     "orderIndex": 193,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_43_46"
   },
   {
     "id": "2021_ales2_soz_44",
@@ -1743,7 +1743,7 @@
     "category": "sozel_mantik",
     "orderIndex": 194,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_43_46"
   },
   {
     "id": "2021_ales2_soz_45",
@@ -1752,7 +1752,7 @@
     "category": "sozel_mantik",
     "orderIndex": 195,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_43_46"
   },
   {
     "id": "2021_ales2_soz_46",
@@ -1761,7 +1761,7 @@
     "category": "sozel_mantik",
     "orderIndex": 196,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_43_46"
   },
   {
     "id": "2021_ales2_soz_47",
@@ -1770,7 +1770,7 @@
     "category": "sozel_mantik",
     "orderIndex": 197,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_47_50"
   },
   {
     "id": "2021_ales2_soz_48",
@@ -1779,7 +1779,7 @@
     "category": "sozel_mantik",
     "orderIndex": 198,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_47_50"
   },
   {
     "id": "2021_ales2_soz_49",
@@ -1788,7 +1788,7 @@
     "category": "sozel_mantik",
     "orderIndex": 199,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_47_50"
   },
   {
     "id": "2021_ales2_soz_50",
@@ -1797,7 +1797,7 @@
     "category": "sozel_mantik",
     "orderIndex": 200,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales2_soz_47_50"
   },
   {
     "id": "2021_ales3_mat_01",
@@ -2003,8 +2003,8 @@
     "subject": "matematik",
     "category": "sayi_problemleri",
     "orderIndex": 223,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_23_24"
   },
   {
     "id": "2021_ales3_mat_24",
@@ -2012,8 +2012,8 @@
     "subject": "matematik",
     "category": "sayi_problemleri",
     "orderIndex": 224,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_23_24"
   },
   {
     "id": "2021_ales3_mat_25",
@@ -2021,8 +2021,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 225,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_25_26"
   },
   {
     "id": "2021_ales3_mat_26",
@@ -2030,8 +2030,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 226,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_25_26"
   },
   {
     "id": "2021_ales3_mat_27",
@@ -2039,8 +2039,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 227,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_27_28"
   },
   {
     "id": "2021_ales3_mat_28",
@@ -2048,8 +2048,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 228,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_27_28"
   },
   {
     "id": "2021_ales3_mat_29",
@@ -2057,8 +2057,8 @@
     "subject": "matematik",
     "category": "sayi_problemleri",
     "orderIndex": 229,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_29_31"
   },
   {
     "id": "2021_ales3_mat_30",
@@ -2066,8 +2066,8 @@
     "subject": "matematik",
     "category": "sayi_problemleri",
     "orderIndex": 230,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_29_31"
   },
   {
     "id": "2021_ales3_mat_31",
@@ -2075,8 +2075,8 @@
     "subject": "matematik",
     "category": "sayi_problemleri",
     "orderIndex": 231,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_29_31"
   },
   {
     "id": "2021_ales3_mat_32",
@@ -2084,8 +2084,8 @@
     "subject": "matematik",
     "category": "tablo_ve_grafik_problemleri",
     "orderIndex": 232,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_32_34"
   },
   {
     "id": "2021_ales3_mat_33",
@@ -2093,8 +2093,8 @@
     "subject": "matematik",
     "category": "yuzde_problemleri",
     "orderIndex": 233,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_32_34"
   },
   {
     "id": "2021_ales3_mat_34",
@@ -2102,8 +2102,8 @@
     "subject": "matematik",
     "category": "sayi_problemleri",
     "orderIndex": 234,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_32_34"
   },
   {
     "id": "2021_ales3_mat_35",
@@ -2111,8 +2111,8 @@
     "subject": "matematik",
     "category": "karisim_problemleri",
     "orderIndex": 235,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_35_37"
   },
   {
     "id": "2021_ales3_mat_36",
@@ -2120,8 +2120,8 @@
     "subject": "matematik",
     "category": "karisim_problemleri",
     "orderIndex": 236,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_35_37"
   },
   {
     "id": "2021_ales3_mat_37",
@@ -2129,8 +2129,8 @@
     "subject": "matematik",
     "category": "oran_oranti_problemleri",
     "orderIndex": 237,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_35_37"
   },
   {
     "id": "2021_ales3_mat_38",
@@ -2138,8 +2138,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 238,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_38_40"
   },
   {
     "id": "2021_ales3_mat_39",
@@ -2147,8 +2147,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 239,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_38_40"
   },
   {
     "id": "2021_ales3_mat_40",
@@ -2156,8 +2156,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 240,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_38_40"
   },
   {
     "id": "2021_ales3_mat_41",
@@ -2165,8 +2165,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 241,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_41_43"
   },
   {
     "id": "2021_ales3_mat_42",
@@ -2174,8 +2174,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 242,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_41_43"
   },
   {
     "id": "2021_ales3_mat_43",
@@ -2183,8 +2183,8 @@
     "subject": "matematik",
     "category": "sayisal_mantik",
     "orderIndex": 243,
-    "isGroupQuestion": false,
-    "groupId": null
+    "isGroupQuestion": true,
+    "groupId": "2021_ales3_mat_41_43"
   },
   {
     "id": "2021_ales3_mat_44",
@@ -2508,7 +2508,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 279,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_29_30"
   },
   {
     "id": "2021_ales3_soz_30",
@@ -2517,7 +2517,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 280,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_29_30"
   },
   {
     "id": "2021_ales3_soz_31",
@@ -2526,7 +2526,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 281,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_31_32"
   },
   {
     "id": "2021_ales3_soz_32",
@@ -2535,7 +2535,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 282,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_31_32"
   },
   {
     "id": "2021_ales3_soz_33",
@@ -2544,7 +2544,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 283,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_33_35"
   },
   {
     "id": "2021_ales3_soz_34",
@@ -2553,7 +2553,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 284,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_33_35"
   },
   {
     "id": "2021_ales3_soz_35",
@@ -2562,7 +2562,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 285,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_33_35"
   },
   {
     "id": "2021_ales3_soz_36",
@@ -2571,7 +2571,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 286,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_36_38"
   },
   {
     "id": "2021_ales3_soz_37",
@@ -2580,7 +2580,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 287,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_36_38"
   },
   {
     "id": "2021_ales3_soz_38",
@@ -2589,7 +2589,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 288,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_36_38"
   },
   {
     "id": "2021_ales3_soz_39",
@@ -2598,7 +2598,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 289,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_39_42"
   },
   {
     "id": "2021_ales3_soz_40",
@@ -2607,7 +2607,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 290,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_39_42"
   },
   {
     "id": "2021_ales3_soz_41",
@@ -2616,7 +2616,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 291,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_39_42"
   },
   {
     "id": "2021_ales3_soz_42",
@@ -2625,7 +2625,7 @@
     "category": "paragrafta_anlam",
     "orderIndex": 292,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_39_42"
   },
   {
     "id": "2021_ales3_soz_43",
@@ -2634,7 +2634,7 @@
     "category": "sozel_mantik",
     "orderIndex": 293,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_43_46"
   },
   {
     "id": "2021_ales3_soz_44",
@@ -2643,7 +2643,7 @@
     "category": "sozel_mantik",
     "orderIndex": 294,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_43_46"
   },
   {
     "id": "2021_ales3_soz_45",
@@ -2652,7 +2652,7 @@
     "category": "sozel_mantik",
     "orderIndex": 295,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_43_46"
   },
   {
     "id": "2021_ales3_soz_46",
@@ -2661,7 +2661,7 @@
     "category": "sozel_mantik",
     "orderIndex": 296,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_43_46"
   },
   {
     "id": "2021_ales3_soz_47",
@@ -2670,7 +2670,7 @@
     "category": "sozel_mantik",
     "orderIndex": 297,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_47_50"
   },
   {
     "id": "2021_ales3_soz_48",
@@ -2679,7 +2679,7 @@
     "category": "sozel_mantik",
     "orderIndex": 298,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_47_50"
   },
   {
     "id": "2021_ales3_soz_49",
@@ -2688,7 +2688,7 @@
     "category": "sozel_mantik",
     "orderIndex": 299,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_47_50"
   },
   {
     "id": "2021_ales3_soz_50",
@@ -2697,6 +2697,6 @@
     "category": "sozel_mantik",
     "orderIndex": 300,
     "isGroupQuestion": true,
-    "groupId": null
+    "groupId": "2021_ales3_soz_47_50"
   }
 ]

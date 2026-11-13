@@ -1,71 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" width="100%" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 225" width="100%" height="205">
   <defs>
     <style>
       .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
       .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
       .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
       .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
-      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.28); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
-      .geo-shaded-purple { fill: rgba(168, 85, 247, 0.28); stroke: #a855f7; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.30); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
       .geo-shaded-green { fill: rgba(34, 197, 94, 0.28); stroke: #22c55e; stroke-width: 2; stroke-linejoin: round; }
-      .geo-shaded-red { fill: rgba(244, 63, 94, 0.28); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.30); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
       .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
       .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
       .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
       .geo-point { fill: var(--text-primary, #f1f5f9); }
       .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
       .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
-      .geo-dashed { stroke-dasharray: 4 4; }
 
       @media (prefers-color-scheme: light) {
         .geo-line { stroke: var(--text-primary, #0f172a); }
         .geo-sec { stroke: var(--accent-primary, #0284c7); }
-        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.20)); stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }
         .geo-text { fill: var(--text-primary, #0f172a); }
         .geo-text-muted { fill: var(--text-secondary, #475569); }
         .geo-text-accent { fill: var(--zen-warning, #d97706); }
         .geo-point { fill: var(--text-primary, #0f172a); }
       }
     </style>
-</defs>
-  
-  <!-- Şekil 1 (Toplam Dersler) -->
-  <g transform="translate(105, 100)">
+  </defs>
+  <!-- Şekil 1 (Toplam Dersler: analiz 144°, geometri 144°, cebir 72°) -->
+  <g transform="translate(105, 95)">
     <circle cx="0" cy="0" r="70" class="geo-line" />
-    <!-- 144° analiz (üst-sağ), 144° cebir (sol), 72° geometri (alt) -->
-    <!-- 0° sağ: (70, 0). 144° saat yönü: (70*cos(144°), 70*sin(144°)) = (-56.6, 41.1) -->
-    <!-- 216°: (-56.6, -41.1) -->
     <line x1="0" y1="0" x2="70" y2="0" class="geo-line" />
-    <line x1="0" y1="0" x2="-56.6" y2="41.1" class="geo-line" />
     <line x1="0" y1="0" x2="-56.6" y2="-41.1" class="geo-line" />
-    
-    <!-- Alan Dolguları & Etiketler -->
-    <text x="18" y="-35" class="geo-text">analiz</text>
-    <text x="25" y="-15" class="geo-text-muted">144°</text>
-
-    <text x="-38" y="0" class="geo-text">cebir</text>
-    <text x="-15" y="15" class="geo-text-muted">144°</text>
-
-    <text x="0" y="45" class="geo-text">geometri</text>
-    <text x="0" y="105" class="geo-text-muted" font-weight="700">Şekil 1</text>
+    <line x1="0" y1="0" x2="-56.6" y2="41.1" class="geo-line" />
+    <text x="12" y="-38" class="geo-text">analiz</text>
+    <text x="15" y="-16" class="geo-text-accent">144°</text>
+    <text x="-44" y="0" class="geo-text">cebir</text>
+    <text x="15" y="16" class="geo-text-accent">144°</text>
+    <text x="12" y="42" class="geo-text">geometri</text>
+    <text x="0" y="95" class="geo-text-muted" font-weight="700">Şekil 1</text>
   </g>
-
-  <!-- Şekil 2 (Zorunlu Dersler) -->
-  <g transform="translate(315, 100)">
+  <!-- Şekil 2 (Zorunlu Dersler: analiz 180°, cebir 60°, geometri 120°) -->
+  <g transform="translate(315, 95)">
     <circle cx="0" cy="0" r="70" class="geo-line" />
-    <!-- 180° analiz (üst yarı: -70 to 70 yatay çizgi) -->
     <line x1="-70" y1="0" x2="70" y2="0" class="geo-line" />
-    <!-- 120° geometri (alt sağ: 0° to 120°), 60° cebir (alt sol: 120° to 180°) -->
-    <!-- 120°: (70*cos(60°), 70*sin(60°)) = (35, 60.6) -->
-    <!-- cebir 60°, geometri 120°: çizgi 120° saat yönü = (70*cos(120), 70*sin(120)) = (-35, 60.6) -->
-    <line x1="0" y1="0" x2="35" y2="60.6" class="geo-line" />
-
+    <line x1="0" y1="0" x2="-35" y2="60.6" class="geo-line" />
     <text x="0" y="-35" class="geo-text">analiz</text>
-    <text x="-32" y="30" class="geo-text">cebir</text>
-    <text x="-25" y="48" class="geo-text-muted">60°</text>
-
-    <text x="32" y="30" class="geo-text">geometri</text>
-    <text x="25" y="48" class="geo-text-muted">120°</text>
-    <text x="0" y="105" class="geo-text-muted" font-weight="700">Şekil 2</text>
+    <text x="-38" y="28" class="geo-text">cebir</text>
+    <text x="-22" y="14" class="geo-text-accent">60°</text>
+    <text x="20" y="42" class="geo-text">geometri</text>
+    <text x="18" y="18" class="geo-text-accent">120°</text>
+    <text x="0" y="95" class="geo-text-muted" font-weight="700">Şekil 2</text>
   </g>
 </svg>

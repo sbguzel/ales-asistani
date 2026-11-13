@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" width="100%" height="205">
+  <defs>
+    <style>
+      .geo-line { stroke: var(--text-primary, #f1f5f9); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-sec { stroke: var(--accent-primary, #38bdf8); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-accent { stroke: var(--zen-warning, #f59e0b); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .geo-shaded { fill: var(--geo-shaded-fill, rgba(56, 189, 248, 0.28)); stroke: var(--geo-shaded-stroke, var(--accent-primary, #38bdf8)); stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-yellow { fill: rgba(245, 158, 11, 0.30); stroke: #f59e0b; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-green { fill: rgba(34, 197, 94, 0.28); stroke: #22c55e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-shaded-red { fill: rgba(244, 63, 94, 0.30); stroke: #f43f5e; stroke-width: 2; stroke-linejoin: round; }
+      .geo-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: var(--text-primary, #f1f5f9); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-muted { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: var(--text-secondary, #94a3b8); text-anchor: middle; dominant-baseline: central; }
+      .geo-text-accent { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: var(--zen-warning, #f59e0b); text-anchor: middle; dominant-baseline: central; }
+      .geo-point { fill: var(--text-primary, #f1f5f9); }
+      .geo-right-angle { stroke: var(--text-muted, #94a3b8); stroke-width: 1.5; fill: none; }
+      .geo-angle-arc { stroke: var(--zen-warning, #f59e0b); stroke-width: 1.8; fill: none; }
+
+      @media (prefers-color-scheme: light) {
+        .geo-line { stroke: var(--text-primary, #0f172a); }
+        .geo-sec { stroke: var(--accent-primary, #0284c7); }
+        .geo-shaded { fill: var(--geo-shaded-fill, rgba(2, 132, 199, 0.22)); stroke: var(--accent-primary, #0284c7); }
+        .geo-text { fill: var(--text-primary, #0f172a); }
+        .geo-text-muted { fill: var(--text-secondary, #475569); }
+        .geo-text-accent { fill: var(--zen-warning, #d97706); }
+        .geo-point { fill: var(--text-primary, #0f172a); }
+      }
+    </style>
+  </defs>
+  <!-- Şekil 1 -->
+  <g transform="translate(20, 15)">
+    <rect x="0" y="0" width="195" height="165" rx="8" class="geo-line" stroke-width="1.6" />
+    <text x="97.5" y="22" class="geo-text" font-weight="700">İÇİNDEKİLER</text>
+    <line x1="15" y1="36" x2="180" y2="36" stroke="var(--text-secondary, #94a3b8)" stroke-width="1" />
+    <text x="15" y="54" class="geo-text" text-anchor="start" style="text-anchor:start">Çorbalar....................</text><text x="180" y="54" class="geo-text" style="text-anchor:end">1</text>
+    <text x="15" y="76" class="geo-text" text-anchor="start" style="text-anchor:start">Salatalar...................</text><text x="180" y="76" class="geo-text" style="text-anchor:end">10</text>
+    <text x="15" y="98" class="geo-text" text-anchor="start" style="text-anchor:start">Et yemekleri.............</text><text x="180" y="98" class="geo-text" style="text-anchor:end">15</text>
+    <text x="15" y="120" class="geo-text" text-anchor="start" style="text-anchor:start">Sebze yemekleri.......</text><text x="180" y="120" class="geo-text" style="text-anchor:end">28</text>
+    <text x="15" y="142" class="geo-text" text-anchor="start" style="text-anchor:start">Tatlılar......................</text><text x="180" y="142" class="geo-text" style="text-anchor:end">38</text>
+    <text x="97.5" y="185" class="geo-text-muted" font-weight="700">Şekil 1</text>
+  </g>
+  <!-- Şekil 2 -->
+  <g transform="translate(245, 15)">
+    <rect x="0" y="0" width="195" height="165" rx="8" class="geo-line" stroke-width="1.6" />
+    <text x="97.5" y="22" class="geo-text" font-weight="700">İÇİNDEKİLER</text>
+    <line x1="15" y1="36" x2="180" y2="36" stroke="var(--text-secondary, #94a3b8)" stroke-width="1" />
+    <text x="15" y="54" class="geo-text" style="text-anchor:start">Salatalar...................</text><text x="180" y="54" class="geo-text" style="text-anchor:end">1</text>
+    <text x="15" y="76" class="geo-text" style="text-anchor:start">Çorbalar....................</text><text x="180" y="76" class="geo-text-accent" style="text-anchor:end">?</text>
+    <text x="15" y="98" class="geo-text" style="text-anchor:start">Sebze yemekleri.......</text><text x="180" y="98" class="geo-text-accent" style="text-anchor:end">?</text>
+    <text x="15" y="120" class="geo-text" style="text-anchor:start">Et yemekleri.............</text><text x="180" y="120" class="geo-text-accent" style="text-anchor:end">?</text>
+    <text x="15" y="142" class="geo-text" style="text-anchor:start">Tatlılar......................</text><text x="180" y="142" class="geo-text" style="text-anchor:end">38</text>
+    <text x="97.5" y="185" class="geo-text-muted" font-weight="700">Şekil 2</text>
+  </g>
+</svg>
